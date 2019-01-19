@@ -1,0 +1,28 @@
+<div [formGroup]="form">
+  <div class="form-group">
+
+
+    <!-- <div [ngSwitch]="question.controlType"> -->
+    <!-- Label -->
+
+    <!-- Textbox  -->
+    <div *ngIf="question.key=='application_id'; then thenBlock; else elseBlock"> </div>
+    <ng-template #thenBlock>
+      <div class="input-field col s6">
+        <label [attr.for]="question.key" class="col-lg-2 control-label">{{question.label}}</label><br/><br/>
+        <input class="form-control validate" [formControlName]="question.key" [id]="question.key" [type]="question.type" disabled="true">
+      </div>
+
+    </ng-template>
+    <ng-template #elseBlock>
+      <div class="input-field col s6">
+        <label [attr.for]="question.key" class="col-lg-2 control-label">{{question.label}}</label><br/><br/>
+        <input class="form-control validate" [formControlName]="question.key" [id]="question.key" [type]="question.type">
+      </div>
+    </ng-template>
+
+  </div>
+  <!-- 
+      <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div> -->
+
+</div>

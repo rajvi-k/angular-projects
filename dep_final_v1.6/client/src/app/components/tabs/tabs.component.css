@@ -1,0 +1,12 @@
+nav ul a:hover {
+    background-color: #9099A2;
+}
+nav{
+        height: 40px;
+    line-height: 40px;
+   
+}
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 40px;
+    line-height: 40px;
+}

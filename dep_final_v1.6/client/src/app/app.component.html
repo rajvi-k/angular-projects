@@ -1,0 +1,52 @@
+<nav>
+  <ul id='dropdown1' class='dropdown-content'>
+    <!-- <li><a class="indigo-text text-darken-4">UserName</a></li> -->
+    <li><a class="indigo-text text-darken-4">Logout</a></li>
+    <li class="divider"></li>
+    <li><a class="indigo-text text-darken-4">help</a></li>
+  </ul>
+
+  <ul id='dropdown-projects' class='dropdown-content projects-dropdown'>
+    <!-- <li><a class="indigo-text text-darken-4">UserName</a></li> -->
+    <li><a class="indigo-text text-darken-4" [routerLink]="['dashboard/wizard']">Create</a></li>
+    <li><a class="indigo-text text-darken-4">Configure</a></li>
+    <li><a class="indigo-text text-darken-4">Users</a></li>
+    <li><a class="indigo-text text-darken-4" [routerLink]="['dashboard/input']">App Inputs</a></li>
+
+  </ul>
+  <ul id='dropdown-dashboard' class='dropdown-content'>
+    <!-- <li><a class="indigo-text text-darken-4">UserName</a></li> -->
+    <li><a class="indigo-text text-darken-4" [routerLink]="['dashboard/tab/scores']">Scores</a></li>
+    <li><a class="indigo-text text-darken-4">Project</a></li>
+  </ul>
+  <div class="nav-wrapper firstclr">
+    <!-- <a></a> -->
+    <a class="brand-logo" [routerLink]="['dashboard/view']"><img src="assets/LTI_Lets_solve_logo_white_png.png" width="70px" height="58px" style="margin-top:-5px;"/></a>
+    <a class="button-collapse indigo-text text-darken-4" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
+    <ul class="hide-on-med-and-down" style="margin-left:6%">
+      <!-- <ul> -->
+      <li class="left"><a class="dropdown-button" data-activates="dropdown-dashboard" data-beloworigin="true">Dashboard</a></li>
+      <li class="left"><a class="dropdown-button" data-activates="dropdown-projects" data-beloworigin="true">Projects</a></li>
+      <!-- <li class="left"><a class="indigo-text text-darken-4" style="font-weight:bold">Users</a></li>
+      <li class="left"><a class="indigo-text text-darken-4" style="font-weight:bold">Roles</a></li>
+      <li class="left"><a class="indigo-text text-darken-4" style="font-weight:bold">Import/Export Excel</a></li>
+      <li class="left"><a class="indigo-text text-darken-4" style="font-weight:bold">App Inputs</a></li> -->
+      <li class="right"><a class="dropdown-button" data-activates='dropdown1' data-beloworigin="true"><i class="material-icons left">account_circle</i>Username</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><a class="indigo-text text-darken-4">Dashboard</a></li>
+      <li><a class="indigo-text text-darken-4">Projects</a></li>
+      <li><a class="indigo-text text-darken-4">Users</a></li>
+      <li><a class="indigo-text text-darken-4">Roles</a></li>
+      <li><a class="indigo-text text-darken-4">Import/Export Excel</a></li>
+      <li><a class="indigo-text text-darken-4">App Inputs</a></li>
+      <li><a class="indigo-text text-darken-4 dropdown-button"><i class="material-icons indigo-text text-darken-4">account_circle</i></a></li>
+    </ul>
+  </div>
+
+</nav>
+
+
+<!-- <sidenav></sidenav> -->
+<!-- <login></login> -->
+<router-outlet></router-outlet>

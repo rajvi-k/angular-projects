@@ -1,0 +1,28 @@
+<div class="card grey lighten-4 centered">
+    <div class="card-content center-align">
+        <div class="row">
+            <h6 class="col s3">Filter by project name</h6>
+            <mat-select class="col s7" [(value)]="selected">
+                <mat-option *ngFor="let proj of projects" [value]="proj">
+                    {{ proj }}
+                </mat-option>
+            </mat-select>
+            <button class="waves-effect waves-light btn col s2" (click)="getAppScores()">Generate</button>
+        </div>
+    </div>
+</div>
+
+<div class="card grey lighten-4 centered">
+
+    <div class="row">
+        <div class="card-image center-align">
+            <div id="overall_score" echarts [options]="chartOption" class="demo-chart" (chartClick)="onChartClick($event)"></div>
+        </div>
+    </div>
+    <div *ngIf="selected != null" class="row center-align">
+        <h5>Overall Application Scores</h5>
+    </div>
+</div>
+
+
+<div>{{results}}</div>

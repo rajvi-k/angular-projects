@@ -1,0 +1,672 @@
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s2"><a href="#test1" class="blue-text">General</a></li>
+      <li class="tab col s2"><a href="#test2">Form 2</a></li>
+      <li class="tab col s2"><a href="#test3">Form 3</a></li>
+      <li class="tab col s2"><a href="#test4">Form 4</a></li>
+      <li class="tab col s2"><a href="#test5">Form 5</a></li>
+    </ul>
+  </div>
+  <div id="test1" class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <!-- <mat-tab-group> -->
+        <!-- <mat-tab label="General Attributes"> -->
+        <mat-horizontal-stepper>
+          <mat-step [stepControl]="first">
+            <ng-template matStepLabel>Part 1</ng-template>
+            <div class="input-field col s6">
+              <input id="name" type="text" class="validate" #name>
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="owner" type="text" class="validate" #owner>
+              <label for="owner">Owner</label>
+            </div>
+
+            <div class="input-field col s12">
+              <input id="description" type="text" class="validate" #description>
+              <label for="description">Description</label>
+            </div>
+
+            <div>
+              <button mat-button matStepperNext (click)="openSnackBar(fname.value,lname.value)">Next</button>
+            </div>
+          </mat-step>
+          <mat-step [stepControl]="second">
+            <ng-template matStepLabel>Part 2</ng-template>
+            <div class="input-field col s6">
+              <input id="lob" type="text" class="validate" #lob>
+              <label for="lob">LOB</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="application_age" type="text" class="validate" #application>
+              <label for="application_age">Appication Age</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="operating_knowledge" type="text" class="validate" #operating>
+              <label for="operating_knowledge">Operating Knowledge</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="country_of_usage" type="text" class="validate" #country>
+              <label for="country_of_usage">Country of Usage</label>
+            </div>
+
+            <div class="input-field col s6">
+              <input id="no_of_users" type="text" class="validate" #nousers>
+              <label for="no_of_users">Number of Users</label>
+            </div>
+
+
+
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </mat-step>
+          <mat-step [stepControl]="third">
+            <ng-template matStepLabel>Part 3</ng-template>
+            <div class="input-field col s6">
+              <input id="languages_supported" type="text" class="validate" #languages>
+              <label for="languages_supported">Languages Supported</label>
+            </div>
+            <div class="col s6">
+              <br/>
+              <!-- <label>Planned DeCommission date Month / Year</label> -->
+              <input type="text" class="datepicker" id="pdcom" placeholder="Date">
+            </div>
+            <div class="input-field col s12">
+              <input id="application_doc" type="text" class="validate" #application>
+              <label for="application_doc">Application Documentation</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="user_type" type="text" class="validate" #user>
+              <label for="user_type">User Type</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="expected_growth" type="text" class="validate" #expected>
+              <label for="expected_growth">Expected User Growth</label>
+            </div>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </mat-step>
+          <mat-step [stepControl]="fourth">
+            <ng-template matStepLabel>Part 4</ng-template>
+            <div class="input-field col s6">
+              <input id="ui_type" type="text" class="validate" #uitype>
+              <label for="ui_type">UI Type</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="usability_index" type="text" class="validate" #usability>
+              <label for="usability_index">Usability Index</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="business_func" type="text" class="validate" #business>
+              <label for="business_func">Business Function</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="os" type="text" class="validate" #os>
+              <label for="os">Operating System</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="deploy_type" type="text" class="validate" #deploy>
+              <label for="deploy_type">Deployment Type</label>
+            </div>
+
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </mat-step>
+
+          <mat-step [stepControl]="fifth">
+            <ng-template matStepLabel>Part 5</ng-template>
+            <div class="input-field col s6">
+              <input id="prod_rel_freq" type="text" class="validate" #prod>
+              <label for="prod_rel_freq">Prodcution Release Frequency</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="vender_dep" type="text" class="validate" #vender>
+              <label for="vender_dep">Vender Dependency</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="func_complexity" type="text" class="validate" #func>
+              <label for="func_complexity">Functional Complexity</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="funct_fitment" type="text" class="validate" #funct>
+              <label for="funct_fitment">Functional Fitment</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="business_critically" type="text" class="validate" #business>
+              <label for="business_critically">Business Critically</label>
+            </div>
+            <mat-slider min="0" max="5" step="1" value="3" thumbLabel>HEllo</mat-slider>
+
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+        <!-- </mat-tab>
+      <mat-tab label="Tab 2">General 2</mat-tab>
+    </mat-tab-group> -->
+      </div>
+    </div>
+
+  </div>
+  <div id="test2" class="col s12">
+
+    <div class="row">
+      <div class="col s6 m3">
+        <div class="card-panel blue">
+          <h5 class="white-text">Application Name</h5>
+          <!-- <span class="new badge white-text grey center">Someone</span> -->
+          <hr/>
+          <span class="white-text">Few Details</span>
+          <span class="new badge white-text grey">Someone</span>
+        </div>
+      </div>
+      <div class="col s6 m3">
+        <div class="card-panel blue">
+          <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+          </span>
+        </div>
+      </div>
+      <div class="col s6 m3 ">
+        <div class="card-panel blue">
+          <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="test3" class="col s12">
+    <div style="display: block">
+      <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+  <div id="test4" class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <div class="card-panel blue deep-purple lighten-3">
+          <div class="row">
+            <div class="col s12">
+              <div class="card-panel blue-text">
+                <div class="col m2">Application Name</div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+
+              </div>
+            </div>
+            <div class="col s12">
+              <div class="card-panel blue-text">
+                <div class="col m2">Application Name</div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+
+              </div>
+            </div>
+            <div class="col s12">
+              <div class="card-panel blue-text">
+                <div class="col m2">Application Name</div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+
+              </div>
+            </div>
+            <div class="col s12">
+              <div class="card-panel blue-text">
+                <div class="col m2">Application Name</div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <div class="col m2 indigo lighten-5">
+                  General - 40%
+                  <div class="prog">
+                    <span class="prog-bar color-2 prog-w-40"></span>
+                  </div>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="test5" class="col s12">
+    <br/>
+    <div class="row">
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Application..</th>
+            <th>General.......</th>
+            <th>Integration...</th>
+            <th>Ticket.........</th>
+            <th>Application..</th>
+            <th>Classification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Some Applications</td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Some Applications</td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Some Applications</td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Some Applications</td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Some Applications</td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Some Applications</td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Some Applications</td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Some Applications</td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Some Applications</td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+            <td>
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="col s2">
+  <div id="progressbar">
+    <div id="bar" style="width:10%" class="blue"></div>
+    <div id="label" class="blue-text">10%</div>
+  </div>
+</div>-->

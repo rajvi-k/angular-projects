@@ -1,0 +1,57 @@
+<!-- <breadcrumb #parent>
+  <nav>
+    <div class="nav-wrapper">
+      <div class="col s12">
+        <template ngFor let-route [ngForOf]="parent.breadcrumbs">
+          <a *ngIf="!route.terminal" class="breadcrumb" href="" [routerLink]="[route.url]">{{ route.displayName }}</a>
+          <span *ngIf="route.terminal" class="breadcrumb">{{ route.displayName }}</span>
+        </template>
+      </div>
+    </div>
+  </nav>
+</breadcrumb> -->
+
+<!-- <breadcrumb #parent>
+  <nav>
+    <div class="nav-wrapper">
+      <div class="col s12">
+        <template ngFor let-route [ngForOf]="parent.breadcrumbs">
+          <a *ngIf="!route.terminal" class="breadcrumb">{{ route.displayName }}</a>
+          <span *ngIf="route.terminal" class="breadcrumb">{{ route.displayName }}</span>
+        </template>
+      </div>
+    </div>
+  </nav>
+</breadcrumb> -->
+<br>
+<nav>
+  <div class="nav-wrapper firstclr">
+    <div class="col s12">
+      <a class="breadcrumb">Dashboard</a>
+      <a class="breadcrumb">Scores</a>
+
+    </div>
+  </div>
+</nav>
+  <!-- <h5>Dashboard > Scores</h5>1 -->
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s4"><a class="active" [routerLink]="['scores']" href="#test1">Apps By score attributes</a></li>
+      <li class="tab col s4"><a [routerLink]="['applicationscores']" href="#test2">Apps by Overall Scores</a></li>
+      <li class="tab col s4">
+        <a [routerLink]="['funnel']" href="#test3">App Filter By Scores</a>
+      </li>
+    </ul>
+  </div>
+  <div id="test1" class="col s12">
+
+  </div>
+  <div id="test2" class="col s12">
+
+  </div>
+  <div id="test3" class="col s12">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

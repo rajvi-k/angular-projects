@@ -1,0 +1,26 @@
+nav ul a:hover {
+    background-color: #ffb300;
+}
+nav{
+        height: 50px;
+    line-height: 50px;
+}
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 50px;
+    line-height: 50px;
+}
+/* .collapsible{
+height:15px
+} */
+a.add{
+    color: black
+}
+a.edit{
+    color: black
+}
+a.delete{
+    color: black
+}
+a{
+    color:black
+}

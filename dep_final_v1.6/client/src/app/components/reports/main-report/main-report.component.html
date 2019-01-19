@@ -1,0 +1,73 @@
+<div class="row blue-grey darken-3">
+<div class="row">
+  <div class="col s12 m4">
+    <div *ngIf="status === 'Before Time'">
+      <div class="card z-depth-2 light-blue darken-3">
+        <div class="card-content white-text">
+          <span class="card-title">Application Status</span>
+          <p>{{status}}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="status === 'On Time'">
+      <div class="card z-depth-2 green darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Application Status</span>
+          <p>{{status}}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="status === 'Delayed'">
+      <div class="card z-depth-2 red darken-2">
+        <div class="card-content white-text">
+          <span class="card-title">Application Status</span>
+          <p>{{status}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4">
+    <div class="row">
+      <div class="card teal z-depth-2">
+        <div class="card-content white-text">
+          <span class="card-title">Overall Score</span>
+          <p>{{score}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4">
+    <div class="row">
+      <div class="card deep-purple darken-1 z-depth-2">
+        <div class="card-content white-text">
+          <span class="card-title">Overall Progress</span>
+          <p>{{percent}}%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card z-depth-2">
+      <div class="card-stacked">
+        <div class="card-content" style="display: block; overflow: hidden">
+          <app-progress-bar></app-progress-bar>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m6">
+    <div class="card z-depth-2">
+      <app-treemap></app-treemap>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <app-users-table></app-users-table>
+</div>
+</div>

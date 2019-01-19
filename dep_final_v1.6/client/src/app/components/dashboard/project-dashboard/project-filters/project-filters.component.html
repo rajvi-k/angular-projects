@@ -1,0 +1,71 @@
+<div class="container-fluid blue-grey darken-2">
+  <div class="row">
+    <app-project-details [project_details_data]="project_details_data"></app-project-details>
+  </div>
+  <div class="row">
+    <div class="card-panel indigo darken-4">
+      <div class="row">
+        <div class="col s4 m2">
+          <label for="angular2-multiselect" class="cyan-text text-accent-3"><h6>Business Criticality</h6></label>
+          <angular2-multiselect [data]="businessCriticallyList" [(ngModel)]="bcItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)"
+            (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)"></angular2-multiselect>
+        </div>
+        <div class="col s4 m2">
+          <label for="angular2-multiselect" class="cyan-text text-accent-3"><h6>Country of Usage</h6> </label>
+          <angular2-multiselect [data]="countryOfUsageList" [(ngModel)]="couItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)"
+            (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)"></angular2-multiselect>
+        </div>
+        <div class="col s4 m2">
+          <label for="angular2-multiselect" class="cyan-text text-accent-3"><h6>User Type</h6></label>
+          <angular2-multiselect [data]="userTypeList" [(ngModel)]="utItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)"
+            (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)"></angular2-multiselect>
+        </div>
+        <div class="col s4 m2">
+          <label for="angular2-multiselect" class="cyan-text text-accent-3"><h6>OS Type</h6></label>
+          <angular2-multiselect [data]="osList" [(ngModel)]="osItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)"
+            (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)"></angular2-multiselect>
+        </div>
+        <div class="col s4 m2">
+          <label for="angular2-multiselect" class="cyan-text text-accent-3"><h6>Storage Type</h6></label>
+          <angular2-multiselect [data]="storageType" [(ngModel)]="stItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)"
+            (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)"></angular2-multiselect>
+        </div>
+        <div class="col s4 m2">
+          <label for="angular2-multiselect" class="cyan-text text-accent-3"><h6>Pace Layer Category</h6></label>
+          <angular2-multiselect [data]="paceLayerCategory" [(ngModel)]="plcItems" [settings]="dropdownSettings" (onSelect)="onItemSelect($event)"
+            (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)"></angular2-multiselect>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card-panel hoverable z-depth-2 ">
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto"
+            (change)="trying($event,optionselected)">
+          <mat-autocomplete #auto="matAutocomplete">
+
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option" #optionselected (onSelectionChange)="addAppToChips($event,option)">
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+
+      <div class="row">
+        <div class="chip">
+          <img src="https://image.flaticon.com/icons/png/512/201/201556.png" alt="Info"> Click on an application(from Below) to view it's
+          Scores
+        </div>
+        <div class="chips chips-placeholder chips-initial"></div>
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <app-project-front [projectId]="project_id" [selectedApps]="selectedAppNames" [eventInput]="eventInput"></app-project-front>
+  </div>
+
+</div>

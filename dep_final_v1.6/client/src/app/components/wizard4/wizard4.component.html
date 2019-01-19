@@ -1,0 +1,87 @@
+<!-- <button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button> -->
+
+<mat-horizontal-stepper [linear]="false" class="col s10 offset-s1 first">
+  <mat-step [stepControl]="firstFormGroup" class="fis">
+
+    <ng-template matStepLabel>Create</ng-template>
+    <project-admin></project-admin>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <ng-template matStepLabel>Configure</ng-template>
+    <!-- <button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button> -->
+    <add-attribute></add-attribute>
+
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Upload</ng-template>
+    <fileio style="background:#ffebee"></fileio>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>View</ng-template>
+
+    <div>
+      <div>
+        <div class="row">
+          <div class="row">
+            <div class="col s12, m12" *ngIf="this.role!='Executive'">
+              <h4>Select Project</h4>
+            </div>
+          </div>
+          <div class="row">
+            <!-- *ngIf="this.role=='Executive'" -->
+            <div *ngIf="this.role=='Executive'; then thenBlock; else elseBlock"> </div>
+            <ng-template #thenBlock>
+              <div class="col s12 m12">
+                <input class="col s11 m11" type="text" value="{{this.proj_Name}}" disabled/>
+                <a class="btn-floating btn-large waves-effect waves-light blue" (click)="setProjNameE()"><i class="material-icons">arrow_forward</i></a>
+              </div>
+
+            </ng-template>
+
+            <ng-template #elseBlock>
+              <div class="col s12 m12">
+                <!-- <label>Project Name</label> -->
+                <select class="col s11 m11" #pname id="pname1" (change)="setProjName()">
+                          <option value="" disabled selected>Select Project</option>
+                          <option *ngFor="let project of projects">{{project}}</option>
+              </select>
+                <a class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">arrow_forward</i></a>
+              </div>
+            </ng-template>
+          </div>
+          <div class="row">
+            <div class="col s6 m6">
+              <a *ngIf="flag1==true" class="col s6 m6 btn waves-effect waves-light blue" (click)="setProjName('ui')">Input Form UI</a>
+            </div>
+            <!-- [routerLink]="['/dashboard/excel']" -->
+            <div class="col s6 m6">
+              <a *ngIf="flag1==true" class="col s6 m6 btn waves-effect waves-light blue" (click)="setProjName('excel')">Input Form Excel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

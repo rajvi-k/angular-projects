@@ -1,0 +1,18 @@
+<!-- <h2 class="header">Horizontal Card</h2> -->
+<div class="card horizontal z-depth-2">
+  <div class="card-image circle ">
+    <div class="card-panel blue z-depth-4 ">
+      <span class="white-text">
+                Number of Apps Completed
+              </span>
+    </div>
+  </div>
+  <div class="card-stacked">
+    <div class="card-content ">
+      <div style="display: block">
+        <canvas baseChart [data]="polarAreaChartData" [labels]="polarAreaChartLabels" [legend]="polarAreaLegend" [chartType]="polarAreaChartType"
+          (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

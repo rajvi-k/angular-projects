@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col s12">
+    <h4 class="header">Add New User</h4>
+
+    <div class="row">
+      <!-- <div class="input-field col s12">
+        <input id="project_name" type="text" class="validate" required="" aria-required="true" #pname>
+        <label for="project_name" data-error="Enter Project name correctly" data-success="right">Project Name</label>
+      </div> -->
+      <select class="col s12" #pname id="pname1">
+          <option value="" disabled selected>Projects</option>
+          <option *ngFor="let project of projects">{{project.project_name}}</option>
+     </select>
+    </div>
+
+    <div class="row">
+      <div class="input-field inline col s6">
+        <input id="user_email" type="email" class="validate" required="" aria-required="true" #uemail>
+        <label for="user_email" data-error="Enter correct email-id" data-success="">User Email</label>
+      </div>
+
+      <div class="input-field col s6">
+        <select required="" aria-required="true" materialize="material_select" #urole>
+              <option value="" disabled selected>Role</option>
+              <option value="Executive">Executive</option>
+              <!-- <option value="Manager">Manager</option> -->
+         </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="user_name" type="text" class="validate" required="" aria-required="true" #uname>
+        <label for="user_name" data-error="Enter username" data-success="">User Name</label>
+      </div>
+
+      <div class="input-field col s6">
+        <input id="password" type="password" class="validate" required="" aria-required="true" #upwd>
+        <label for="password" data-error="Enter password" data-success="">Password</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12" >
+        <button class="btn waves-effect waves-light" type="submit" (click)="addUser(pname.value,uemail.value,uname.value,upwd.value,urole.value)" [routerLink]="['/dashboard/user-edit']"
+          name="action">Add User
+                <i class="material-icons right">send</i>
+              </button>
+      </div>
+    </div>
+  </div>
+</div>

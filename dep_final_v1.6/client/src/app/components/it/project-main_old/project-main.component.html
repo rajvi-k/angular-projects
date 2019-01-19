@@ -1,0 +1,835 @@
+<!-- <div class="row">
+  <h5>Project Name</h5>
+  <hr/>
+</div> -->
+<br/>
+<br/>
+<br/>
+
+<div class="row">
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>Application</th>
+        <th>General......</th>
+        <th>Integration...</th>
+        <th>Ticket.........</th>
+        <th>Application..</th>
+        <th>Classification</th>
+      </tr>
+    </thead>
+    <tbody id="table_input">
+      <tr>
+        <td><a class="waves-effect waves-light  modal-trigger" href="#modal1">Some Application 1</a>
+        </td>
+        <td>
+          <a class="modal-trigger" href="#modal1" (click)="tempFunc('test1')">
+            <div id="progressbar">
+              <div id="bar" style="width:10%" class="blue"></div>
+              <div id="label" class="blue-text">10%</div>
+            </div>
+          </a>
+        </td>
+        <td>
+          <a class="modal-trigger" href="#modal1" (click)="tempFunc('test2')">
+            <div id="progressbar">
+              <div id="bar" style="width:10%" class="blue"></div>
+              <div id="label" class="blue-text">10%</div>
+            </div>
+          </a>
+        </td>
+        <td>
+          <a class="modal-trigger" href="#modal1" (click)="tempFunc('test3')">
+            <div id="progressbar">
+              <div id="bar" style="width:10%" class="blue"></div>
+              <div id="label" class="blue-text">10%</div>
+            </div>
+          </a>
+        </td>
+        <td>
+          <a class="modal-trigger" href="#modal1" (click)="tempFunc('test4')">
+            <div id="progressbar">
+              <div id="bar" style="width:10%" class="blue"></div>
+              <div id="label" class="blue-text">10%</div>
+            </div>
+          </a>
+        </td>
+        <td>
+          <a class="modal-trigger" href="#modal1" (click)="tempFunc('test7')">
+            <div id="progressbar">
+              <div id="bar" style="width:10%" class="blue"></div>
+              <div id="label" class="blue-text">10%</div>
+            </div>
+          </a>
+        </td>
+        <td >
+          <a class="modal-trigger" href="#modal2">
+            <div id="progressbar">
+              <div id="label" class="blue-text">Scores</div>
+            </div>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td><a class="waves-effect waves-light  modal-trigger" href="#modal1">Some Application</a>
+        </td>
+        <td>
+          <a class="modal-trigger" href="#modal1" (click)="tempFunc('test1')">
+            <div id="progressbar">
+              <div id="bar" style="width:90%" class="blue"></div>
+              <div id="label" class="white-text">90%</div>
+            </div>
+          </a>
+        </td>
+        <td>
+            <a class="modal-trigger" href="#modal1" (click)="tempFunc('test2')">
+          <div id="progressbar">
+            <div id="bar" style="width:10%" class="blue"></div>
+            <div id="label" class="blue-text">10%</div>
+          </div></a>
+        </td>
+        <td>
+            <a class="modal-trigger" href="#modal1" (click)="tempFunc('test3')">
+          <div id="progressbar">
+            <div id="bar" style="width:10%" class="blue"></div>
+            <div id="label" class="blue-text">10%</div>
+          </div></a>
+        </td>
+        <td>
+            <a class="modal-trigger" href="#modal1" (click)="tempFunc('test4')">
+          <div id="progressbar">
+            <div id="bar" style="width:10%" class="blue"></div>
+            <div id="label" class="blue-text">10%</div>
+          </div></a>
+        </td>
+        <td>
+            <a class="modal-trigger" href="#modal1" (click)="tempFunc('test7')">
+          <div id="progressbar">
+            <div id="bar" style="width:10%" class="blue"></div>
+            <div id="label" class="blue-text">10%</div>
+          </div>
+        </a>
+        </td>
+
+        <td >
+            
+            <a class="modal-trigger" href="#modal2">
+            <div id="progressbar">
+              <div id="label" class="blue-text">Scores</div>
+            </div>
+          </a>
+
+        </td>
+      </tr>
+      <tr>
+        <td><a class="waves-effect waves-light  modal-trigger" href="#modal1" push-right >Some Application</a>
+        </td>
+        <td>
+          <a class="modal-trigger" href="#modal1" (click)="tempFunc('test1')">
+            <div id="progressbar">
+              <div id="bar" style="width:10%" class="blue"></div>
+              <div id="label" class="blue-text">10%</div>
+            </div>
+          </a>
+        </td>
+        <td>
+            <a class="modal-trigger" href="#modal1" (click)="tempFunc('test2')">
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+        </a>
+        </td>
+        <td>
+            <a class="modal-trigger" href="#modal1" (click)="tempFunc('test3')">
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+        </a>
+        </td>
+        <td>
+            <a class="modal-trigger" href="#modal1" (click)="tempFunc('test4')">
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div></a>
+
+        </td>
+        <td>
+            <a class="modal-trigger" href="#modal1" (click)="tempFunc('test7')">
+              <div id="progressbar">
+                <div id="bar" style="width:10%" class="blue"></div>
+                <div id="label" class="blue-text">10%</div>
+              </div>
+        </a>
+        </td>
+        <td >
+            <a class="modal-trigger" href="#modal2">
+                <div id="progressbar">
+                  <div id="label" class="blue-text">Scores</div>
+                </div>
+              </a>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+  <div class="row">
+    <div class="center">
+      <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- <div class="row center">
+    <a href="#" class="btn center waves-effect waves-light" id="addRow" (click)="addRow()">
+        <i class="material-icons">add</i></a>
+  </div> -->
+</div>
+
+<!-- Input Modal -->
+<div id="modal1" class="modal">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s2"><a href="#test1" >General</a></li>
+      <li class="tab col s2"><a href="#test2">Integrate</a></li>
+      <li class="tab col s2"><a href="#test3">Ticket</a></li>
+      <li class="tab col s2"><a href="#test4">App Type</a></li>
+      <li class="tab col s2"><a href="#test7">Classification</a></li>
+      <!-- <li class="tab col s2"><a href="#test5">Classification</a></li> -->
+    </ul>
+  </div>
+  <!-- General attribute -->
+  <div id="test1" class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <!-- <mat-tab-group1> -->
+        <!-- <mat-tab label="General Attributes"> -->
+        <mat-horizontal-stepper>
+                <mat-step [stepControl]="first">
+                    <ng-template matStepLabel>Part 1</ng-template>
+                          <div class="input-field col s6">
+                            <input id="name" type="text" class="validate" #name>
+                            <label for="name">Name</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input id="owner" type="text" class="validate" #owner>
+                            <label for="owner">Owner</label>
+                          </div>
+
+                          <div class="input-field col s12">
+                            <input id="description" type="text" class="validate" #description>
+                            <label for="description">Description</label>
+                          </div>
+
+                           
+                          <div  class="col s12">
+                            <button mat-button matStepperNext (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                          </div>
+          </mat-step>
+
+
+         
+          <mat-step [stepControl]="second">
+            <ng-template matStepLabel>Part 2</ng-template>
+                        <div class="input-field col s6">
+                          <input id="lob" type="text" class="validate" #lob>
+                          <label for="lob">LOB</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="application_age" type="text" class="validate" #application>
+                          <label for="application_age">Appication Age</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <input id="operating_knowledge" type="text" class="validate" #operating>
+                          <label for="operating_knowledge">Operating Knowledge</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="country_of_usage" type="text" class="validate" #country>
+                          <label for="country_of_usage">Country of Usage</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                          <input id="no_of_users" type="text" class="validate" #nousers>
+                          <label for="no_of_users">Number of Users</label>
+                        </div>
+
+                        <div class="col s12">
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+          </mat-step>
+          <mat-step [stepControl]="third">
+            <ng-template matStepLabel>Part 3</ng-template>
+                          <div class="input-field col s6">
+                            <input id="languages_supported" type="text" class="validate" #languages>
+                            <label for="languages_supported">Languages Supported</label>
+                          </div>
+                          <div class="col s6">
+                            <br/>
+                            <!-- <label>Planned DeCommission date Month / Year</label> -->
+                            <input type="text" class="datepicker" id="pdcom" placeholder="Date">
+                          </div>
+                          <div class="input-field col s12">
+                            <input id="application_doc" type="text" class="validate" #application>
+                            <label for="application_doc">Application Documentation</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input id="user_type" type="text" class="validate" #user>
+                            <label for="user_type">User Type</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input id="expected_growth" type="text" class="validate" #expected>
+                            <label for="expected_growth">Expected User Growth</label>
+                          </div>
+
+                        
+                          
+                          <div class="col s12">
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext>Next</button>
+                          </div>
+          </mat-step>
+
+
+          <!-- GENERAL 4TH -->
+          <mat-step [stepControl]="fourth">
+            <ng-template matStepLabel>Part 4</ng-template>
+                        <div class="input-field col s6">
+                          <input id="ui_type" type="text" class="validate" #uitype>
+                          <label for="ui_type">UI Type</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="usability_index" type="text" class="validate" #usability>
+                          <label for="usability_index">Usability Index</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <input id="business_func" type="text" class="validate" #business>
+                          <label for="business_func">Business Function</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="os" type="text" class="validate" #os>
+                          <label for="os">Operating System</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="deploy_type" type="text" class="validate" #deploy>
+                          <label for="deploy_type">Deployment Type</label>
+                        </div>
+
+                        <div class="col s12">
+                          <button mat-button matStepperPrevious>Back</button>
+                          <button mat-button matStepperNext>Next</button>
+                        </div>
+          </mat-step>
+
+
+          <!-- GENERAL 5TH -->
+          <mat-step [stepControl]="fifth">
+            <ng-template matStepLabel>Part 5</ng-template>
+                        <div class="input-field col s6">
+                          <input id="prod_rel_freq" type="text" class="validate" #prod>
+                          <label for="prod_rel_freq">Prodcution Release Frequency</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="vender_dep" type="text" class="validate" #vender>
+                          <label for="vender_dep">Vender Dependency</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <input id="func_complexity" type="text" class="validate" #func>
+                          <label for="func_complexity">Functional Complexity</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="funct_fitment" type="text" class="validate" #funct>
+                          <label for="funct_fitment">Functional Fitment</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="business_critically" type="text" class="validate" #business>
+                          <label for="business_critically">Business Critically</label>
+                        </div>
+            
+
+
+                              <!-- dynamic fields for  general attributes-->
+                              <dynamic-form [questions]="generalDynamicAttributes"></dynamic-form>
+                              <!-- dynamic fields for  general attributes ending-->
+
+
+                    <div class="col s12">
+                      <button mat-button matStepperPrevious>Back</button>
+                      
+                    </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+        <!-- </mat-tab>
+      <mat-tab label="Tab 2">General 2</mat-tab>
+    </mat-tab-group> -->
+      </div>
+    </div>
+  </div>
+  <!-- General attribute ends-->
+
+
+
+  <!-- Integral attribute -->
+  <div id="test2" class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <!-- <mat-tab-group> -->
+        <!-- <mat-tab label="Integral Attributes"> -->
+        <mat-horizontal-stepper>
+          <mat-step [stepControl]="first">
+            <ng-template matStepLabel>Part 1</ng-template>
+                      <div class="input-field col s6">
+                        <input id="no_integ" type="text" class="validate" #nointeg>
+                        <label for="no_integ">Number of integration</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="point_to_point" type="text" class="validate" #point>
+                        <label for="point_to_point">Point to point Integration</label>
+                      </div>
+
+                      <div class="input-field col s12">
+                        <input id="no_middleware" type="text" class="validate" #nomiddleware>
+                        <label for="no_middleware">Number of middlewares</label>
+                      </div>
+
+                      <div class="col s12">
+                        <button mat-button matStepperNext (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                      </div>
+          </mat-step>
+          <mat-step [stepControl]="second">
+            <ng-template matStepLabel>Part 2</ng-template>
+                          <div class="input-field col s6">
+                            <input id="api_services" type="text" class="validate" #apiservices>
+                            <label for="api_Services">Number of Api per services</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input id="func_api" type="text" class="validate" #funcapi>
+                            <label for="func_api">Functionality as per api</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input id="affinity_score" type="text" class="validate" #affinityscore>
+                            <label for="affinity_score">Affinity Score</label>
+                          </div>
+                        
+
+                              <!-- dynamic fields for  integration attributes-->
+                              <dynamic-form [questions]="integrationDynamicAttributes"></dynamic-form>
+                              <!-- dynamic fields for  integration attributes ending-->
+
+
+                          <div class="col s12">
+                            <button mat-button matStepperPrevious>Back</button>
+                            
+                          </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+        <!-- </mat-tab>
+      <mat-tab label="Tab 2">General 2</mat-tab>
+    </mat-tab-group> -->
+      </div>
+    </div>
+  </div>
+  <!-- Integrate attribute close -->
+  <!-- Ticket attributes -->
+  <div id="test3" class="col s12">
+    <div class="row">
+      <div class="col s12">
+
+        <h5>Tickets</h5>
+        <hr/>
+
+                        <div class="input-field col s6">
+                          <input id="ticket_attributes" type="text" class="validate" #ticketattributes>
+                          <label for="ticket_attributes">Ticket attribute</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="total_no_of_tickets" type="text" class="validate" #totaltickets>
+                          <label for="total_no_of_tickets">Total Number Of Tickets</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                          <input id="no_of_Crs" type="text" class="validate" #nocrs>
+                          <label for="no_of_Crs">Number of CRS</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                          <input id="no_of_bug" type="text" class="validate" #nobug>
+                          <label for="no_of_bug">Number of Bug FIxes</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                          <input id="completion_percent" type="text" class="validate" #completion>
+                          <label for="completion_percent">Completion Percentage</label>
+                        </div>
+
+                              <!-- dynamic fields for  integration attributes-->
+                              <dynamic-form [questions]="ticketDynamicAttributes"></dynamic-form>
+                              <!-- dynamic fields for  integration attributes ending-->
+      </div>
+    </div>
+  </div>
+  <!-- Ticket attribute close -->
+
+  <!-- Application Type -->
+  <div id="test4" class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <ul class="tabs">
+            <li class="tab col s4"><a href="#test5">Custom Attributes</a></li>
+            <li class="tab col s4"><a href="#test6">Package Attributes</a></li>
+          </ul>
+        </div>
+        <div id="test5" class="col s12">
+          <div class="row">
+            <mat-horizontal-stepper>
+              <mat-step [stepControl]="first">
+                <ng-template matStepLabel>Part 1</ng-template>
+                            <div class="input-field col s6">
+                              <input id="ui_dev" type="text" class="validate" #uidev>
+                              <label for="ui_dev">UI Dev Language</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="ui_lib_framework" type="text" class="validate" #uilibframework>
+                              <label for="ui_lib_framework">Ui Library Framework With Version</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="application_version" type="text" class="validate" #applicationversion>
+                              <label for="application_version">Application layer library framework with version</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="application_layer_dev_language" type="text" class="validate" #applicationlayerdevlanguage>
+                              <label for="application_layer_dev_language">Application Layer Dev Language</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                              <input id="application_layer_products_with_version" type="text" class="validate" #applicationproductversion>
+                              <label for="application_layer_products_with_version">Application Layer Products With Version</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                              <input id="middleware_with_version" type="text" class="validate" #middlewarewithversion>
+                              <label for="middleware_with_version">Middleware With Version</label>
+                            </div>
+
+                         
+
+                <div class="col s12">
+                  <button mat-button matStepperNext (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                </div>
+              </mat-step>
+
+
+              <mat-step [stepControl]="second">
+                <ng-template matStepLabel>Part 2</ng-template>
+                              <div class="input-field col s6">
+                                <input id="storage_type" type="text" class="validate" #storage>
+                                <label for="storage_type">Storage Type</label>
+                              </div>
+                              <div class="input-field col s6">
+                                <input id="storage_product_and_version" type="text" class="validate" #storageproductandversion>
+                                <label for="storage_product_and_version">Storage product and version</label>
+                              </div>
+                              <div class="input-field col s12">
+                                <input id="persistence_database_framework_with_version" type="text" class="validate" #persistencedatabaseversion>
+                                <label for="persistence_database_framework_with_version">Persistence Database Framework With Version</label>
+                              </div>
+                              <div class="input-field col s6">
+                                <input id="scm_tool" type="text" class="validate" #scmtool>
+                                <label for="scm_tool">Scm Tool</label>
+                              </div>
+
+                              <div class="input-field col s6">
+                                <input id="completion_percentage" type="text" class="validate" #completionpercentage1>
+                                <label for="completion_percentage">Completion Percentage</label>
+                              </div>
+
+
+                              <!-- dynamic fields for  custom Attributes-->
+                              <dynamic-form [questions]="customDynamicAttributes"></dynamic-form>
+                              <!-- dynamic fields for  custom Attributes ending-->
+
+                              <div class="col s12">
+                                <button mat-button matStepperNext (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                              </div>
+              </mat-step>
+
+            </mat-horizontal-stepper>
+          </div>
+        </div>
+        <!-- Project attributes -->
+        <div id="test6" class="col s12">
+          <div class="row">
+            <mat-horizontal-stepper>
+              <mat-step [stepControl]="first">
+                <ng-template matStepLabel>Part 1</ng-template>
+                            <div class="input-field col s6">
+                              <input id="name_package" type="text" class="validate" #namepackage>
+                              <label for="name_package">Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="package" type="text" class="validate" #package>
+                              <label for="package">Package</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                              <input id="description_package" type="text" class="validate" #descriptionpackage>
+                              <label for="description_package">Description</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                              <input id="vendor" type="text" class="validate" #vendor>
+                              <label for="vendor">Vendor</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                              <input id="completion_percentage_package" type="text" class="validate" #completionpercentagepackage>
+                              <label for="completion_percentage_package">Completion Percentage</label>
+                            </div>
+
+                            <!-- dynamic fields for  Project package attributes-->
+                            <dynamic-form [questions]="packageDynamicAttributes"></dynamic-form>
+                            <!-- dynamic fields for  Project  package attributes ending-->
+
+                           
+              </mat-step>
+
+
+
+
+            </mat-horizontal-stepper>
+          </div>
+        </div>
+        <!-- project attributes close -->
+
+      </div>
+    </div>
+  </div>
+  <!-- Application Type -->
+
+  <!-- Classification -->
+
+  <div id="test7" class="col s12">
+      <div class="row">
+        <div class="col s12">
+  
+          <h5>Classification</h5>
+          <hr/>
+  
+                          <div class="input-field col s6">
+                            <input id="ticket_attributes" type="text" class="validate" #ticketattributes>
+                            <label for="ticket_attributes">Pace Layer Category</label>
+                          </div>
+
+                          <div class="input-field col s6">
+                            <input id="total_no_of_tickets" type="text" class="validate" #totaltickets>
+                            <label for="total_no_of_tickets">Four R's</label>
+                          </div>
+  
+                          
+                          
+                                <!-- dynamic fields for  integration attributes-->
+                                <dynamic-form [questions]="ticketDynamicAttributes"></dynamic-form>
+                                <!-- dynamic fields for  integration attributes ending-->
+        </div>
+      </div>
+    </div>
+    <!-- class ends -->
+</div>
+
+
+
+<!-- Scores -->
+<div id="modal2" class="modal">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s2"><a href="#testscore">Scores</a></li>
+    </ul>
+  </div>
+
+
+  <div id="testscore" class="col s12">
+    <div class="row">
+      <div class="col s12">
+        <!-- <mat-tab-group> -->
+        <!-- <mat-tab label="Optimize Scores"> -->
+
+
+        <!-- OPTIMIZE score -->
+        <mat-horizontal-stepper>
+          <mat-step [stepControl]="first">
+            <ng-template matStepLabel class="pink-text">Optimize</ng-template>
+            
+            <h3>Enter optimize score</h3>
+          
+             <div class="row"> 
+               <span class="col s6 score ">Stability</span><span class="col s6 score ">Maturity</span>
+              </div>
+              <mat-slider class="primary" tickInterval="1.0"  ng-model="color.blue" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+              <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+               
+
+              <div class="row"> 
+                  <span class="col s6 score">Availibility </span> <span class="col s6 score ">Scalability </span >
+                 </div>
+                 <mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+                 <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+
+                 <div class="row"> 
+                    <span class="col s6 score">Cloud Applicabilty </span> <span class="col s6 score">Current cloud</span >
+                   </div><mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+                   <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+
+                   <div class="row"> 
+                      <span class="col s6 score">Redundency</span> <span class="col s6 score">License Optimization</span >
+                     </div><mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+                     <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+
+                     
+                     <div class="row"> 
+                        <span class="col s6 score">Technical Debt</span> 
+                       </div><mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+                       <!-- Optimize score ends -->
+       
+            <div  class="col s12">
+              <button mat-button matStepperNext (click)="openSnackBar(fname.value,lname.value)">Next</button>
+            </div>
+          </mat-step>
+
+
+          <!-- Digitize score -->
+          <mat-step [stepControl]="second">
+            <ng-template matStepLabel>Digitize</ng-template>
+            <h3>Enter Digitize score</h3>
+                  <div class="row"> 
+                    <span class="col s6 score">Straight-through Processing Adoption</span><span class="col s6 score">Api Applicability</span>
+                  </div>
+                  <mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+                  <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+                    
+
+                  <div class="row"> 
+                    <span class="col s6 score">Current Api Adoption</span> <span class="col s6 score">Technology Obsolecence </span>
+                      </div>
+                      <mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+                      <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+
+                      <div class="row"> 
+                        <span class="col s6 score">Mobility Enablement Scope</span><span class="col s6 score">Current Mobility Adoption Level</span>
+                        </div><mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+                        <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+
+                        <div class="row"> 
+                          <span class="col s6 score"> Self Service Adoption</span> 
+                          </div>
+                          <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+                    <!-- digitalize_scores ends -->
+              <div class="col s12">
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+          </mat-step>
+
+          <!-- Expedite scores -->
+          <mat-step [stepControl]="third">
+            <ng-template matStepLabel>Expediate</ng-template>
+            <h3>Enter Expediate score</h3>
+        
+          <div class="row"> 
+            <span class="col s6 score">Testing Automation Adoption</span><span class="col s6 score">DevOps Applicability</span >
+           </div><mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+           <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+           <div class="row"> 
+            <span class="col s6 score"> Current DevOps Adoption </span></div>
+           <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+           <!-- expedite_scores: over -->
+         
+
+          <div class="col s12">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </mat-step>
+
+        <!-- Monitize score -->
+          <mat-step [stepControl]="fourth">
+            <ng-template matStepLabel>Monitize</ng-template>
+            <h3>Enter Monitize score</h3>
+
+
+            <div class="row"> 
+              <span class="col s6 score">Unique Functionality </span><span class="col s6 score"> Registered as Ip</span >
+             </div><mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+             <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+
+             <div class="row"> 
+              <span class="col s6 score">Current ROI  Realization Model  </span> <span class="col s6 score">Market Potential</span >
+             </div><mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+             <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+
+             <div class="row"> 
+              <span class="col s6 score">  Ease of Monetization</span> <span class="col s6 score"> Monetization Model</span >
+             </div><mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+             <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+            <!-- Monitize score over -->
+            <div  class="col s12">
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </mat-step>
+          <mat-step [stepControl]="fifth">
+            <ng-template matStepLabel>Innovation</ng-template>
+            <h3>Enter Innovation score</h3>
+
+            <!-- Innovation score -->
+
+            <div class="row"> 
+              <span class="col s6 score">  AI/ML Applicability</span> <span class="col s6 score">Chatbot Applicability</span >
+             </div><mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+             <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+
+             <div class="row"> 
+              <span class="col s6 score">  RPA Applicability</span> <span class="col s6 score">Blockchain Applicability</span >
+             </div><mat-slider tickInterval="1.0" class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+             <mat-slider tickInterval="1.0"  class="col s6" min="0" max="5" step="1" value="3" thumbLabel></mat-slider>
+
+
+            <!-- Innovation score over -->
+            <div  class="col s12">
+              <button mat-button matStepperPrevious>Back</button>
+         
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+        <!-- </mat-tab>
+      <mat-tab label="Tab 2">General 2</mat-tab>
+    </mat-tab-group> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="fixed-action-btn horizontal">
+  <a class="btn-floating btn-large red" id="addRow" (click)="addRow()">
+      <i class="large material-icons">add</i>
+    </a>
+</div>

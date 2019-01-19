@@ -1,0 +1,15 @@
+.shadow-class{
+    position: relative;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 5px;
+    background: white
+    }
+
+.demo-chart
+{
+height:400px
+}
+.label_color{
+color:black
+
+}

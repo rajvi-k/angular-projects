@@ -1,0 +1,45 @@
+<div class="container-fluid blue-grey darken-4">
+  <div class="card-panel green">
+    <span class="white-text">
+      <b>
+        Total Number of Projects
+      </b>
+         
+          <span class="badge white blue-text text-darken-2 right-align"><b>{{numberProjects|async}}</b></span>
+    </span>
+  </div>
+  <div class="card-panel indigo darken-4">
+    <span class="black-text">
+            <table class="card-panel centered bordered">
+                <thead class="white-text">
+                  <tr class="card-panel blue z-depth-4 hoverable">
+                      <th>Name</th>
+                      <th>Description</th>
+                      <th>Type</th>
+                      <th>Start Date</th>
+                      <th>Delivery Date</th>
+                      <th>Budget</th>
+                      <th>Number of Applications</th>
+                      <th></th>
+                  </tr>
+                </thead>
+        
+                <tbody class="card-panel">
+                  
+                  <tr *ngFor="let project of projectDescriptions|async ">
+                   <th class="center-align"> {{project.project_name|titlecase}}</th>
+                   <td> {{project.description|titlecase}}</td>
+                   <td> {{project.project_type|titlecase}}</td>
+                   <td> {{project.start_date| date:"MM/dd/yy"}}</td>
+                   <td> {{project.delivery_date| date:"MM/dd/yy"}}</td>
+                   <td> {{project.project_budget|titlecase}}</td>
+                   <td style="padding-right:80px" ><span class="badge green white-text">{{project.numberOfApplications}}</span> </td>
+    <td> <a class="btn-flat waves-effect waves-light" (click)="projectRoute(project.project_name)" [routerLink]="['/dashboard','project',project.project_name]"><i class="material-icons tiny">send</i></a></td>
+
+    </tr>
+    </tbody>
+    </table>
+
+    </span>
+  </div>
+</div>

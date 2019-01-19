@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-image">
+    <div class="row">
+      
+        <ngx-charts-gauge [view]="view" [scheme]="colorScheme" [results]="single" [min]="0" [max]="total" [angleSpan]="240" [startAngle]="-120"
+          [units]="'Apps'" [bigSegments]="10" (select)="onSelect($event)">
+        </ngx-charts-gauge>
+
+    
+    </div>
+
+    <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" href="#modal2"><i class="material-icons">zoom_out_map</i></a>
+  </div>
+  <div class="card-content blue-text">
+    <h6 class="center-align">
+      Apps by Business Criticality
+    </h6>
+
+  </div>
+</div>
+
+<div id="modal2" class="modal modal-fixed-footer">
+
+
+  <div class="modal-content center-align">
+    <div class="center-align">
+      <div class="row">
+        <div class="text-blue">
+          <h4>Apps by Business Criticality</h4>
+        </div>
+        <div class="col s6">
+          <ngx-charts-gauge [view]="[400,400]" [scheme]="colorScheme" [results]="single" [min]="0" [max]="total" [angleSpan]="240"
+            [startAngle]="-120" [units]="'Apps'" [bigSegments]="10" [smallSegments]="5" (select)="onSelect($event)">
+          </ngx-charts-gauge>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="modal-action  modal-close waves-effect waves-green btn-flat ">Close</a>
+  </div>
+</div>

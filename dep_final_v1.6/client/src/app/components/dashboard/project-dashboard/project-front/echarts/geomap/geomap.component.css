@@ -1,0 +1,9 @@
+.demo-chart-1{
+    height: 270px;
+    width:700px;
+  } 
+
+  .card .card-content.country {
+    padding: 10px;
+    border-radius: 0 0 2px 2px;
+}

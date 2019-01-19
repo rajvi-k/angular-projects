@@ -1,0 +1,48 @@
+<div *ngIf="details">
+  <div class="row">
+    <div *ngFor="let category of categories;let i=index">
+      <div *ngIf="category=='name' || category=='description' || category=='owner' ||category=='os'||category=='country_of_usage'">
+          <div *ngIf="category=='name'" class="card-panel truncate col s6 m2 z-depth-2 blue" title="{{details[category]}}">
+              <span class="white-text">
+            <h6><b>{{category|titlecase}}</b></h6>
+           <p> {{details[category]}}</p>
+          </span>
+            </div>
+        <div *ngIf="category=='description'" class="card-panel  col s6 m10 z-depth-2  deep-purple darken-2" title="{{details[category]}}">
+          <span class="white-text truncate">
+      <h6><b >{{category|titlecase}}</b></h6>
+     <p class="truncate"> {{details[category]}}</p>
+    </span>
+        </div>
+        
+        <div *ngIf="!(category=='description'|| category=='name')" class="card-panel truncate col s6 m4 z-depth-2 " title="{{details[category]}}">
+          <span class="blue-text">
+        <h6><b>{{category|titlecase}}</b></h6>
+       <p> {{details[category]}}</p>
+      </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s5">
+    <div class="card-panel blue lighten-5">
+      <table class="responsive bordered striped highlight centered">
+        <tbody>
+          <div *ngFor="let category of categories">
+            <tr [hidden]="category=='name' || category=='description' || category=='owner' ||category=='os'||category=='country_of_usage'">
+
+              <th><span class="blue-text">{{category|titlecase}}</span></th>
+              <td><span class="black-text truncate">{{details[category]}}</span></td>
+
+            </tr>
+          </div>
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+  </div>
+</div>

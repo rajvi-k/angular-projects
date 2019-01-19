@@ -1,0 +1,47 @@
+<div>
+  <div>
+    <div class="row">
+      <div class="row">
+        <div class="col s12, m12" *ngIf="this.role!='Executive'">
+          <h4>Select Project</h4>
+        </div>
+      </div>
+      <div class="row">
+        <!-- *ngIf="this.role=='Executive'" -->
+        <div *ngIf="this.role=='Executive'; then thenBlock; else elseBlock"> </div>
+        <ng-template #thenBlock>
+        <div class="col s12 m12">
+          <input class="col s11 m11" type="text" value ="{{this.proj_Name}}" disabled/>
+          <a class="btn-floating btn-large waves-effect waves-light blue" (click)="setProjNameE()"><i class="material-icons">arrow_forward</i></a>
+        </div>
+       
+      </ng-template>
+
+      <ng-template #elseBlock>
+          <div *ngIf="projects.length>0" class="col s12 m12">
+              <!-- <label>Project Name</label> -->
+              <select class="col s11 m11" #pname id="pname1" (change)="setProjName()">
+                          <option value="" disabled selected>Select Project</option>
+                          <option *ngFor="let project of projects">{{project}}</option>
+              </select>
+              <a class="btn-floating btn-large waves-effect waves-light blue" (click)="setProjName()"><i class="material-icons">arrow_forward</i></a>
+            </div>
+      </ng-template>
+      </div>
+      <div class="row">
+        <div class="col s6 m6">
+          <a *ngIf="flag1==true" class="col s6 m6 btn waves-effect waves-light blue" (click)="setProjName('ui')" >Input Form UI</a>
+        </div>
+        <!-- [routerLink]="['/dashboard/excel']" -->
+        <div class="col s6 m6">
+          <a *ngIf="flag1==true" class="col s6 m6 btn waves-effect waves-light blue" (click)="setProjName('excel')">Input Form Excel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

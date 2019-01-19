@@ -1,0 +1,437 @@
+import { Component, OnInit, OnChanges, ElementRef } from '@angular/core';
+import { LocalDataSource } from 'ng2-smart-table';
+import { JsonPipe } from '@angular/common';
+import { ExelSettingsModule } from '../../modules/exel-settings/exel-settings.module';
+import { AppService } from '../../services/app.service';
+import { Observable } from 'rxjs';
+import { ProjectApp } from '../../models/app-model';
+import { ActivatedRoute } from '@angular/router';
+import { MappingService } from '../../services/mapping.service';
+@Component({
+  selector: 'app-exel4',
+  templateUrl: './exel4.component.html',
+  styleUrls: ['./exel4.component.css']
+})
+export class Exel4Component implements OnInit {
+
+  source: LocalDataSource;
+  private appObsvr: Observable<any[]>;
+  private newApp: ProjectApp;
+  private apps: ProjectApp[];
+  public apps$: Observable<ProjectApp[]>;
+  public exelData:any[]=[];
+  config: ExelSettingsModule = new ExelSettingsModule()
+  constructor(private appSvc: AppService, private el: ElementRef,
+    private route: ActivatedRoute,private mappingSvc: MappingService ) {
+ 
+    //returns array of applications
+   // this.apps$ = this.appSvc.getApps();
+
+  //this.apps$.subscribe(_ => this.apps=_);
+
+ 
+    //this.appSvc.getApps().subscribe(_ =>this.apps=_)
+
+    
+  }
+
+ 
+  ngOnInit(){
+      //this.appSvc.getApps().subscribe(_ =>this.apps=_)
+      //this.apps$ = this.appSvc.getApps();
+      let app = this.route.snapshot.data["appResolve"];
+      
+      this.exelData=this.mappingSvc.convertToExel(app)
+   
+      this.source = new LocalDataSource(this.config.data);
+      this.appSvc.getApps().subscribe(data => {
+        this.apps = data
+        
+      })
+
+     
+    
+     
+  }
+
+  public onAddCall(event) {
+    event.confirm.resolve(event.newData);
+    console.log("this1", this.apps);
+
+    this.appSvc.addApp(event.newData).subscribe(res => {  this.appSvc.getApps().subscribe(_ =>console.log("post add",_))},
+
+      err => alert(err))
+    
+   
+   
+  }
+
+  onEditCall(event){
+    event.confirm.resolve(event.newData);
+  
+    //does not produce correct data outside??????
+    this.appSvc.updateAppById(event.newData.application_id, event.newData).subscribe(res =>{  this.appSvc.getApps().subscribe(_ =>console.log("post edit",_))},
+    
+          err => alert(err))
+
+
+    
+  }
+
+//languages_supported buggy!!!!!!!!!!!
+  onDeleteCall(event){
+
+    event.confirm.resolve(event.data);
+
+    this.appSvc.deleteApps(event.data.application_id).subscribe(res =>{  this.appSvc.getApps().subscribe(_ =>console.log("post delete",_))},
+    
+          err => alert(err))
+  }
+
+ 
+  //data = this.exelData
+  //data=this.config.data
+  
+  settings = {
+    add: {
+      confirmCreate: true,
+    },
+    edit: {
+      confirmSave: true,
+    },
+    delete:{
+      confirmDelete:true,
+    },
+    columns: {
+
+
+
+      application_id: {
+        title: 'Application ID'
+      },
+
+      name: {
+        title: 'GA:Name'
+      },
+      description: {
+        title: 'GA:Description'
+      }
+      , lob: {
+        title: 'GA:LOB'
+      },
+      business_function: {
+        title: 'GA:Business Function'
+      },
+      owner: {
+        title: 'GA:Owner'
+      },
+      business_critically: {
+        title: 'GA:Business Criticality'
+      },
+      application_age: {
+        title: 'GA:Application Age'
+      },
+      planned_decommission_date: {
+        title: 'GA:Planned decommission date'
+      },
+      functional_complexity: {
+        title: 'GA:Functional complexity'
+      },
+      functional_fitment: {
+        title: 'GA:Functional fitment'
+      },
+      operating_knowledge: {
+        title: 'GA:Operating knowledge'
+      },
+      ui_type: {
+        title: 'GA:Full Name'
+      },
+      country_of_usage: {
+        title: 'GA:Country of usage'
+      },
+      languages_supported: {
+        title: 'GA:Languages Supported'
+      },
+      user_type: {
+        title: 'GA:User type'
+      },
+      no_of_users: {
+        title: 'GA:No of users'
+      },
+      expected_user_growth: {
+        title: 'GA:Expected user growth'
+      },
+      usability_index: {
+        title: 'GA:Usability index'
+      },
+      application_documentation: {
+        title: 'GA:Application documentation'
+      },
+      os: {
+        title: 'GA:OS'
+      },
+      deployment_type: {
+        title: 'GA:Deployment type'
+      },
+      production_release_frequency_per_year: {
+        title: 'GA:Production Release Frequency Per Year'
+      },
+      vendor_dependency: {
+        title: 'GA:Vendor dependency'
+      },
+
+
+
+      //integration_attributes:
+
+
+      no_of_integrations: {
+        title: 'IA:No Of Integrations'
+      },
+      no_of_point_to_point_Integrations: {
+        title: 'IA:No of point to point Integrations'
+      },
+      no_of_middleware_based_Integartions: {
+        title: 'IA:No of middleware based Integartions'
+      },
+      no_of_api_per_services_exposed: {
+        title: 'IA:No Of Api Per Services Exposed'
+      },
+      percent_of_functionality_avaiable_as_api: {
+        title: 'IA:Percent Of Functionality Avaiable As Api'
+      },
+      affinity_score: {
+        title: 'IA:Affinity Score'
+      },
+
+
+
+
+
+      //ticket_attributes:{
+      ticket_attributes: {
+        title: 'TA: ticket attributes'
+      },
+      total_no_of_tickets: {
+        title: 'TA:total no of tickets'
+      },
+      no_of_crs: {
+        title: 'TA:no of crs'
+      },
+      no_of_bug_fixes: {
+        title: 'TA:no of bug fixes'
+      },
+
+
+
+      //application_type:
+
+      //custom_applications_attributes :{   
+      // custom_selected: {
+      //   title: 'CA:Custom Selected'
+      // },
+      ui_dev_language: {
+        title: 'CA:ui dev language'
+      },
+      ui_library_framework_with_version: {
+        title: 'CA:ui library framework with version'
+      },
+      application_layer_dev_language: {
+        title: 'CA:application layer dev language'
+      },
+      application_layer_library_framework_with_version: {
+        title: 'CA:application layer library framework with version'
+      },
+      application_layer_products_with_version: {
+        title: 'CA:application layer products with version'
+      },
+      middleware_with_version: {
+        title: 'CA:middleware with version'
+      },
+      storage_type: {
+        title: 'CA:storage type'
+      },
+      storage_product_and_version: {
+        title: 'CA:storage product and version'
+      },
+      persistence_database_framework_with_version: {
+        title: 'CA:persistence database framework with version'
+      },
+      scm_tool: {
+        title: 'CA:scm tool'
+      },
+
+
+
+      // package_attributes:{
+      // package_selected: {
+      //   title: 'PA: Package selected'
+      // },
+      // package_name: {
+      //   title: 'PA:package name'
+      // },
+      package: {
+        title: 'PA:package'
+      },
+      // package_description: {
+      //   title: 'PA:package description'
+      // },
+      vendor: {
+        title: 'PA:vendor'
+      },
+
+
+
+      // classification_attributes: {
+
+      pace_layer_category: {
+        title: 'CA: pace layer category'
+      },
+      four_rs: {
+        title: 'CA:four rs'
+      },
+
+
+
+      //scores:{
+
+      // optimize_scores:{
+      os_stability: {
+        title: 'OS: Stability'
+      },
+      os_maturity: {
+        title: 'OS: Maturity'
+      },
+      os_scalability_score: {
+        title: 'OS: Scalability score'
+      },
+      os_cloud_applicabilty_score: {
+        title: 'OS: Cloud applicabilty score'
+      },
+      os_current_cloud_score: {
+        title: 'OS: Current cloud score'
+      },
+      os_redundency_score: {
+        title: 'OS:Redundency score'
+      },
+      os_availibility_score: {
+        title: 'OS: Availibility score'
+      },
+      os_license_optimization_score: {
+        title: 'OS: License optimization score'
+      },
+      os_consolidation_score: {
+        title: 'OS: Consolidation score'
+      },
+      os_technical_debt_score: {
+        title: 'OS: Technical debt score'
+      },
+
+
+      //digitalize_scores:{
+      // ds_straight_through_processing_adoption_score: {
+      //   title: 'DS:  Straight through processing adoption score'
+      // },
+      // ds_api_applicability_score: {
+      //   title: 'DS :  Api applicability score'
+      // },
+      ds_current_api_adoption_score: {
+        title: 'DS:  Current api adoption score'
+      },
+      ds_technology_obsolecence: {
+        title: 'DS:  Technology obsolecence score'
+      },
+      ds_mobility_enablement_scope: {
+        title: 'DS:  Mobility enablement scope score'
+      },
+      ds_current_mobility_adoption_level: {
+        title: 'DS:  Current mobility adoption level score'
+      },
+      ds_self_service_adoption: {
+        title: 'DS: Self service adoption score'
+      },
+
+
+      // expedite_scores:{
+      es_testing_automation_adoption: {
+        title: 'ES:Testing automation adoption score'
+      },
+      es_devops_applicability_score: {
+        title: 'ES: Devops applicability  score'
+      },
+      es_current_dev_ops_adoption_score: {
+        title: 'ES: Current dev ops adoption score '
+      },
+
+
+      //  monetize_scores :{
+      ms_unique_functionality: {
+        title: 'MS: Unique functionality score'
+      },
+      ms_registered_as_ip: {
+        title: 'MS:Registered as ip score'
+      },
+      ms_current_roi_realization_model: {
+        title: 'MS:Current roi realization model score'
+      },
+      ms_market_potential: {
+        title: 'MS: Market potential score'
+      },
+      ms_ease_of_monetization: {
+        title: 'MS: Ease of monetization score'
+      },
+      ms_monetization_model: {
+        title: 'MS: Monetization model score'
+      },
+
+
+      // innovation_scores :{
+      is_ai_or_ml_applicability: {
+        title: 'IS: AI/ML Applicability score'
+      },
+      is_chat_bot_applicability: {
+        title: 'IS: Chat Bot Applicability score'
+      },
+      is_rpa_applicability_score: {
+        title: 'IS: Rpa Applicability  score'
+      },
+      is_block_chain_applicability_score: {
+        title: 'IS: Block Chain Applicability score '
+      },
+
+
+
+      lti_owner: {
+        title: 'Others S:Lti Owner score'
+      },
+      redundant_application_name: {
+        title: 'Others S:Redundant Application Name score'
+      },
+      impact_of_downtime: {
+        title: ' Others S:Impact of Downtime score'
+      },
+      tco_score: {
+        title: 'Others S:Tco Score'
+      },
+      devlopement_methodology: {
+        title: 'Others S:Devlopement Methodology score'
+      }
+
+
+
+
+
+
+
+    }
+
+
+  }
+
+
+
+  
+
+
+
+}

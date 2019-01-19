@@ -1,0 +1,60 @@
+<div *ngFor="let category of categories;let i=index">
+  <div class="row">
+    <div class="col s12 m12 l12">
+
+
+      <div class="card horizontal">
+        <div class="card-stacked">
+          <div class="card-content">
+            {{category|titlecase}}
+            <div *ngIf="i%2==1" class="row">
+              <div *ngFor="let gauge of multi[category]">
+
+                <div class="col s2 m2 l2">
+                  <div class="truncate">
+                    <div class="row">
+
+                      <div *ngIf="gauge.value>3 || gauge.value==3" class="row">
+                        <ngx-charts-linear-gauge [view]="[120,120]" [scheme]="colorScheme2" [value]="gauge.value" [previousValue]="3" [min]="0" [max]="5" [units]="''"
+                          (select)="onSelect($event)" title="{{gauge.name}}">
+                        </ngx-charts-linear-gauge>
+                      </div>
+                      <div *ngIf="gauge.value==0 || gauge.value==1  || gauge.value==2" class="row">
+                        <ngx-charts-linear-gauge [view]="[120,120]" [scheme]="colorScheme1" [value]="gauge.value" [previousValue]="3" [min]="0" [max]="5" [units]="''"
+                          (select)="onSelect($event)" title="{{gauge.name}}">
+                        </ngx-charts-linear-gauge>
+                      </div>
+
+
+                      <div class="row">
+                        <p> <span class="indigo-text text-darken-2">
+                                {{gauge.name|titlecase}}
+                              </span></p>
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="i%2==0" class="row">
+              <ngx-charts-number-card  [results]="multi[category]" (select)="onSelect($event)">
+              </ngx-charts-number-card>
+            </div>
+
+            <!-- <ngx-charts-pie-grid  [results]="multi[category]" (select)="onSelect($event)">
+            </ngx-charts-pie-grid> -->
+
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

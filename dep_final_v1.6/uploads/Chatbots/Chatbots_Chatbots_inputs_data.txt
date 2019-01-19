@@ -1,0 +1,2832 @@
+[
+    {
+        "_id": "5a042af42cc8b61fac98f6be",
+        "project_id": "5",
+        "project_percentage": 100,
+        "attributesMaster": [
+            {
+                "key": "application_id",
+                "value": "",
+                "label": "Application ID",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "application",
+                "value": "",
+                "label": "Application",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "ams_candidate",
+                "value": "",
+                "label": "AMS Candidate (Y/N)",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "release_wave",
+                "value": "",
+                "label": "Release Wave",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "gpc_vendor",
+                "value": "",
+                "label": "GPC Vendor",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "application_status",
+                "value": "",
+                "label": "Application Status",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "application_landscape_group_name",
+                "value": "",
+                "label": "Application Landscape Group/Product Group Name",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "it_owner_full_name",
+                "value": "",
+                "label": "IT Owner Full Name",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "software_type",
+                "value": "",
+                "label": "Software Type",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "application_description",
+                "value": "",
+                "label": "Application Description",
+                "controlType": "textbox",
+                "category_type": "integration",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "system_support_requirements",
+                "value": "",
+                "label": "System Support Requirements",
+                "controlType": "textbox",
+                "category_type": "integration",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "disaster_recovery_requirements_rto",
+                "value": "",
+                "label": "Disaster Recovery Requirements RTO",
+                "controlType": "textbox",
+                "category_type": "integration",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "application_or_product_tool",
+                "value": "",
+                "label": "Application or Product (Tool)",
+                "controlType": "textbox",
+                "category_type": "integration",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "maintenance_or_support_ftes",
+                "value": "",
+                "label": "Maintenance / Support FTEs",
+                "controlType": "textbox",
+                "category_type": "ticket",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "key_system_technologies",
+                "value": "",
+                "label": "Key System Technologies",
+                "controlType": "textbox",
+                "category_type": "ticket",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "system_interfaces",
+                "value": "",
+                "label": "System Interfaces",
+                "controlType": "textbox",
+                "category_type": "ticket",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "planned_production_deployments_per_year",
+                "value": "",
+                "label": "Planned Production Deployments per Year",
+                "controlType": "textbox",
+                "category_type": "application_type",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "system_enhancements_per_year",
+                "value": "",
+                "label": "System Enhancements per Year",
+                "controlType": "textbox",
+                "category_type": "application_type",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "enhancement_size_percentage",
+                "value": "",
+                "label": "Enhancement Size % (Small, Medium, Large) ",
+                "controlType": "textbox",
+                "category_type": "application_type",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "system_bugs_or_incidents_per_year",
+                "value": "",
+                "label": "System Bugs / Incidents per Year",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "number_of_users",
+                "value": "",
+                "label": "Number of Users (CW for Companywide)",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "application_comments_optional",
+                "value": "",
+                "label": "Application Comments (Optional)",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "business_criticality",
+                "value": "",
+                "label": "Business Criticality",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "data_classification",
+                "value": "",
+                "label": "Data Classification",
+                "controlType": "textbox",
+                "category_type": "ticket",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "gold_plating",
+                "value": "",
+                "label": "Gold Plating",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "transistion_length",
+                "value": "",
+                "label": "Application Category",
+                "controlType": "textbox",
+                "category_type": "application_type",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "esp_estimate_of_munich_re",
+                "value": "",
+                "label": "Transition Length -Estimated Duration of Transiton - Business Days",
+                "controlType": "textbox",
+                "category_type": "application_type",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "leanix_id",
+                "value": "",
+                "label": "ESP Estimate of Munich Re SME effort or Incumbent ESP effort required for transition (PD)",
+                "controlType": "textbox",
+                "category_type": "application_type",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "pace_layer_classification",
+                "value": "",
+                "label": "LeanIX-ID",
+                "controlType": "textbox",
+                "category_type": "general_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "tech_trans_opportunity",
+                "value": "",
+                "label": "LTI Practice Group",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "biz_trans_oppti",
+                "value": "",
+                "label": "PACE Layer Classification",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "seg_comments",
+                "value": "",
+                "label": "Tech Trans Opportunity",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "technology_updated",
+                "value": "",
+                "label": "Biz Trans Oppti",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "age",
+                "value": "",
+                "label": "SEG comments",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "portfolio",
+                "value": "",
+                "label": "Technology-updated",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "forecasted_demand_monthly_hrs",
+                "value": "",
+                "label": "Age",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            },
+            {
+                "key": "age_group",
+                "value": "",
+                "label": "Portfolio",
+                "controlType": "textbox",
+                "category_type": "classification_attributes",
+                "type": "email",
+                "options": []
+            }
+        ],
+        "applications": [
+            {
+                "_id": "5a0c2b1da19819258858273d",
+                "application_name": "Bloom Dyn",
+                "application_id": "1",
+                "scores": {
+                    "optimize_scores": {
+                        "stability": 1,
+                        "maturity": 1,
+                        "availibility_score": 1,
+                        "scalability_score": 1,
+                        "cloud_applicabilty_score": 4,
+                        "current_cloud_score": 2,
+                        "redundency_score": 4,
+                        "license_optimization_score": 5,
+                        "consolidation_score": 2,
+                        "technical_debt_score": 4
+                    },
+                    "digitalize_scores": {
+                        "straight_through_processing_adoption_score": 1,
+                        "api_applicability_score": 1,
+                        "current_api_adoption_score": 1,
+                        "technology_obsolecence": 1,
+                        "mobility_enablement_scope": 1,
+                        "current_mobility_adoption_level": 1,
+                        "self_service_adoption": 1
+                    },
+                    "expedite_scores": {
+                        "testing_automation_adoption": 0,
+                        "devops_applicability_score": "3",
+                        "current_dev_ops_adoption_score": 1
+                    },
+                    "monetize_scores": {
+                        "unique_functionality": 1,
+                        "registered_as_ip": 1,
+                        "current_roi_realization_model": 1,
+                        "market_potential": 1,
+                        "ease_of_monetization": 1,
+                        "monetization_model": 3
+                    },
+                    "innovation_scores": {
+                        "ai_or_ml_applicability": 2,
+                        "chat_bot_applicability": 2,
+                        "rpa_applicability_score": 4,
+                        "block_chain_applicability_score": 3
+                    }
+                },
+                "attributes": [
+                    {
+                        "_id": "5a0c2b1da198192588582762",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application ID",
+                        "value": "1",
+                        "key": "application_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582761",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application",
+                        "value": "Bloom Dyn",
+                        "key": "application",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582760",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "AMS Candidate (Y/N)",
+                        "value": "Yes",
+                        "key": "ams_candidate",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858275f",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Release Wave",
+                        "value": "Oct-18",
+                        "key": "release_wave",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858275e",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "GPC Vendor",
+                        "value": "Vendor1",
+                        "key": "gpc_vendor",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858275d",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application Status",
+                        "value": "Finished",
+                        "key": "application_status",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858275c",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application Landscape Group/Product Group Name",
+                        "value": "MRSG",
+                        "key": "application_landscape_group_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858275b",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "IT Owner Full Name",
+                        "value": "Dhiren Lal",
+                        "key": "it_owner_full_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858275a",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Software Type",
+                        "value": "HomeGrown",
+                        "key": "software_type",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582759",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Gold Plating",
+                        "value": "C3",
+                        "key": "gold_plating",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582758",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "LeanIX-ID",
+                        "value": "SoR",
+                        "key": "pace_layer_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582757",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "System Bugs / Incidents per Year",
+                        "value": "8",
+                        "key": "system_bugs_or_incidents_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582756",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Number of Users (CW for Companywide)",
+                        "value": "100",
+                        "key": "number_of_users",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582755",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Application Comments (Optional)",
+                        "value": "Documentation needs updating",
+                        "key": "application_comments_optional",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582754",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Business Criticality",
+                        "value": "Business Critical",
+                        "key": "business_criticality",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582753",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "LTI Practice Group",
+                        "value": "Upgrade",
+                        "key": "tech_trans_opportunity",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582752",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "PACE Layer Classification",
+                        "value": "Retain",
+                        "key": "biz_trans_oppti",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582751",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Tech Trans Opportunity",
+                        "value": "Upgrade to latest SQL server / cloud ; Defects are on higher side for small application.Assumed it is recently updated",
+                        "key": "seg_comments",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582750",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Biz Trans Oppti",
+                        "value": ".Net",
+                        "key": "technology_updated",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858274f",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "SEG comments",
+                        "value": "2",
+                        "key": "age",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858274e",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Technology-updated",
+                        "value": "MRSG",
+                        "key": "portfolio",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858274d",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Age",
+                        "value": "NA",
+                        "key": "forecasted_demand_monthly_hrs",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858274c",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Portfolio",
+                        "value": "Current",
+                        "key": "age_group",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858274b",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Planned Production Deployments per Year",
+                        "value": "2",
+                        "key": "planned_production_deployments_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858274a",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "System Enhancements per Year",
+                        "value": "2",
+                        "key": "system_enhancements_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582749",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Enhancement Size % (Small, Medium, Large) ",
+                        "value": "2",
+                        "key": "enhancement_size_percentage",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582748",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Application Category",
+                        "value": "223hrs",
+                        "key": "transistion_length",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582747",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Transition Length -Estimated Duration of Transiton - Business Days",
+                        "value": "33mp",
+                        "key": "esp_estimate_of_munich_re",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582746",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "ESP Estimate of Munich Re SME effort or Incumbent ESP effort required for transition (PD)",
+                        "value": "333",
+                        "key": "leanix_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582745",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "Maintenance / Support FTEs",
+                        "value": "Minimal",
+                        "key": "maintenance_or_support_ftes",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582744",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "Key System Technologies",
+                        "value": ".net, SQL2012, Excel",
+                        "key": "key_system_technologies",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582743",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "System Interfaces",
+                        "value": "Data warehouse",
+                        "key": "system_interfaces",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582742",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "Data Classification",
+                        "value": "C3",
+                        "key": "data_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582741",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "Application Description",
+                        "value": "Bloom allows users to map bordereau data sent from various clients in various formats and upload it into a uniformed database. Uses a C# .net interface with a SQL2012 back-end.",
+                        "key": "application_description",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da198192588582740",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "System Support Requirements",
+                        "value": "8-6 (UK)",
+                        "key": "system_support_requirements",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858273f",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "Disaster Recovery Requirements RTO",
+                        "value": "48 hours",
+                        "key": "disaster_recovery_requirements_rto",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2b1da19819258858273e",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "Application or Product (Tool)",
+                        "value": "HomeGrown",
+                        "key": "application_or_product_tool",
+                        "options": []
+                    }
+                ],
+                "attribute_category_completion": [
+                    {
+                        "category_type": "general_attributes",
+                        "total_fields": 11,
+                        "completed_fields": 11,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "integration_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 4,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "ticket_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 4,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "application_type",
+                        "total_fields": 6,
+                        "completed_fields": 6,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "classification_attributes",
+                        "total_fields": 12,
+                        "completed_fields": 12,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "custom_applications_attributes",
+                        "total_fields": 5,
+                        "completed_fields": 0,
+                        "percent": "0"
+                    }
+                ],
+                "attribute_details": []
+            },
+            {
+                "_id": "5a0c39b4a198192588582a0f",
+                "application_name": "Gloom",
+                "application_id": "2",
+                "scores": {
+                    "optimize_scores": {
+                        "stability": 1,
+                        "maturity": 1,
+                        "availibility_score": 1,
+                        "scalability_score": 5,
+                        "cloud_applicabilty_score": 1,
+                        "current_cloud_score": 5,
+                        "redundency_score": 1,
+                        "license_optimization_score": 5,
+                        "consolidation_score": 5,
+                        "technical_debt_score": 1
+                    },
+                    "digitalize_scores": {
+                        "straight_through_processing_adoption_score": 1,
+                        "api_applicability_score": 1,
+                        "current_api_adoption_score": 1,
+                        "technology_obsolecence": 1,
+                        "mobility_enablement_scope": 1,
+                        "current_mobility_adoption_level": 1,
+                        "self_service_adoption": 1
+                    },
+                    "expedite_scores": {
+                        "testing_automation_adoption": 0,
+                        "devops_applicability_score": "3",
+                        "current_dev_ops_adoption_score": 1
+                    },
+                    "monetize_scores": {
+                        "unique_functionality": 1,
+                        "registered_as_ip": 1,
+                        "current_roi_realization_model": 1,
+                        "market_potential": 1,
+                        "ease_of_monetization": 1,
+                        "monetization_model": 3
+                    },
+                    "innovation_scores": {
+                        "ai_or_ml_applicability": 2,
+                        "chat_bot_applicability": 2,
+                        "rpa_applicability_score": 4,
+                        "block_chain_applicability_score": 3
+                    }
+                },
+                "attributes": [
+                    {
+                        "_id": "5a0c39b4a198192588582a34",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application ID",
+                        "value": "2",
+                        "key": "application_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a33",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application",
+                        "value": "Gloom",
+                        "key": "application",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a32",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "AMS Candidate (Y/N)",
+                        "value": "Yes",
+                        "key": "ams_candidate",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a31",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Release Wave",
+                        "value": "Oct-18",
+                        "key": "release_wave",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a30",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "GPC Vendor",
+                        "value": "Vendor1",
+                        "key": "gpc_vendor",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a2f",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application Status",
+                        "value": "In Use",
+                        "key": "application_status",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a2e",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application Landscape Group/Product Group Name",
+                        "value": "MRSG",
+                        "key": "application_landscape_group_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a2d",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "IT Owner Full Name",
+                        "value": "Dhiren Lal",
+                        "key": "it_owner_full_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a2c",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Software Type",
+                        "value": "HomeGrown",
+                        "key": "software_type",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a2b",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Gold Plating",
+                        "value": "C3",
+                        "key": "gold_plating",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a2a",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "LeanIX-ID",
+                        "value": "SoR",
+                        "key": "pace_layer_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a29",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "System Bugs / Incidents per Year",
+                        "value": "8",
+                        "key": "system_bugs_or_incidents_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a28",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Number of Users (CW for Companywide)",
+                        "value": "8",
+                        "key": "number_of_users",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a27",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Application Comments (Optional)",
+                        "value": "Documentation needs updating",
+                        "key": "application_comments_optional",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a26",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Business Criticality",
+                        "value": "Business Critical",
+                        "key": "business_criticality",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a25",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "LTI Practice Group",
+                        "value": "Upgrade",
+                        "key": "tech_trans_opportunity",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a24",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "PACE Layer Classification",
+                        "value": "Retain",
+                        "key": "biz_trans_oppti",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a23",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Tech Trans Opportunity",
+                        "value": "Upgrade to latest SQL server / cloud ; Defects are on higher side for small application.Assumed it is recently updated",
+                        "key": "seg_comments",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a22",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Biz Trans Oppti",
+                        "value": ".Net",
+                        "key": "technology_updated",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a21",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "SEG comments",
+                        "value": "2",
+                        "key": "age",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a20",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Technology-updated",
+                        "value": "MRSG",
+                        "key": "portfolio",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a1f",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Age",
+                        "value": "NA",
+                        "key": "forecasted_demand_monthly_hrs",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a1e",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Portfolio",
+                        "value": "Current",
+                        "key": "age_group",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a1d",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Planned Production Deployments per Year",
+                        "value": "2",
+                        "key": "planned_production_deployments_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a1c",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "System Enhancements per Year",
+                        "value": "2",
+                        "key": "system_enhancements_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a1b",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Enhancement Size % (Small, Medium, Large) ",
+                        "value": "2",
+                        "key": "enhancement_size_percentage",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a1a",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Application Category",
+                        "value": "Cat",
+                        "key": "transistion_length",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a19",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Transition Length -Estimated Duration of Transiton - Business Days",
+                        "value": "33mp",
+                        "key": "esp_estimate_of_munich_re",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a18",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "ESP Estimate of Munich Re SME effort or Incumbent ESP effort required for transition (PD)",
+                        "value": "",
+                        "key": "leanix_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a17",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "Maintenance / Support FTEs",
+                        "value": "Minimal",
+                        "key": "maintenance_or_support_ftes",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a16",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "Key System Technologies",
+                        "value": ".net, SQL2012, Excel",
+                        "key": "key_system_technologies",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a15",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "System Interfaces",
+                        "value": "Data warehouse",
+                        "key": "system_interfaces",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a14",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "Data Classification",
+                        "value": "C2",
+                        "key": "data_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a13",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "Application Description",
+                        "value": "Bloom allows users to map bordereau data sent from various clients in various formats and upload it into a uniformed database. Uses a C# .net interface with a SQL2012 back-end.",
+                        "key": "application_description",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a12",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "System Support Requirements",
+                        "value": "8-6 (UK)",
+                        "key": "system_support_requirements",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a11",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "Disaster Recovery Requirements RTO",
+                        "value": "",
+                        "key": "disaster_recovery_requirements_rto",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c39b4a198192588582a10",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "Application or Product (Tool)",
+                        "value": "HomeGrown",
+                        "key": "application_or_product_tool",
+                        "options": []
+                    }
+                ],
+                "attribute_category_completion": [
+                    {
+                        "category_type": "general_attributes",
+                        "total_fields": 11,
+                        "completed_fields": 11,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "integration_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 3,
+                        "percent": 75
+                    },
+                    {
+                        "category_type": "ticket_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 4,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "application_type",
+                        "total_fields": 6,
+                        "completed_fields": 5,
+                        "percent": 84
+                    },
+                    {
+                        "category_type": "classification_attributes",
+                        "total_fields": 12,
+                        "completed_fields": 12,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "custom_applications_attributes",
+                        "total_fields": 5,
+                        "completed_fields": 0,
+                        "percent": "0"
+                    }
+                ],
+                "attribute_details": []
+            },
+            {
+                "_id": "5a0c3e00a198192588582a5b",
+                "application_name": "Gloom",
+                "application_id": "3",
+                "attributes": [
+                    {
+                        "_id": "5a0c3e00a198192588582a80",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application ID",
+                        "value": "3",
+                        "key": "application_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a7f",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application",
+                        "value": "Gloom",
+                        "key": "application",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a7e",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "AMS Candidate (Y/N)",
+                        "value": "Yes",
+                        "key": "ams_candidate",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a7d",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Release Wave",
+                        "value": "Oct-18",
+                        "key": "release_wave",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a7c",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "GPC Vendor",
+                        "value": "Vendor1",
+                        "key": "gpc_vendor",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a7b",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application Status",
+                        "value": "In Use",
+                        "key": "application_status",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a7a",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Application Landscape Group/Product Group Name",
+                        "value": "MRSG",
+                        "key": "application_landscape_group_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a79",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "IT Owner Full Name",
+                        "value": "",
+                        "key": "it_owner_full_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a78",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Software Type",
+                        "value": "HomeGrown",
+                        "key": "software_type",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a77",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "Gold Plating",
+                        "value": "C3",
+                        "key": "gold_plating",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a76",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "label": "LeanIX-ID",
+                        "value": "SoR",
+                        "key": "pace_layer_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a75",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "System Bugs / Incidents per Year",
+                        "value": "8",
+                        "key": "system_bugs_or_incidents_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a74",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Number of Users (CW for Companywide)",
+                        "value": "8",
+                        "key": "number_of_users",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a73",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Application Comments (Optional)",
+                        "value": "Documentation needs updating",
+                        "key": "application_comments_optional",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a72",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Business Criticality",
+                        "value": "Business Critical",
+                        "key": "business_criticality",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a71",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "LTI Practice Group",
+                        "value": "Upgrade",
+                        "key": "tech_trans_opportunity",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a70",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "PACE Layer Classification",
+                        "value": "Retain",
+                        "key": "biz_trans_oppti",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a6f",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Tech Trans Opportunity",
+                        "value": "Upgrade to latest SQL server / cloud ; Defects are on higher side for small application.Assumed it is recently updated",
+                        "key": "seg_comments",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a6e",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Biz Trans Oppti",
+                        "value": ".Net",
+                        "key": "technology_updated",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a6d",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "SEG comments",
+                        "value": "2",
+                        "key": "age",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a6c",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Technology-updated",
+                        "value": "MRSG",
+                        "key": "portfolio",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a6b",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Age",
+                        "value": "NA",
+                        "key": "forecasted_demand_monthly_hrs",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a6a",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "label": "Portfolio",
+                        "value": "Current",
+                        "key": "age_group",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a69",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Planned Production Deployments per Year",
+                        "value": "2",
+                        "key": "planned_production_deployments_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a68",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "System Enhancements per Year",
+                        "value": "2",
+                        "key": "system_enhancements_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a67",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Enhancement Size % (Small, Medium, Large) ",
+                        "value": "2",
+                        "key": "enhancement_size_percentage",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a66",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Application Category",
+                        "value": "223hrs",
+                        "key": "transistion_length",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a65",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "Transition Length -Estimated Duration of Transiton - Business Days",
+                        "value": "33mp",
+                        "key": "esp_estimate_of_munich_re",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a64",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "label": "ESP Estimate of Munich Re SME effort or Incumbent ESP effort required for transition (PD)",
+                        "value": "333",
+                        "key": "leanix_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a63",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "Maintenance / Support FTEs",
+                        "value": "Minimal",
+                        "key": "maintenance_or_support_ftes",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a62",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "Key System Technologies",
+                        "value": ".net, SQL2012, Excel",
+                        "key": "key_system_technologies",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a61",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "System Interfaces",
+                        "value": "Data warehouse",
+                        "key": "system_interfaces",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a60",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "label": "Data Classification",
+                        "value": "C3",
+                        "key": "data_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a5f",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "Application Description",
+                        "value": "Bloom allows users to map bordereau data sent from various clients in various formats and upload it into a uniformed database. Uses a C# .net interface with a SQL2012 back-end.",
+                        "key": "application_description",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a5e",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "System Support Requirements",
+                        "value": "8-6 (UK)",
+                        "key": "system_support_requirements",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a5d",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "Disaster Recovery Requirements RTO",
+                        "value": "48 hours",
+                        "key": "disaster_recovery_requirements_rto",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c3e00a198192588582a5c",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "label": "Application or Product (Tool)",
+                        "value": "HomeGrown",
+                        "key": "application_or_product_tool",
+                        "options": []
+                    }
+                ],
+                "attribute_category_completion": [
+                    {
+                        "category_type": "general_attributes",
+                        "total_fields": 11,
+                        "completed_fields": 10,
+                        "percent": 91
+                    },
+                    {
+                        "category_type": "integration_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 4,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "ticket_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 4,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "application_type",
+                        "total_fields": 6,
+                        "completed_fields": 6,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "classification_attributes",
+                        "total_fields": 12,
+                        "completed_fields": 12,
+                        "percent": 100
+                    },
+                    {
+                        "category_type": "custom_applications_attributes",
+                        "total_fields": 5,
+                        "completed_fields": 0,
+                        "percent": "0"
+                    }
+                ],
+                "attribute_details": []
+            },
+            {
+                "_id": "5a0c2fa1a19819258858292b",
+                "application_name": "Kappa",
+                "application_id": "9",
+                "attributes": [
+                    {
+                        "_id": "5a0c2fa1a198192588582950",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "9",
+                        "key": "application_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858294f",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "Kappa",
+                        "key": "application",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858294e",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "ams_candidate",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858294d",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "22-Jul",
+                        "key": "release_wave",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858294c",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "gpc_vendor",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858294b",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_status",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858294a",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_landscape_group_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582949",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "it_owner_full_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582948",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "software_type",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582947",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "gold_plating",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582946",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "pace_layer_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582945",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_bugs_or_incidents_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582944",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "number_of_users",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582943",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_comments_optional",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582942",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "High",
+                        "key": "business_criticality",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582941",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "tech_trans_opportunity",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582940",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "biz_trans_oppti",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858293f",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "seg_comments",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858293e",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "technology_updated",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858293d",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "age",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858293c",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "portfolio",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858293b",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "forecasted_demand_monthly_hrs",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858293a",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "age_group",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582939",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "planned_production_deployments_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582938",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "11",
+                        "key": "system_enhancements_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582937",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "enhancement_size_percentage",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582936",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "transistion_length",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582935",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "esp_estimate_of_munich_re",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582934",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "leanix_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582933",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "33",
+                        "key": "maintenance_or_support_ftes",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582932",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "key_system_technologies",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582931",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_interfaces",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a198192588582930",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "data_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858292f",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_description",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858292e",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_support_requirements",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858292d",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "gf",
+                        "key": "disaster_recovery_requirements_rto",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c2fa1a19819258858292c",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_or_product_tool",
+                        "options": []
+                    }
+                ],
+                "attribute_category_completion": [
+                    {
+                        "category_type": "general_attributes",
+                        "total_fields": 11,
+                        "completed_fields": 3,
+                        "percent": 28
+                    },
+                    {
+                        "category_type": "integration_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 1,
+                        "percent": 25
+                    },
+                    {
+                        "category_type": "ticket_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 1,
+                        "percent": 25
+                    },
+                    {
+                        "category_type": "application_type",
+                        "total_fields": 6,
+                        "completed_fields": 1,
+                        "percent": 17
+                    },
+                    {
+                        "category_type": "classification_attributes",
+                        "total_fields": 12,
+                        "completed_fields": 1,
+                        "percent": 9
+                    },
+                    {
+                        "category_type": "custom_applications_attributes",
+                        "total_fields": 5,
+                        "completed_fields": 0,
+                        "percent": "0"
+                    }
+                ],
+                "attribute_details": []
+            },
+            {
+                "_id": "5a0c31d5a198192588582951",
+                "application_name": "Kiara",
+                "application_id": "77",
+                "attributes": [
+                    {
+                        "_id": "5a0c31d5a198192588582976",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "77",
+                        "key": "application_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582975",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "Kiara",
+                        "key": "application",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582974",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "ams_candidate",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582973",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "3-Sep",
+                        "key": "release_wave",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582972",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "gpc_vendor",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582971",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "Filled",
+                        "key": "application_status",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582970",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_landscape_group_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858296f",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "d",
+                        "key": "it_owner_full_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858296e",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "software_type",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858296d",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "gold_plating",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858296c",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "pace_layer_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858296b",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_bugs_or_incidents_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858296a",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "1",
+                        "key": "number_of_users",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582969",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_comments_optional",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582968",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "business_criticality",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582967",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "tech_trans_opportunity",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582966",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "biz_trans_oppti",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582965",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "seg_comments",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582964",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "technology_updated",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582963",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "age",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582962",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "portfolio",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582961",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "forecasted_demand_monthly_hrs",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582960",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "age_group",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858295f",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "planned_production_deployments_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858295e",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_enhancements_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858295d",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "enhancement_size_percentage",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858295c",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "transistion_length",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858295b",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "esp_estimate_of_munich_re",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a19819258858295a",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "leanix_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582959",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "Low",
+                        "key": "maintenance_or_support_ftes",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582958",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "key_system_technologies",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582957",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_interfaces",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582956",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "data_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582955",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "VUstom",
+                        "key": "application_description",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582954",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_support_requirements",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582953",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "disaster_recovery_requirements_rto",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31d5a198192588582952",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_or_product_tool",
+                        "options": []
+                    }
+                ],
+                "attribute_category_completion": [
+                    {
+                        "category_type": "general_attributes",
+                        "total_fields": 11,
+                        "completed_fields": 5,
+                        "percent": 46
+                    },
+                    {
+                        "category_type": "integration_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 1,
+                        "percent": 25
+                    },
+                    {
+                        "category_type": "ticket_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 1,
+                        "percent": 25
+                    },
+                    {
+                        "category_type": "application_type",
+                        "total_fields": 6,
+                        "completed_fields": 0,
+                        "percent": 0
+                    },
+                    {
+                        "category_type": "classification_attributes",
+                        "total_fields": 12,
+                        "completed_fields": 1,
+                        "percent": 9
+                    },
+                    {
+                        "category_type": "custom_applications_attributes",
+                        "total_fields": 5,
+                        "completed_fields": 0,
+                        "percent": "0"
+                    }
+                ],
+                "attribute_details": []
+            },
+            {
+                "_id": "5a0c31e8a19819258858299d",
+                "application_name": "Azz",
+                "application_id": "33",
+                "attributes": [
+                    {
+                        "_id": "5a0c31e8a1981925885829c2",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "33",
+                        "key": "application_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829c1",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "Azz",
+                        "key": "application",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829c0",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "ams_candidate",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829bf",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "release_wave",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829be",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "gpc_vendor",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829bd",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_status",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829bc",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_landscape_group_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829bb",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "it_owner_full_name",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829ba",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "software_type",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829b9",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "No",
+                        "key": "gold_plating",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829b8",
+                        "type": "email",
+                        "category_type": "general_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "pace_layer_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829b7",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_bugs_or_incidents_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829b6",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "number_of_users",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829b5",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_comments_optional",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829b4",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "business_criticality",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829b3",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "tech_trans_opportunity",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829b2",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "biz_trans_oppti",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829b1",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "seg_comments",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829b0",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "technology_updated",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829af",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "age",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829ae",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "portfolio",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829ad",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "forecasted_demand_monthly_hrs",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829ac",
+                        "type": "email",
+                        "category_type": "classification_attributes",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "age_group",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829ab",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "planned_production_deployments_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829aa",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_enhancements_per_year",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829a9",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "enhancement_size_percentage",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829a8",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "transistion_length",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829a7",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "esp_estimate_of_munich_re",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829a6",
+                        "type": "email",
+                        "category_type": "application_type",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "leanix_id",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829a5",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "maintenance_or_support_ftes",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829a4",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "key_system_technologies",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829a3",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_interfaces",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829a2",
+                        "type": "email",
+                        "category_type": "ticket",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "data_classification",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829a1",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_description",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a1981925885829a0",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "system_support_requirements",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a19819258858299f",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "disaster_recovery_requirements_rto",
+                        "options": []
+                    },
+                    {
+                        "_id": "5a0c31e8a19819258858299e",
+                        "type": "email",
+                        "category_type": "integration",
+                        "controlType": "textbox",
+                        "value": "",
+                        "key": "application_or_product_tool",
+                        "options": []
+                    }
+                ],
+                "attribute_category_completion": [
+                    {
+                        "category_type": "general_attributes",
+                        "total_fields": 11,
+                        "completed_fields": 3,
+                        "percent": 28
+                    },
+                    {
+                        "category_type": "integration_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 0,
+                        "percent": 0
+                    },
+                    {
+                        "category_type": "ticket_attributes",
+                        "total_fields": 4,
+                        "completed_fields": 0,
+                        "percent": 0
+                    },
+                    {
+                        "category_type": "application_type",
+                        "total_fields": 6,
+                        "completed_fields": 0,
+                        "percent": 0
+                    },
+                    {
+                        "category_type": "classification_attributes",
+                        "total_fields": 12,
+                        "completed_fields": 0,
+                        "percent": 0
+                    },
+                    {
+                        "category_type": "custom_applications_attributes",
+                        "total_fields": 5,
+                        "completed_fields": 0,
+                        "percent": "0"
+                    }
+                ],
+                "attribute_details": []
+            }
+        ],
+        "project_details": {
+            "project_nr": "009",
+            "project_name": "Transformation child1",
+            "parent_project": "Transformation parent1",
+            "customer": "Apple Cider1",
+            "project_type": "Agile projects1",
+            "project_status": "competed1",
+            "start_date": "2015-03-25T00:00:00.000Z",
+            "delivery_date": "2015-03-25T00:00:00.000Z",
+            "project_budget_hours": 6000,
+            "project_budget": "6000000",
+            "description": "transforming the legacy application",
+            "project_manager": "rajvi1",
+            "project_it_head": "manoj1",
+            "project_executives": [
+                "sahil1",
+                "shashank1"
+            ]
+        }
+    }
+]

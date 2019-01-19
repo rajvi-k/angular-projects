@@ -1,0 +1,38 @@
+<div class="container-fluid blue-grey darken-2">
+  <div class="row">
+    <div class="col s10 m4">
+      
+<app-all-applications [projectId]="projectId" [selectedEvent]="selectedEvent" [selectedAppNames]="selectedAppNames"> </app-all-applications>
+    </div>
+    <div class="col s10 m4">
+     <app-business-criticality [projectId]="projectId" [selectedEvent]="selectedEvent" [selectedAppNames]="selectedAppNames"></app-business-criticality> 
+    </div>
+    <div class="col s10 m4">
+      <app-ui-type [projectId]="projectId" [selectedEvent]="selectedEvent" [selectedAppNames]="selectedAppNames"></app-ui-type>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col m8 s10">
+      <geomap [projectId]="projectId" [selectedEvent]="selectedEvent" [selectedAppNames]="selectedAppNames"></geomap>
+    </div>
+    <div class="os col s10 m4">
+      <app-system-interface  [projectId]="projectId" [selectedEvent]="selectedEvent" [selectedAppNames]="selectedAppNames"></app-system-interface>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s10 m4">
+      <app-application-age [projectId]="projectId" [selectedEvent]="selectedEvent" [selectedAppNames]="selectedAppNames"></app-application-age>
+    </div>
+    <div class="col s10 m4">
+     
+ <app-storage-type [projectId]="projectId" [selectedEvent]="selectedEvent" [selectedAppNames]="selectedAppNames"></app-storage-type>
+    </div>
+    <div class="col m4 s10">
+      <app-lti-owner [projectId]="projectId" [selectedEvent]="selectedEvent" [selectedAppNames]="selectedAppNames"></app-lti-owner>
+    </div>
+
+  </div>
+   <div class="row">
+    
+</div>
+</div>

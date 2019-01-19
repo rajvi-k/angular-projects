@@ -1,0 +1,1297 @@
+<!-- <div class="card col s12">
+    <div class="col s2 center-align">Project Name:</div>
+    <div class="col s3">
+        {{pname}}
+    </div>
+    <div class="col s2 offset-s3">
+        <a class="modal-trigger" href="#modalfile2"><button type="button" class="btn btn-flat"><span class="white-text"> Files <i class="material-icons prefix"  >file_upload</i></span></button></a>
+    </div>
+     <div class="white-text col s2  " style="font-family:Roboto, sans-serif">
+        <a class="modal-trigger" href="#modalfile"><button type="button" class="btn btn-flat" (click)="download()"><span class="white-text"> Files <i class="material-icons prefix"  >file_download</i></span></button></a>
+    </div>
+</div> -->
+<!-- <div class="row"> -->
+    <div class="col s12">
+        <h5 class="center">Project Name : {{pname}}</h5>
+        <a class="modal-trigger tooltipped btn-floating btn-small waves-effect waves-light right" href="#modalfile" data-position="bottom" data-tooltip="File Download" (click)="download()"><i class="material-icons">file_download</i></a>
+        <a class="modal-trigger tooltipped btn-floating btn-small waves-effect waves-light right" href="#modalfile2" data-position="bottom" data-delay="50" data-tooltip="File Upload"><i class="material-icons">file_upload</i></a> 
+    </div>
+<!-- </div> -->
+
+<div id="modalfile2" class="modal">
+    <!-- class="card-panel #e0f2f1 teal lighten-5 col s4 offset-s1" -->
+    <input id="cin" name="cin" type="file" (change)="fileChangeEvent($event)" placeholder="Upload a file..." multiple/>
+    <button id="btadd" style="margin-top:4px;margin-bottom:4px" class="col s2" type="button" class="btn btn-primary" (click)="upload()">Upload</button>
+
+</div>
+
+<div id="modalfile" class="modal">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+
+                <th>Files</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let f of files">
+                <td>{{f}}</td>
+                <td><a href="{{url+pname+'/'+f}}"><i class="material-icons">file_download</i></a>
+                </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+<!-- <div class="row">
+      <h5>Project Name</h5>
+      <hr/>
+    </div> -->
+
+
+<div class="row">
+    <table class="responsive-table">
+        <thead>
+            <tr>
+                <th></th>
+
+                <th>Application<span class="white-text">...</span></th>
+                <th>General<span class="white-text">.......</span></th>
+                <th>Integration<span class="white-text">...</span></th>
+                <th>Ticket<span class="white-text">........</span></th>
+                <th>App Type<span class="white-text">......</span></th>
+                <th>Classification</th>
+
+                <th>Others<span class="white-text">.......</span></th>
+                <th *ngxPermissionsOnly="['TPC','ADMIN']">Scores<span class="white-text">........</span></th>
+            </tr>
+        </thead>
+        <tbody id="table_input">
+            <tr *ngFor="let i of apps | paginate: { itemsPerPage: config.itemsPerPage, currentPage: p } ">
+                <td></td>
+                <td><a class="waves-effect waves-light  modal-trigger" href="#modal1" (click)="tempFunc('test1',i.application_id)">{{i.application_name}}</a>
+                </td>
+                <td>
+                    <a class="modal-trigger" href="#modal1" (click)="tempFunc('test1',i.application_id)">
+                        <div id="progressbar">
+                            <div id="bar" [ngStyle]="{'width': (i.attribute_category_completion[0].percent)+'%'}" class="blue"></div>
+                            <div id="label" class="white-text">{{i.attribute_category_completion[0].percent }}%</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a class="modal-trigger" href="#modal1" onClick="$('ul.tabs').tabs();console.log('vv');" (click)="tempFunc('test2',i.application_id)">
+                        <div id="progressbar">
+                            <div id="bar" [ngStyle]="{'width': (i.attribute_category_completion[1].percent)+'%'}" class="blue"></div>
+                            <div id="label" class="white-text">{{i.attribute_category_completion[1].percent }}%</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a class="modal-trigger" href="#modal1" onClick="$('ul.tabs').tabs()" (click)="tempFunc('test3',i.application_id)">
+                        <div id="progressbar">
+                            <div id="bar" [ngStyle]="{'width': (i.attribute_category_completion[2].percent)+'%'}" class="blue"></div>
+                            <div id="label" class="white-text">{{i.attribute_category_completion[2].percent }}%</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a class="modal-trigger" href="#modal1" onClick="$('ul.tabs').tabs()" (click)="tempFunc('test4',i.application_id)">
+                        <div id="progressbar">
+                            <div id="bar" [ngStyle]="{'width': (i.attribute_category_completion[3].percent) +'%'}" class="blue"></div>
+                            <div id="label" class="white-text">{{i.attribute_category_completion[3].percent }}%</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a class="modal-trigger" href="#modal1" onClick="$('ul.tabs').tabs()" (click)="tempFunc('test7',i.application_id)">
+                        <div id="progressbar">
+                            <div id="bar" [ngStyle]="{'width': (i.attribute_category_completion[4].percent)+'%'}" class="blue"></div>
+                            <div id="label" class="white-text">{{i.attribute_category_completion[4].percent }}%</div>
+                        </div>
+                    </a>
+                </td>
+                <!-- <td>
+                        <a class="modal-trigger" href="#modal1" (click)="tempFunc('others',i.application_id)">
+                            <div id="progressbar">
+                                <div id="bar" [ngStyle]="{'width': '0%' }" class="blue"></div>
+                                <div id="label" class="white-text">{{i.attribute_category_completion[6].percent }}%</div> 
+                            </div>
+                        </a>
+                    </td> -->
+                <!-- <div id="label" class="white-text">{{i.attribute_category_completion[6].percent }}%</div> -->
+                <td>
+                    <a class="modal-trigger" href="#modal1" onClick="$('ul.tabs').tabs()" (click)="tempFunc('other',i.application_id)">
+                        <div id="progressbar">
+                            <div id="bar" [ngStyle]="{'width': '0%' }" class="blue"></div>
+
+                        </div>
+                    </a>
+                </td>
+                <td *ngxPermissionsOnly="['TPC']">
+                    <a class="modal-trigger" href="#modal2" (click)="tempFunc('',i.application_id)">
+                        <div id="progressbar">
+                            <div id="label" class="blue-text">Scores</div>
+                        </div>
+                    </a>
+                </td>
+                <td><a class="waves-effect waves-light  modal-trigger" (click)="generate(i.application_id)" href="#modal111">Report</a></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <!-- <div class="row">
+            
+          <div class="left input-field inline" style="padding-left:30px">
+                  <h6>Apps Per Page<input type="number" id="prpage" min="5" [(ngModel)]="config.itemsPerPage"></h6>
+           
+          </div>
+          <div class="center">
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+  
+      </div> -->
+    <div class="row" style="overflow-y:hidden">
+
+        <!-- <div class="left input-field inline col s4" style="padding-left:30px">
+            <h6>Apps Per Page<input type="number" id="prpage" min="5" [(ngModel)]="config.itemsPerPage"></h6>
+            
+        </div> -->
+        
+        <!-- <div class="left input-field inline col s2" style="padding-left:30px">
+            <button data-target="proj2Report" class="btn light-blue btn modal-trigger" (click)='report()'>Reports</button>
+        </div> -->
+        <div class="center">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+
+    </div>
+    <!-- <div class="row center">
+        <a href="#" class="btn center waves-effect waves-light" id="addRow" (click)="addRow()">
+            <i class="material-icons">add</i></a>
+      </div> -->
+</div>
+
+<!-- Input Modal -->
+<div id="modal1" class="modal">
+    <br>
+    <div class="col s12 right-align">
+        <a class="modal-close">
+            <i class="material-icons"  style="color:black">cancel</i>
+                </a>
+</div>
+<div class="col s12">
+    <ul class="tabs tabs-fixed-width">
+        <li class="tab col s2"><a href="#test1" (click)="tabsInit()">General</a></li>
+        <li class="tab col s2"><a href="#test2" (click)="tabsInit()">Integration</a></li>
+        <li class="tab col s2"><a href="#test3" (click)="tabsInit()">Ticket</a></li>
+        <li class="tab col s2"><a href="#test4" (click)="tabsInit()">App Type</a></li>
+        <li class="tab col s2"><a href="#test7" (click)="tabsInit()">Classification</a></li>
+        <!-- <li class="tab col s2"><a href="#others">Others</a></li> -->
+        <li class="tab col s2" (click)="tabsInit()"><a href="#other">Others</a></li>
+
+        <!-- <li class="tab col s2"><a href="#test5">Classification</a></li> -->
+    </ul>
+</div>
+
+
+
+<!-- General attribute -->
+<div id="test1" class="col s12">
+    <div class="row">
+        <div class="col s12">
+            <!-- <mat-tab-group1> -->
+            <!-- <mat-tab label="General Attributes"> -->
+            <mat-horizontal-stepper>
+                <mat-step [stepControl]="first">
+                    <ng-template matStepLabel>Part 1</ng-template>
+
+                    <form [formGroup]="formGeneral" class="horizontal">
+
+
+                        <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                        <div *ngFor="let question of generalColumns2">
+                            <df-question [question]="question" [form]="formGeneral"></df-question>
+                        </div>
+                        <div class="form-group col s12">
+                            <button type="edit" class="btn btn-primary modal-close" (click)="onEdit()">Save</button>
+                            <button matStepperNext class="btn light-blue" (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                        </div>
+
+
+
+                    </form>
+                    <!-- 
+                <div class="col s12">
+                  <button  matStepperNext class="btn light-blue"  (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                </div> -->
+                </mat-step>
+
+
+
+                <mat-step [stepControl]="second">
+                    <ng-template matStepLabel>Part 2</ng-template>
+                    <form [formGroup]="formGeneral" class="horizontal">
+
+
+                        <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                        <div *ngFor="let question of generalColumns1">
+                            <df-question [question]="question" [form]="formGeneral"></df-question>
+                        </div>
+                        <div class="form-group col s12">
+                            <button type="edit" class="btn btn-primary modal-close" (click)="onEdit()">Save</button>
+                        </div>
+
+
+
+                    </form>
+                </mat-step>
+                <!-- <mat-step [stepControl]="third">
+                <ng-template matStepLabel>Part 3</ng-template>
+    
+    
+    
+    
+                <div class="col s12">
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </mat-step>
+    
+    
+              <!-GENERAL 4TH -->
+                <!-- <mat-step [stepControl]="fourth">
+                <ng-template matStepLabel>Part 4</ng-template>
+    
+    
+                <div class="col s12">
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </mat-step> -->
+
+
+                <!-- GENERAL 5TH -->
+                <!-- <mat-step [stepControl]="fifth">
+                <ng-template matStepLabel>Part 5</ng-template>
+    
+    
+                <div class="col s12">
+                  <button mat-button matStepperPrevious>Back</button>
+    
+                </div>
+              </mat-step> -->
+            </mat-horizontal-stepper>
+            <!-- </mat-tab>
+          <mat-tab label="Tab 2">General 2</mat-tab>
+        </mat-tab-group> -->
+        </div>
+    </div>
+</div>
+<!-- General attribute ends-->
+
+
+
+<!-- Integral attribute -->
+<div id="test2" class="col s12">
+    <div class="row">
+        <div class="col s12">
+            <!-- <mat-tab-group> -->
+            <!-- <mat-tab label="Integral Attributes"> -->
+            <mat-horizontal-stepper>
+                <mat-step [stepControl]="first">
+                    <ng-template matStepLabel>Part 1</ng-template>
+
+                    <form [formGroup]="form_integration" class="horizontal">
+
+
+                        <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                        <div *ngFor="let question of integrationColumns">
+
+                            <df-question [question]="question" [form]="form_integration"></df-question>
+                        </div>
+                        <div class="form-group col s12">
+                            <button type="edit" class="btn btn-primary modal-close" (click)="onEdit()">Save</button>
+                        </div>
+
+
+
+
+
+                    </form>
+                </mat-step>
+                <!-- <mat-step [stepControl]="second">
+                <ng-template matStepLabel>Part 2</ng-template>
+    
+    
+                <div class="col s12">
+                  <button mat-button matStepperPrevious>Back</button>
+    
+                </div>
+              </mat-step> -->
+            </mat-horizontal-stepper>
+            <!-- </mat-tab>
+          <mat-tab label="Tab 2">General 2</mat-tab>
+        </mat-tab-group> -->
+        </div>
+    </div>
+</div>
+<!-- Integrate attribute close -->
+<!-- Ticket attributes -->
+<div id="test3" class="col s12">
+    <div class="row">
+        <div class="col s12">
+
+            <mat-horizontal-stepper>
+                <mat-step [stepControl]="first">
+                    <ng-template matStepLabel>Part 1</ng-template>
+
+
+                    <form [formGroup]="form_ticket" class="horizontal">
+
+
+                        <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                        <div *ngFor="let question of ticketColumns1">
+
+                            <df-question [question]="question" [form]="form_ticket"></df-question>
+                        </div>
+                        <div class="form-group col s12">
+                            <button type="edit" class="btn btn-primary modal-close" (click)="onEdit()">Save</button>
+                        </div>
+
+
+
+
+                    </form>
+                </mat-step>
+                <!-- <mat-step [stepControl]="second">
+            <ng-template matStepLabel>Part 2</ng-template>
+            <div *ngFor="let question of ticketColumns2">
+                
+                            <df-question [question]="question" [form]="form_ticket"></df-question>
+                          </div>
+    
+            <div class="col s12">
+              <button mat-button matStepperPrevious>Back</button>
+    
+            </div>
+          </mat-step> -->
+            </mat-horizontal-stepper>
+        </div>
+    </div>
+</div>
+<!-- Ticket attribute close -->
+
+<!-- Application Type -->
+<div id="test4" class="col s12">
+    <div class="row">
+        <div class="col s12">
+            <div class="row">
+                <ul class="tabs">
+                    <li class="tab col s4"><a href="#test5">Custom Attributes</a></li>
+                    <li class="tab col s4"><a href="#test6">Package Attributes</a></li>
+                </ul>
+            </div>
+            <div id="test5" class="col s12">
+                <div class="row">
+                    <mat-horizontal-stepper>
+                        <mat-step [stepControl]="first">
+                            <ng-template matStepLabel>Part 1</ng-template>
+
+
+                            <form [formGroup]="form_application_type" class="horizontal">
+
+
+                                <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                                <div *ngFor="let question of application_typeColumns2">
+
+                                    <df-question [question]="question" [form]="form_application_type"></df-question>
+                                </div>
+                                <div class="form-group col s12">
+                                    <button type="edit" class="btn btn-primary modal-close" (click)="onEdit()">Save</button>
+                                    <button class="btn light-blue" matStepperNext (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                                </div>
+
+
+
+
+                            </form>
+
+                            <!-- <div class="col s12">
+                      <button class="btn light-blue" matStepperNext (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                    </div> -->
+                        </mat-step>
+
+
+                        <mat-step [stepControl]="second">
+                            <ng-template matStepLabel>Part 2</ng-template>
+
+                            <form [formGroup]="form_application_type" class="horizontal">
+
+
+                                <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                                <div *ngFor="let question of application_typeColumns1">
+
+                                    <df-question [question]="question" [form]="form_application_type"></df-question>
+                                </div>
+                                <div class="form-group col s12">
+                                    <button type="edit" class="btn btn-primary modal-close" (click)="onEdit()">Save</button>
+                                </div>
+
+
+
+
+                            </form>
+
+
+                            <!-- <div class="col s12">
+                      <button mat-button matStepperNext (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                    </div> -->
+                        </mat-step>
+
+                    </mat-horizontal-stepper>
+                </div>
+            </div>
+            <!-- Project attributes -->
+            <div id="test6" class="col s12">
+                <div class="row">
+                    <mat-horizontal-stepper>
+                        <mat-step [stepControl]="first">
+                            <ng-template matStepLabel>Part 1</ng-template>
+
+
+
+
+                        </mat-step>
+
+
+
+
+                    </mat-horizontal-stepper>
+                </div>
+            </div>
+            <!-- project attributes close -->
+
+        </div>
+    </div>
+</div>
+<!-- Application Type -->
+
+<!-- Classification -->
+
+<div id="test7" class="col s12">
+    <div class="row">
+        <div class="col s12">
+            <mat-horizontal-stepper>
+                <mat-step [stepControl]="first">
+                    <ng-template matStepLabel>Part 1</ng-template>
+
+
+                    <form [formGroup]="form_classification" class="horizontal">
+
+
+
+                        <div *ngFor="let question of classificationColumns1">
+
+                            <df-question [question]="question" [form]="form_classification"></df-question>
+                        </div>
+                        <div class="form-group col s12">
+                            <button type="edit" class="btn btn-primary modal-close" (click)="onEdit()">Save</button>
+                            <button matStepperNext class="btn light-blue" (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="second">
+                    <ng-template matStepLabel>Part 2</ng-template>
+                    <form [formGroup]="form_classification" class="horizontal">
+
+
+
+                        <div *ngFor="let question of classificationColumns2">
+
+                            <df-question [question]="question" [form]="form_classification"></df-question>
+                        </div>
+                        <div class="form-group col s12">
+                            <button type="edit" class="btn btn-primary modal-close" (click)="onEdit()">Save</button>
+                            <button matStepperPrevious class="btn indigo lighten-1">Back</button>
+
+                        </div>
+
+                    </form>
+
+                    <div class="col s12">
+
+
+                    </div>
+                </mat-step>
+            </mat-horizontal-stepper>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+<div id="other" class="col s12">
+
+    <div class="row">
+        <div class="col s12">
+
+
+            <form [formGroup]="form_others" class="horizontal">
+                <div *ngFor="let x of customCat">
+                    <div class="card-panel #80cbc4 teal lighten-3 col s12">
+                        <div class="white-text  center-align" style="font-family:Roboto, sans-serif">
+
+                            {{x.category_type}}
+                        </div>
+                    </div>
+                    <div *ngFor="let question of x.attributes">
+                        <df-question [question]="question" [form]="form_others"></df-question>
+                    </div>
+                </div>
+                <div class="form-group col s12">
+                    <button type="edit" class="btn btn-primary modal-close" (click)="onEdit()">Save</button>
+
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+<!-- class ends -->
+<!-- others start-->
+<!-- <div id="others" class="col s12">
+        <div class="row">
+            <div class="col s12">
+    
+    
+                <!-- <ng-template matStepLabel>Part 1</ng-template> -->
+
+
+<!-- <form [formGroup]="form_others" class="horizontal">
+    
+    
+    
+                    <div *ngFor="let question of customColumns">
+    
+                        <df-question [question]="question" [form]="form_others"></df-question>
+                    </div>
+                    <div class="form-group col s12">
+                        <button type="edit" class="btn btn-primary modal-close" (click)="onEdit()">Save</button>
+    
+                    </div>
+                </form>
+    
+               
+    
+            </div>
+        </div> 
+    </div> -->
+
+</div>
+
+
+<!-- Scores -->
+<div id="modal2" class="modal">
+    <br>
+    <!-- <div class="col s12 right-align">
+            <a class="modal-close">
+                <i class="material-icons"  style="color:black">cancel</i>
+                    </a>
+    </div> -->
+
+
+
+    <div id="testscore" class="col s12">
+        <div class="row">
+            <div class="col s12">
+                <!-- <mat-tab-group> -->
+                <!-- <mat-tab label="Optimize Scores"> -->
+
+                <!-- OPTIMIZE score -->
+                <mat-horizontal-stepper>
+
+
+                    <mat-step [stepControl]="first">
+                        <ng-template matStepLabel class="pink-text">Optimize</ng-template>
+
+                        <!-- <h3>Enter optimize score</h3>  -->
+                        <div class="row">
+                            <span class="col s6 score ">Stability</span><span class="col s6 score ">Maturity</span>
+                        </div>
+                        <mat-slider #stability class="primary" tickInterval="1.0" ng-model="color.blue" class="col s6" min="0" max="5" step="1" [value]=scores.stability
+                            thumbLabel></mat-slider>
+                        <mat-slider #maturity tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.maturity thumbLabel></mat-slider>
+
+
+
+                        <div class="row">
+                            <span class="col s6 score">Availibility </span> <span class="col s6 score ">Scalability </span >
+                     </div><form [formGroup]="form_scores">
+                     <mat-slider #availibility  tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.availibility thumbLabel></mat-slider>
+                     <mat-slider #scalability tickInterval="1.0"  class="col s6" min="0" max="5" step="1" [value]=scores.scalability thumbLabel></mat-slider></form>
+    
+    
+                     <div class="row"> 
+                        <span class="col s6 score">Cloud Applicabilty </span> <span class="col s6 score">Current cloud</span>
+                        </div>
+                        <form [formGroup]="form_scores">
+                            <mat-slider #cloud_applicabilty tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.cloud_applicabilty
+                                thumbLabel></mat-slider>
+                            <mat-slider #current_cloud tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.current_cloud thumbLabel></mat-slider>
+
+                        </form>
+
+
+                        <div class="row">
+                            <span class="col s6 score">Redundency</span> <span class="col s6 score">License Optimization</span >
+                         </div><form [formGroup]="form_scores"><mat-slider #redundency tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.redundency   thumbLabel> </mat-slider>
+                         <mat-slider #optimization tickInterval="1.0"  class="col s6" min="0" max="5" step="1" [value]=scores.license_optimization   thumbLabel></mat-slider></form>
+    
+    
+                         
+                         <div class="row"> 
+                            <span class="col s6 score">Technical Debt</span>
+                        </div>
+
+                        <mat-slider #debt tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.technical_debt thumbLabel></mat-slider>
+                        <div class="col s12">
+                            <button type="warning" class="btn light-blue" matStepperNext>Next</button>
+
+
+
+                            <button type="warning" class="btn btn-primary modal-close" (click)="submitScores(debt,optimization,cloud_applicabilty,redundency,current_cloud,availibility,scalability,stability,maturity,self_service_adoption,current_mobility_adoption_level,mobility_enablement_scope,technology_obsolecence,current_api_adoption_score,api_applicability_score,straight_through_processing_adoption_score,testing_automation_adoption,current_dev_ops_adoption_score,devops_applicability_score,unique_functionality,registered_as_ip,current_roi_realization_model,market_potential,ease_of_monetization,monetization_model,ai_or_ml_applicability,chat_bot_applicability,innovation_scores_rpa_applicability,innovation_scores_block_chain_applicability)">Save</button>
+
+                        </div>
+
+                        <!-- Optimize score ends -->
+
+
+                    </mat-step>
+
+
+                    <!-- Digitize score -->
+                    <mat-step [stepControl]="second">
+                        <ng-template matStepLabel>Digitize</ng-template>
+
+                        <div class="row">
+                            <span class="col s6 score">Straight-through Processing Adoption</span><span class="col s6 score">Api Applicability</span>
+                        </div>
+                        <form [formGroup]="form_scores">
+                            <mat-slider #straight_through_processing_adoption_score tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.straight_through_processing_adoption
+                                thumbLabel></mat-slider>
+                            <mat-slider #api_applicability_score tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.api_applicability
+                                thumbLabel></mat-slider>
+                        </form>
+
+
+                        <div class="row">
+                            <span class="col s6 score">Current Api Adoption</span> <span class="col s6 score">Technology Obsolecence </span>
+                        </div>
+                        <form [formGroup]="form_scores">
+                            <mat-slider #current_api_adoption_score tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.current_api_adoption
+                                thumbLabel></mat-slider>
+                            <mat-slider #technology_obsolecence tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.technology_obsolecence
+                                thumbLabel></mat-slider>
+                        </form>
+
+
+                        <div class="row">
+                            <span class="col s6 score">Mobility Enablement Scope</span><span class="col s6 score">Current Mobility Adoption Level</span>
+                        </div>
+                        <form [formGroup]="form_scores">
+                            <mat-slider #mobility_enablement_scope tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.mobility_enablement_scope
+                                thumbLabel></mat-slider>
+                            <mat-slider #current_mobility_adoption_level tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.current_mobility_adoption_level
+                                thumbLabel></mat-slider>
+                        </form>
+
+
+                        <div class="row">
+                            <span class="col s6 score"> Self Service Adoption</span>
+                        </div>
+                        <form [formGroup]="form_scores">
+                            <mat-slider #self_service_adoption tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.self_service_adoption
+                                thumbLabel></mat-slider>
+                        </form>
+                        <!-- digitalize_scores ends -->
+                        <div class="col s12">
+                            <button matStepperPrevious class="btn indigo lighten-1">Back</button>
+                            <button type="warning" matStepperNext class="btn light-blue">Next</button>
+
+
+
+                            <button type="warning" class="btn btn-primary modal-close" (click)="submitScores(debt,optimization,cloud_applicabilty,redundency,current_cloud,availibility,scalability,stability,maturity,self_service_adoption,current_mobility_adoption_level,mobility_enablement_scope,technology_obsolecence,current_api_adoption_score,api_applicability_score,straight_through_processing_adoption_score,testing_automation_adoption,current_dev_ops_adoption_score,devops_applicability_score,unique_functionality,registered_as_ip,current_roi_realization_model,market_potential,ease_of_monetization,monetization_model,ai_or_ml_applicability,chat_bot_applicability,innovation_scores_rpa_applicability,innovation_scores_block_chain_applicability)">Save</button>
+
+                        </div>
+                    </mat-step>
+
+                    <!-- Expedite scores -->
+                    <mat-step [stepControl]="third">
+                        <ng-template matStepLabel>Expedite</ng-template>
+
+
+                        <div class="row">
+                            <span class="col s6 score">Current Dev Ops Adoption Score</span><span class="col s6 score">DevOps Applicability</span >
+               </div><form [formGroup]="form_scores"><mat-slider  #current_dev_ops_adoption_score tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.current_dev_ops_adoption  thumbLabel></mat-slider>
+               <mat-slider  #devops_applicability_score tickInterval="1.0"  class="col s6" min="0" max="5" step="1" [value]=scores.devops_applicability   thumbLabel></mat-slider></form>
+    
+               <div class="row"> 
+                <span class="col s6 score"> Testing Automation Adoption </span></div>
+                        <form [formGroup]="form_scores">
+                            <mat-slider #testing_automation_adoption tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.testing_automation_adoption
+                                thumbLabel></mat-slider>
+                        </form>
+                        <!-- expedite_scores: over -->
+
+
+                        <div class="col s12">
+                            <button matStepperPrevious class="btn indigo lighten-1">Back</button>
+                            <button type="warning" matStepperNext class="btn light-blue">Next</button>
+
+
+
+                            <button type="warning" class="btn btn-primary modal-close" (click)="submitScores(debt,optimization,cloud_applicabilty,redundency,current_cloud,availibility,scalability,stability,maturity,self_service_adoption,current_mobility_adoption_level,mobility_enablement_scope,technology_obsolecence,current_api_adoption_score,api_applicability_score,straight_through_processing_adoption_score,testing_automation_adoption,current_dev_ops_adoption_score,devops_applicability_score,unique_functionality,registered_as_ip,current_roi_realization_model,market_potential,ease_of_monetization,monetization_model,ai_or_ml_applicability,chat_bot_applicability,innovation_scores_rpa_applicability,innovation_scores_block_chain_applicability)">Save</button>
+
+                        </div>
+                    </mat-step>
+
+                    <!-- Monitize score -->
+                    <mat-step [stepControl]="fourth">
+                        <ng-template matStepLabel>Monitize</ng-template>
+
+
+
+                        <div class="row">
+                            <span class="col s6 score">Unique Functionality </span><span class="col s6 score"> Registered as Ip</span >
+                 </div><form  [formGroup]="form_scores"><mat-slider  #unique_functionality  tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.unique_functionality thumbLabel></mat-slider>
+                 <mat-slider  #registered_as_ip  tickInterval="1.0"  class="col s6" min="0" max="5" step="1" [value]=scores.registered_as_ip thumbLabel></mat-slider></form>
+    
+    
+                 <div class="row"> 
+                  <span class="col s6 score">Current ROI  Realization Model  </span> <span class="col s6 score">Market Potential</span >
+                 </div><form [formGroup]="form_scores"><mat-slider  #current_roi_realization_model   tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.current_roi_realization_model thumbLabel></mat-slider>
+                 <mat-slider  #market_potential  tickInterval="1.0"  class="col s6" min="0" max="5" step="1" [value]=scores.market_potential thumbLabel></mat-slider></form>
+    
+    
+                 <div class="row"> 
+                  <span class="col s6 score">  Ease of Monetization</span> <span class="col s6 score"> Monetization Model</span >
+                 </div><form [formGroup]="form_scores"><mat-slider  #ease_of_monetization  tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.ease_of_monetization thumbLabel></mat-slider>
+                 <mat-slider  #monetization_model  tickInterval="1.0"  class="col s6" min="0" max="5" step="1" [value]=scores.monetization_model thumbLabel></mat-slider></form>
+    
+                <!-- Monitize score over -->
+                <div  class="col s12">
+                  <button matStepperPrevious class="btn indigo lighten-1" >Back</button>
+                  <button type="warning"  matStepperNext class="btn light-blue" >Next</button>
+                  
+                     
+      
+                    <button type="warning" class="btn btn-primary modal-close"  (click)="submitScores(debt,optimization,cloud_applicabilty,redundency,current_cloud,availibility,scalability,stability,maturity,self_service_adoption,current_mobility_adoption_level,mobility_enablement_scope,technology_obsolecence,current_api_adoption_score,api_applicability_score,straight_through_processing_adoption_score,testing_automation_adoption,current_dev_ops_adoption_score,devops_applicability_score,unique_functionality,registered_as_ip,current_roi_realization_model,market_potential,ease_of_monetization,monetization_model,ai_or_ml_applicability,chat_bot_applicability,innovation_scores_rpa_applicability,innovation_scores_block_chain_applicability)">Save</button>
+                   
+                </div>
+              </mat-step>
+              <mat-step [stepControl]="fifth">
+                <ng-template matStepLabel>Innovation</ng-template>
+            
+    
+                <!-- Innovation score -->
+    
+                <div class="row"> 
+                  <span class="col s6 score">  AI/ML Applicability</span> <span class="col s6 score">Chatbot Applicability</span >
+                 </div><form [formGroup]="form_scores"><mat-slider  #ai_or_ml_applicability  tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.ai_or_ml_applicability thumbLabel></mat-slider>
+                 <mat-slider  #chat_bot_applicability tickInterval="1.0"  class="col s6" min="0" max="5" step="1" [value]=scores.chat_bot_applicability thumbLabel></mat-slider></form>
+    
+    
+                 <div class="row"> 
+                  <span class="col s6 score">  RPA Applicability</span> <span class="col s6 score">Blockchain Applicability</span >
+                 </div><form [formGroup]="form_scores"><mat-slider   #innovation_scores_rpa_applicability tickInterval="1.0" class="col s6" min="0" max="5" step="1" [value]=scores.rpa_applicability   thumbLabel></mat-slider>
+                 <mat-slider  #innovation_scores_block_chain_applicability  tickInterval="1.0"  class="col s6" min="0" max="5" step="1" [value]=scores.block_chain_applicability  thumbLabel></mat-slider></form>
+    
+    
+                <!-- Innovation score over -->
+                <div  class="col s12">
+                  <button  matStepperPrevious  class="btn indigo lighten-1" >Back</button>
+              
+                  
+                     
+      
+                    <button type="warning" class="btn btn-primary modal-close" class="btn " (click)="submitScores(debt,optimization,cloud_applicabilty,redundency,current_cloud,availibility,scalability,stability,maturity,self_service_adoption,current_mobility_adoption_level,mobility_enablement_scope,technology_obsolecence,current_api_adoption_score,api_applicability_score,straight_through_processing_adoption_score,testing_automation_adoption,current_dev_ops_adoption_score,devops_applicability_score,unique_functionality,registered_as_ip,current_roi_realization_model,market_potential,ease_of_monetization,monetization_model,ai_or_ml_applicability,chat_bot_applicability,innovation_scores_rpa_applicability,innovation_scores_block_chain_applicability)">Save</button>
+                   
+                </div>
+              </mat-step>
+            </mat-horizontal-stepper>
+            <!-- </mat-tab>-->
+          <!-- <mat-tab label="Tab 2">General 2</mat-tab> -->
+      
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="fixed-action-btn horizontal">
+      <a class="btn-floating btn-large red modal-trigger" id="addRow" href="#modal9" (click)="addRows()">
+          <i class="large material-icons">add</i>
+        </a>
+    </div>
+    
+    
+    
+    <!-- Add new -->
+    
+    
+    
+    
+    <div id="modal9" class="modal">
+            <br>
+        <div class="col s12 right-align">
+            <a class="modal-close"><i class="material-icons" style="color:black">cancel</i></a>
+            </div>
+        <div class="col s12">
+          <ul class="tabs  tabs-fixed-width">
+            <li class="tab col s2"><a href="#test11">General</a></li>
+            <li class="tab col s2"><a href="#test21">Integration</a></li>
+            <li class="tab col s2"><a href="#test31">Ticket</a></li>
+            <li class="tab col s2"><a href="#test41">App Type</a></li>
+            <li class="tab col s2"><a href="#test71">Classification</a></li>
+            <li class="tab col s2"><a href="#test91">Others</a></li>
+           
+            <!-- <li class="tab col s2"><a href="#test5">Classification</a></li> -->
+          </ul>
+        </div>
+        <!-- General attribute -->
+        <div id="test11" class="col s12">
+          <div class="row">
+            <div class="col s12">
+              <!-- <mat-tab-group1> -->
+              <!-- <mat-tab label="General Attributes"> -->
+              <mat-horizontal-stepper>
+                <mat-step [stepControl]="first">
+                  <ng-template matStepLabel>Part 1</ng-template>
+      
+                  <form [formGroup]="formGeneral" class="horizontal">
+      
+      
+                    <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                    <div *ngFor="let question of generalColumns2">
+                      <df-question [question]="question" [form]="formGeneral"></df-question>
+                    </div>
+                    
+                <div class="form-group col s12">
+                    <button  type="add" class="btn btn-primary modal-close" (click)="onAdd()">Add</button>
+                    <button   matStepperNext class="btn light-blue" (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                </div>
+                  
+      
+      
+      
+                  </form>
+      
+                  <!-- <div class="col s12">
+                    <button   matStepperNext class="btn light-blue" (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                  </div> -->
+                </mat-step>
+      
+      
+      
+                <mat-step [stepControl]="second">
+                  <ng-template matStepLabel>Part 2</ng-template>
+                  <form [formGroup]="formGeneral" class="horizontal">
+                      
+                      
+                                    <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                                    <div *ngFor="let question of generalColumns1">
+                                      <df-question [question]="question" [form]="formGeneral"></df-question>
+                                    </div>
+                                    <div class="form-group col s12">
+                                        <button  type="add" class="btn btn-primary modal-close" (click)="onAdd()">Add</button>
+                                    </div>
+                                      
+                      
+                      
+                                  </form>
+                </mat-step>
+              
+         
+              </mat-horizontal-stepper>
+              <!-- </mat-tab>
+            <mat-tab label="Tab 2">General 2</mat-tab>
+          </mat-tab-group> -->
+            </div>
+          </div>
+        </div>
+        <!-- General attribute ends-->
+      
+      
+      
+        <!-- Integral attribute -->
+        <div id="test21" class="col s12">
+          <div class="row">
+            <div class="col s12">
+              <!-- <mat-tab-group> -->
+              <!-- <mat-tab label="Integral Attributes"> -->
+              <mat-horizontal-stepper>
+                <mat-step [stepControl]="first">
+                  <ng-template matStepLabel>Part 1</ng-template>
+      
+                  <form [formGroup]="form_integration" class="horizontal">
+      
+      
+                    <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                    <div *ngFor="let question of integrationColumns">
+      
+                      <df-question [question]="question" [form]="form_integration"></df-question>
+                    </div>
+                    <div class="form-group col s12">
+                        <button  type="add" class="btn btn-primary modal-close" (click)="onAdd()">Add</button>
+                    </div>
+                      
+      
+      
+      
+      
+                  </form>
+                </mat-step>
+                <!-- <mat-step [stepControl]="second">
+                  <ng-template matStepLabel>Part 2</ng-template>
+      
+      
+                  <div class="col s12">
+                    <button mat-button matStepperPrevious>Back</button>
+      
+                  </div>
+                </mat-step> -->
+              </mat-horizontal-stepper>
+              <!-- </mat-tab>
+            <mat-tab label="Tab 2">General 2</mat-tab>
+          </mat-tab-group> -->
+            </div>
+          </div>
+        </div>
+        <!-- Integrate attribute close -->
+        <!-- Ticket attributes -->
+        <div id="test31" class="col s12">
+          <div class="row">
+            <div class="col s12">
+      
+                <mat-horizontal-stepper>
+                    <mat-step [stepControl]="first">
+                      <ng-template matStepLabel>Part 1</ng-template>
+          
+      
+              <form [formGroup]="form_ticket" class="horizontal">
+      
+      
+                <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                <div *ngFor="let question of ticketColumns1">
+      
+                  <df-question [question]="question" [form]="form_ticket"></df-question>
+                </div>
+                <div class="form-group col s12">
+                    <button  type="add" class="btn btn-primary modal-close" (click)="onAdd()">Add</button>
+                </div>
+                  
+      
+      
+      
+              </form>
+            </mat-step>
+            <!-- <mat-step [stepControl]="second">
+              <ng-template matStepLabel>Part 2</ng-template>
+              <div *ngFor="let question of ticketColumns2">
+                  
+                              <df-question [question]="question" [form]="form_ticket"></df-question>
+                            </div>
+      
+              <div class="col s12">
+                <button mat-button matStepperPrevious>Back</button>
+      
+              </div>
+            </mat-step> -->
+          </mat-horizontal-stepper>
+            </div>
+          </div>
+        </div>
+        <!-- Ticket attribute close -->
+      
+        <!-- Application Type -->
+        <div id="test41" class="col s12">
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <ul class="tabs">
+                  <li class="tab col s4"><a href="#test5">Custom Attributes</a></li>
+                  <li class="tab col s4"><a href="#test6">Package Attributes</a></li>
+                </ul>
+              </div>
+              <div id="test5" class="col s12">
+                <div class="row">
+                  <mat-horizontal-stepper>
+                    <mat-step [stepControl]="first">
+                      <ng-template matStepLabel>Part 1</ng-template>
+      
+      
+                      <form [formGroup]="form_application_type" class="horizontal">
+      
+      
+                        <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                        <div *ngFor="let question of application_typeColumns2">
+      
+                          <df-question [question]="question" [form]="form_application_type"></df-question>
+                        </div>
+                        <div class="form-group col s12">
+                            <button  type="add" class="btn btn-primary modal-close" (click)="onAdd()">Add</button>
+                            <button  matStepperNext class="btn light-blue"  (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                        </div>
+                          
+      
+      
+      
+                      </form>
+      
+                      <!-- <div class="col s12">
+                        <button  matStepperNext class="btn light-blue"  (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                      </div> -->
+                    </mat-step>
+      
+      
+                    <mat-step [stepControl]="second">
+                      <ng-template matStepLabel>Part 2</ng-template>
+      
+                      <form [formGroup]="form_application_type" class="horizontal">
+      
+      
+                        <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                        <div *ngFor="let question of application_typeColumns1">
+      
+                          <df-question [question]="question" [form]="form_application_type"></df-question>
+                        </div>
+                        <div class="form-group col s12">
+                            <button  type="add" class="btn btn-primary modal-close" (click)="onAdd()">Add</button>
+                            <!-- <button  matStepperNext class="btn light-blue"  (click)="openSnackBar(fname.value,lname.value)">Next</button> -->
+                            <button  matStepperPrevious class="btn indigo lighten-1">Back</button>
+                        </div>
+                          
+      
+      
+                      </form>
+      
+      
+                      <!-- <div class="col s12">
+                        <button  matStepperNext class="btn light-blue"  (click)="openSnackBar(fname.value,lname.value)">Next</button>
+                      </div> -->
+                    </mat-step>
+      
+                  </mat-horizontal-stepper>
+                </div>
+              </div>
+              <!-- Project attributes -->
+              <!-- <div id="test6" class="col s12">
+                <div class="row">
+                  <mat-horizontal-stepper>
+                    <mat-step [stepControl]="first">
+                      <ng-template matStepLabel>Part 1</ng-template>
+      
+      
+      
+      
+                    </mat-step>
+      
+      
+      
+      
+                  </mat-horizontal-stepper>
+                </div>
+              </div> -->
+              <!-- project attributes close -->
+      
+            </div>
+          </div>
+        </div>
+        <!-- Application Type -->
+      
+        <!-- Classification -->
+      
+        <div id="test71" class="col s12">
+          <div class="row">
+            <div class="col s12">
+              <mat-horizontal-stepper>
+                <mat-step [stepControl]="first">
+                  <ng-template matStepLabel>Part 1</ng-template>
+      
+      
+                  <form [formGroup]="form_classification" class="horizontal">
+                    
+                    
+                              <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                              <div *ngFor="let question of classificationColumns1">
+                    
+                                <df-question [question]="question" [form]="form_classification"></df-question>
+                              </div>
+                              <div class="form-group col s12">
+                                  <button  type="add" class="btn btn-primary modal-close" (click)="onAdd()">Add</button>
+                              </div>
+                                
+                            </form>
+        </mat-step>
+        <mat-step [stepControl]="second">
+          <ng-template matStepLabel>Part 2</ng-template>
+          <form [formGroup]="form_classification" class="horizontal">
+            
+            
+                      <!-- <dynamic-form [questions]="apps[2].attributes" ></dynamic-form> -->
+                      <div *ngFor="let question of classificationColumns2">
+            
+                        <df-question [question]="question" [form]="form_classification"></df-question>
+                      </div>
+                      <div class="form-group col s12">
+                       <button  type="add" class="btn btn-primary modal-close" (click)="onAdd()">Add</button>
+                       <button  matStepperPrevious class="btn indigo lighten-1">Back</button>
+                      </div>
+                      
+                    </form>
+          <!-- <div class="col s12">
+            <button  matStepperPrevious class="btn indigo lighten-1">Back</button>
+      
+          </div> -->
+        </mat-step>
+      </mat-horizontal-stepper>
+              </div>
+          </div>
+        </div>
+        <!-- class ends -->
+        <!--others-->
+        <div id="test91" class="col s12">
+            <div class="row">
+                <div class="col s12">
+                    <form [formGroup]="form_others" class="horizontal">
+                        <div *ngFor="let category of customCol">
+                        
+                        <div class="card-panel #80cbc4 teal lighten-3 col s12">
+                            <div class="white-text  center-align" style="font-family:Roboto, sans-serif">
+
+                                {{category.category_type}}
+                            </div>
+                            </div>
+
+                            <div *ngFor="let question of category.attributes">
+                                <df-question [question]="question" [form]="form_others"></df-question>
+                            </div>
+                           
+                        </div>
+                        <div class="form-group col s12">
+                            <button type="edit" class="btn btn-primary modal-close" (click)="onAdd()">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--other eds-->
+      </div>
+    <div id="modal111" class="modal modal-fixed-footer">
+        <div *ngIf="this.reportArray.length!=0" class="modal-content">
+            <h4 >The following attributes are incomplete</h4>
+            <ul  class="fa-ul" style=" column-count: 2;">
+                <li *ngFor="let x of this.reportArray"><i class="fa fa-exclamation-triangle"></i>{{x.label}}</li>
+            </ul>
+            <!-- <h4 *ngIf="this.reportArray.length==0">All fields have been filled</h4> -->
+        </div>
+        <!-- <div *ngIf="this.reportArray.length==0" class="modal-content"> -->
+            <!-- <h4>The application is filled</h4> -->
+        <div *ngIf="this.reportArray.length==0" class="modal-content">
+            <h4 >All fields have been filled</h4>
+        </div>
+        <!-- </div> -->
+    
+        <div class="modal-footer" style="padding-bottom:8%">
+            <button *ngIf="this.reportArray.length!=0"  style="margin-bottom:0px" (click)="exportToExcel()" class="modal-action modal-close waves-effect waves-green btn" >Export</button>
+            <button style="margin-bottom:0px"  class="modal-action modal-close waves-effect waves-green btn">Close</button>
+            
+        </div>
+    </div>
+    <!-- report -->
+    <div id="proj2Report" class="modal modal-fixed-footer report">
+
+        <div class="row">
+            <div class="col s12">
+                <mat-horizontal-stepper>
+                    <mat-step [stepControl]="first">
+                        <ng-template matStepLabel>Consolidated Report</ng-template>
+                        <!-- <h6 *ngIf="this.common.length!=0">The following attributes are incomplete</h6> -->
+                        <div *ngIf="this.common.length!=0" class="modal-content">
+
+
+
+
+
+                            <ul class="fa-ul col s12" style=" column-count: 2;">
+                                <li *ngFor="let x of common"><i class="fa fa-exclamation-triangle"></i>{{x}}</li>
+                            </ul>
+
+                            <div class="col s12">
+                                <button *ngIf="this.common.length!=0" style="margin-bottom:0px" (click)="exportToMissingExcel()" class="modal-action modal-close waves-effect waves-green btn">Export</button>
+                                <button style="margin-bottom:0px" class="modal-action modal-close waves-effect waves-green btn">Close</button>
+
+                            </div>
+                            <!-- <h4 *ngIf="this.reportArray.length==0">All fields have been filled</h4> -->
+                        </div>
+                        <!-- <div *ngIf="this.reportArray.length==0" class="modal-content"> -->
+                        <!-- <h4>The application is filled</h4> -->
+                        <div *ngIf="this.common.length==0" class="modal-content">
+                            <h6>There are no attributes incomplete across the entire project.</h6>
+                        </div>
+                        <!-- </div> -->
+
+
+                    </mat-step>
+                    <mat-step [stepControl]="second">
+                        <ng-template matStepLabel>Individual Report</ng-template>
+                        <div *ngIf="this.projectreport.length!=0" class="modal-content">
+
+                            <!-- <h6>The following attributes are incomplete</h6> -->
+                            <div *ngFor="let app of projectreport">
+
+                                <div class="card-panel #80cbc4 teal lighten-3 col s12">
+                                    <div class="white-text  center-align" style="font-family:Roboto, sans-serif">
+
+                                        {{app.application_id}}
+                                    </div>
+                                </div>
+                                <h6 *ngIf="app.atts.length==0" class="center-align">All fields are filled</h6>
+                                <ul *ngIf="app.atts.length!=0" class="fa-ul col s12" style=" column-count: 2;">
+                                    <li *ngFor="let x of app.atts"><i class="fa fa-exclamation-triangle"></i>{{x.label}}</li>
+                                </ul>
+
+                            </div>
+                            <div class="col s12">
+                                <button *ngIf="this.reportArray.length!=0" style="margin-bottom:0px" (click)="exportToExcel()" class="modal-action modal-close waves-effect waves-green btn">Export</button>
+                                <button style="margin-bottom:0px" class="modal-action modal-close waves-effect waves-green btn">Close</button>
+
+                            </div>
+                            <!-- <h4 *ngIf="this.reportArray.length==0">All fields have been filled</h4> -->
+                        </div>
+                        <!-- <div *ngIf="this.reportArray.length==0" class="modal-content"> -->
+                        <!-- <h4>The application is filled</h4> -->
+                        <div *ngIf="this.projectreport.length==0" class="modal-content">
+                            <h6>All fields have been filled</h6>
+                        </div>
+                        <!-- </div> -->
+
+
+
+                    </mat-step>
+                </mat-horizontal-stepper>
+            </div>
+        </div>
+    </div>
+      <script>
+        $("#application_id").prop('disabled', true);
+    </script>

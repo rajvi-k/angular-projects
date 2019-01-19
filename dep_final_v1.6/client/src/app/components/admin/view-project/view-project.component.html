@@ -1,0 +1,177 @@
+<div class="row ">
+  
+    <div class="col m12 s4 card-panel  indigo lighten-1">
+      <span class="white-text">
+      <h4 class="header" style="text-align:center" >PROJECTS</h4>
+        </span>
+    </div>
+  
+    <div *ngIf="this.role=='TPC'" class="row ">
+  
+  
+      <div class="input-field col s6 offset-s3">
+  
+        <i class="material-icons prefix">search</i>
+        <input type="text" id="search1" class="form-control" [(ngModel)]="query" placeholder="Search by project name or description"
+          placement="right" />
+  
+      </div>
+  
+  
+      <div *ngFor="let project of projects|search:'project_name,version':query|paginate: {itemsPerPage: 6, currentPage:page, id: '1'} ">
+        <!-- *ngIf="project.version_flag===false" -->
+        <div class="col s6 m6">
+          <div class="card  teal lighten-4">
+            <div class="card-content">
+              <span class="card-title" large-text>{{project.project_name}}  <a *ngIf="project.attribute_details.length==0"    class="btn halfway-fab waves-effect waves-light truncate" style="font-size:12px" (click)="copyFrom(project._id)"><i class="material-icons small">content_copy</i>Copy Attributes From</a><span *ngIf="project.version>0" class="new badge" data-badge-caption="">v{{project.version}}</span></span>
+  
+              <!-- <p>{{project.description}}</p> -->
+              <!-- <br/> -->
+              <tr>
+                <td>Start Date : {{project.start_date | date:"MM/dd/yy"}}</td>
+                <td>End Date : {{project.delivery_date | date:"MM/dd/yy"}}</td>
+  
+              </tr>
+              <!-- <span *ngIf="project.version_flag===false"> -->
+              
+              <!-- style="margin-left:75%" -->
+              <span *ngIf="project.version>0">
+                <table style="border: 1px solid black; border-collapse: collapse;">
+                    <thead><tr *ngIf="project.version>0"  style="border: 1px solid black;" >
+                        <!-- style="padding-left:70%" -->
+                      <th style="border-bottom: 1px solid black;border-right: 1px solid black;">Versions</th>
+                      <th style="border-bottom: 1px solid black;border-right: 1px solid black;" >Created At</th>
+                      <th style="border-bottom: 1px solid black;border-right: 1px solid black;">Created By</th>
+                      <th style="border-bottom: 1px solid black;border-right: 1px solid black;">View</th>
+                    </tr>
+                      </thead>
+                      <tbody >
+                          <tr *ngFor="let p of projectsAll">
+                              <td *ngIf="p.project==project.project && p.version_flag==true" style="border-bottom: 1px solid black;border-right: 1px solid black;text-align:center;">
+                                v{{p.version}}
+                              </td>
+                              <td *ngIf="p.project==project.project && p.version_flag==true" style="border-bottom: 1px solid black;border-right: 1px solid black;text-align:center;">
+                                  {{p.created_at | date:"MM/dd/yy"}}
+                              </td>
+                              <td *ngIf="p.project==project.project && p.version_flag==true" style="border-bottom: 1px solid black;border-right: 1px solid black;text-align:center;">
+                                  {{p.created_by}}
+                              </td>
+                              <td *ngIf="p.project==project.project && p.version_flag==true" style="border-bottom: 1px solid black;border-right: 1px solid black;text-align:center;">
+                                  <!-- margin-left:40px; -->
+                                  <a style="font-size:12px" class="waves-effect waves-light btn-sm black-text" [routerLink]="['/dashboard/view-version',p._id]"><i class="material-icons">send</i></a>
+                              </td>
+                              <!-- <td></td> -->
+                            </tr>
+                      </tbody>
+                      
+                </table>
+                 
+              </span>
+              <!-- </span> -->
+  
+            </div>
+  
+            <div class="card-action" *ngIf="project.version_flag===false">
+              <a style="margin-left:5px;font-size:12px" class="col s2 m2 btn waves-effect waves-light truncate" [routerLink]="['/dashboard/edit-project',project._id]"><i class="material-icons">mode_edit</i>Edit</a>
+              <a style="margin-left:5px;font-size:12px" class="col s2 m4 btn waves-effect waves-light truncate" [routerLink]="['/dashboard/add-attribute',project._id,project.project_name]"><i class="material-icons">add</i>Manage Attributes</a>
+              <a style="margin-left:5px;font-size:12px" class="col s2 btn waves-effect waves-light red truncate" (click)="delete(project._id)"><i class="material-icons">delete</i></a>
+              <!-- <a href="#mmodal" style="margin-left:5px" class="col s1 btn modal-trigger waves-effect waves-light blue" (click)="version(project._id)"><i class="material-icons">mode_edit</i></a> -->
+              <!-- <a class="modal-trigger" href="#modal1"><button id="vsn" type="button" class="btn btn-primary" (click)="version(project._id)">Files <i class="material-icons prefix"  >file_upload</i></button></a> -->
+              <a style="margin-left:5px;font-size:12px" class="modal-trigger col s1 m3 btn  waves-effect waves-light blue" href="#modal1"
+                (click)="version(project._id)"><i class="material-icons">add</i>version</a>
+              <!-- <a style="margin-left:5px;font-size:12px" class="col s1 m3 btn  waves-effect waves-light blue" (click)="versionAdd(project.project_name)"><i class="material-icons">add</i>version</a> -->
+            </div>
+            <div *ngIf="project.version_flag===true">
+              <!-- <a style="margin-left:50%;font-size:12px" class="col s2 btn waves-effect waves-light red truncate" (click)="vversion(project.project_name)"><i class="material-icons">view</i></a> -->
+              <a style="margin-left:10px;font-size:12px" class="col s2 btn waves-effect waves-light red truncate" (click)="delete(project._id)"><i class="material-icons">delete</i></a>
+            </div>
+          </div>
+        </div>
+        <!-- <div id="modal1" class="modal">
+        <div class="row">
+          <label for="vname">Project Name</label>
+          <input type="text" id="vname" value={{projects.project_name|json}}/>
+  
+          <a style="margin-left:10px;margin-bottom:10px" (click)="versionAdd(vname.value)" class="col s2 btn waves-effect waves-light green"><i class="material-icons">add</i>Add Version</a>
+        </div>
+  
+      </div> -->
+        <div id="modal1" class="modal col s6">
+          <div>
+            <!-- <input id="vname" type="text" value={{projects}} #vname/> -->
+            <h6>Add new version </h6>
+            <a style="margin-left:10px;margin-bottom:10px" (click)="versionAdd()" class="modal-close col s2 btn waves-effect waves-light green"><i class="material-icons">add</i>Add Version</a>
+          </div>
+  
+        </div>
+      </div>
+      <div>
+        <pagination-controls style="text-align:center" (pageChange)="page = $event" id="1" maxSize="10" directionLinks="true" autoHide="false">
+        </pagination-controls>
+      </div>
+    </div>
+  
+    <div *ngIf="this.role=='Executive'" class="row ">
+      <div class="col s6 m6 offset-m3" *ngFor="let project of projects">
+        <div *ngIf="project.project_name==this.proj_Name" class="card  teal lighten-4">
+          <div class="card-content">
+            <span class="card-title" large-text>{{project.project_name}}</span>
+            <p>{{project.description}}</p>
+            <br/>
+            <tr>
+              <td>Start Date : {{project.start_date | date:"MM/dd/yy"}}</td>
+              <td>End Date : {{project.delivery_date | date:"MM/dd/yy"}}</td>
+  
+            </tr>
+            <!-- <tr>
+              <td>Created by:{{project.created_by}} </td>
+              <td>Created at:{{project.created_at}}</td>
+  
+            </tr> -->
+            <!-- <tr>
+              <td>Modified by:{{project.modified_by}} </td>
+              <td>Modified at:{{project.modified_at}}</td>
+  
+            </tr> -->
+  
+          </div>
+          <div class="card-action">
+            <a class="btn waves-effect waves-light" [routerLink]="['/dashboard/edit-project',project._id]"><i class="material-icons">mode_edit</i>Edit</a>
+            <a class="btn waves-effect waves-light" [routerLink]="['/dashboard/add-attribute',project._id,project.project_name]"><i class="material-icons">add</i>Manage Attributes</a>
+            <a class="btn waves-effect waves-light red" (click)="delete(project._id)"><i class="material-icons">delete</i></a>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  </div>
+  <div id="modal11" class="modal">
+  
+    <div class="modal-content">
+  
+      <h4>Copy Attributes</h4>
+      <div class="row" id="cpydiv">
+        <div class="col s12">
+          <div class="input-field">
+            <select id="sPname" class="sPname">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="{{name._id}}" *ngFor="let name of pNames">{{name.project_name}}</option>
+              </select>
+            <label>Select Project From which you want to copy attributes</label>
+          </div>
+        </div>
+      </div><br><br><br>
+      <!-- <div id="caution" class="row">
+          <h5>Are You Sure You want to Copy attributes<br>Note : Previously Selected Attributes will be Overriden.</h5>
+          <a class="waves-effect btn-flat waves-green">Yes</a>
+          <a class="waves-effect btn-flat waves-green">No</a>
+        </div> -->
+    </div>
+    <div class="modal-footer">
+      <a id="cpbtn" (click)="copyAttrData()" class="modal-action waves-effect btn-flat disabled">Copy</a>
+      <a id="clbtn" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>

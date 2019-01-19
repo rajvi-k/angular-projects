@@ -1,0 +1,36 @@
+<!-- <button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button> -->
+<div class="xx">
+<mat-vertical-stepper [linear]="false">
+  <mat-step [stepControl]="firstFormGroup">
+    <form >
+      <ng-template matStepLabel>Select Category</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Last name, First name"  required>
+      </mat-form-field>
+      <div class="col offset-s4 s6"> 
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form >
+      <ng-template matStepLabel>Manage Attributes</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Address" required>
+      </mat-form-field>
+      <div class="col offset-s4 s6">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Submit</ng-template>
+    
+    <div class="col offset-s4 s6">
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>
+
+</div>

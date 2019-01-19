@@ -1,0 +1,95 @@
+<div class="row">
+  <h1>
+    Excel Importer
+  </h1>
+
+  <!-- <div class="content" style="width:auto; margin:0 auto; border:2px solid black;"> -->
+  <div class="content">
+    <div class="one">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input type="file" (change)="handleFile($event)" />
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Select Any .xls or .xlsx File to import">
+        </div>
+      </div>
+    </div>
+    <div class="two">
+      <div id="res">
+        <!-- <div class="ui-widget">
+        <select id="combobox">
+              <option *ngFor="let opt of statHeads" value="{{opt}}">{{opt}}</option>
+            </select>
+      </div> -->
+        <!-- <table border="1" style="width:auto; margin:0 auto; text-align:center"> -->
+        <div class="row">
+          <div class="col s10 offset-s1">
+            <table class="table responsive-table centered highlight">
+              <thead>
+                <tr>
+                  <th>Header</th>
+                  <th>Mapping</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let opt of result">
+                  <!-- <tr> -->
+                  <th>{{opt.column_name}}</th>
+                  <td>
+                    <div class="ui-widget">
+                      <!-- <select id="{{opt.column_id}}" #sl>
+                  <option value="0">Select</option>
+                  <option value="N/A">N/A</option>
+                  <option *ngFor="let ab of statHeads" value="{{ab}}">{{ab}}</option>
+                </select> -->
+                      <div class="input-field col s12">
+                        <select class="" id="{{opt.column_id}}" #sl >
+                          <option value="0">Select</option>
+                          <option value="N/A">N/A</option>
+                          <option *ngFor="let ab of statHeads" value="{{ab}}">{{ab}}</option>
+                        </select>
+                        <!-- <label>Mapping</label> -->
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row center">
+        <button (click)="validate(sl)" class="btn waves-effect waves-light center">Next <i class="material-icons right">send</i></button>
+      </div>
+    </div>
+    <div class="three">
+      <table class="table responsive-table">
+        <thead>
+          <tr>
+            <th>Excel Header</th>
+            <th *ngFor="let res of result">{{res.column_name}}</th>
+          </tr>
+          <tr>
+            <th>Mapped Header</th>
+            <th *ngFor="let res of result">{{res.mapped_name}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of remTmp; let i = index">
+            <td></td>
+            <td *ngFor="let b of remTmp[i]">{{b}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 
+<div class="ui-widget">
+  <select id="combobox">
+              <option *ngFor="let opt of statHeads" value="{{opt}}">{{opt}}</option>
+            </select>
+</div> -->
+</div>

@@ -1,0 +1,68 @@
+<div class="body">
+        <div style="float:right;padding:5% 5% 5% 5%">
+                <table class="table table-dark table-bordered">
+                    <thead>
+                        <td>Username</td>
+                        <td>Password</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                admin
+                            </td>
+                            <td>
+                                admin@123
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                tpc
+                            </td>
+                            <td>
+                                tpc@123
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                executive
+                            </td>
+                            <td>
+                                executive@123
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+</div>
+<div class="grad"></div>
+<div class="header">
+         <div>Transformation<span>  Portal</span></div>
+</div>
+
+<br>
+<div class="login">
+    <form [formGroup]="form">
+        <div class="form-group">
+            <div class="col-sm-7 col-md-7">
+                <input type="text" class="form-control" formControlName="username" placeholder="Username" autofocus required />
+            </div>
+            <div class="text-danger" *ngIf="form.controls.username.touched ||form.controls.username.dirty">
+                <div [hidden]="!form.controls.username.hasError('required')">Username is required</div>
+                <!-- <div [hidden]="!form.controls.username.hasError('minlength')">Minimum 6 characters are required</div> -->
+                </div> 
+        </div>
+        <!-- <input type="text"  placeholder="username" name="user" autofocus><br> -->
+        <div class="form-group">
+            <div class="col-sm-7 col-md-7">
+                <input type="password" class="form-control" formControlName="password" placeholder="Password" name="password" required />
+            </div>
+            <div class="text-danger" *ngIf="form.controls.password.touched ||form.controls.password.dirty">
+                <div [hidden]="!form.controls.password.hasError('required')">Password is required</div>
+               </div> 
+        </div>
+        <!-- <input type="password" placeholder="password" name="password"><br> -->
+        <input type="button" style="color:black;" value="Login" (click)="login(form)">
+        <!-- <span class="psw"><br/><a href="#">Forgot password?</a></span> -->
+    </form>
+</div>

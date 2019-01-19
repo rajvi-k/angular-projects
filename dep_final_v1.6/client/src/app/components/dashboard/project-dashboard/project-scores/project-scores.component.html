@@ -1,0 +1,46 @@
+<div class="card grey lighten-4 centered">
+    <div class="card-content center-align">
+        <div class="row">
+            <h6 class="col s3">Filter by project name</h6>
+            <mat-select class="col s8" [(value)]="selected">
+                <mat-option *ngFor="let proj of projects" [value]="proj">
+                    {{ proj }}
+                </mat-option>
+            </mat-select>
+        </div>
+    </div>
+</div>
+
+<!-- Optimize score visualisation -->
+<mat-tab-group [(selectedIndex)]="index">
+    <mat-tab label="Optimize">
+        <div *ngIf="index == 0">
+            <scores [proj]="selected" type="Optimize"></scores>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Digitalize">
+        <div *ngIf="index == 1">
+            <scores [proj]="selected" type="Digitalize"></scores>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Expedite">
+        <div *ngIf="index == 2">
+            <scores [proj]="selected" type="Expedite"></scores>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Monetize">
+        <div *ngIf="index == 3">
+            <scores [proj]="selected" type="Monetize"></scores>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Innovation">
+        <div *ngIf="index == 4">
+            <scores [proj]="selected" type="Innovation"></scores>
+        </div>
+    </mat-tab>
+
+</mat-tab-group>

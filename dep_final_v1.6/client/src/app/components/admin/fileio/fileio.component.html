@@ -1,0 +1,63 @@
+<div class="container ">
+  
+  <h4>File Import/Export </h4>
+  <div *ngIf="this.role=='TPC'">
+    <div class="row">
+      <div class="input-field col s6">
+        <select #pname id="pname1">
+              <option value="" disabled selected>Projects</option>
+              <option *ngFor="let project of projects">{{project.project_name}}</option>
+         </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <button class="btn waves-effect waves-light" style="" (click)="exportToExcel(pname)">Export Template</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s3">
+        <button class="btn" (click)="importExcel()">New Import</button>
+      </div>
+      <div class="col s6">
+        <!-- <button class="btn modal-trigger truncate" (click)="importExcel('Incremental')">Incremental Import</button> -->
+        <button class="btn truncate" (click)="importIncExcel()">Incremental Import</button>
+      </div>
+    </div>
+  </div>
+  <!-- --------------------------------------------------------------------------------------------------------------- -->
+  <div *ngIf="this.role=='Executive'">
+    <div class="row">
+      <div class="input-field col s6">
+        <select #pname id="pname1">
+              <option>{{this.proj_Name}}</option>
+         </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <button class="btn waves-effect waves-light" (click)="exportToExcel(pname)">Export</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+          <!-- 'New' -->
+        <button class="btn" (click)="importExcel()">New Import</button>
+      </div>
+      <div class="col s6">
+        <button class="btn truncate" (click)="importIncExcel()">Incremental Import</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- <div id="modal1" class="modal">
+  <div class="modal-content">
+    <excel-new [typeofimp]="typeofimp"></excel-new>
+  </div>
+</div> -->
+<!-- <div id="modal2" class="modal">
+  <div class="modal-content">
+    <inc-import></inc-import>
+  </div>
+</div> -->

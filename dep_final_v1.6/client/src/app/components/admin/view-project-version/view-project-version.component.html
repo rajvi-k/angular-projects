@@ -1,0 +1,73 @@
+<!-- <p>{{projectd|json}}/p> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col s12 m12">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title align-center" style="text-align:center">PROJECT DETAILS</span>
+
+        </div>
+        <div class="card-action  #fafafa grey lighten-5">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Start Date</th>
+              <th>Delivery Date</th>
+              <th>Budget</th>
+            </tr>
+            <tr>
+              <td> {{projectd.project_name|titlecase}}</td>
+              <td> {{projectd.description|titlecase}}</td>
+              <td> {{projectd.project_type|titlecase}}</td>
+              <td> {{projectd.start_date| date:"MM/dd/yy"}}</td>
+              <td> {{projectd.delivery_date| date:"MM/dd/yy"}}</td>
+              <td> {{projectd.project_budget|titlecase}}</td>
+            </tr>
+
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="col s6 m6">
+  <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>View Attributes </div>
+      <div class="collapsible-body">
+        <!-- <tr >
+          <td></td>
+        </tr> -->
+        <ul *ngFor="let a of attrlabels">
+          <li >
+              {{a}}
+          </li>
+        </ul>
+
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="col s6 m6">
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">filter_drama</i>View Applications </div>
+        <div class="collapsible-body">
+          <!-- <tr >
+            <td></td>
+          </tr> -->
+          <ul *ngFor="let ap of appnames">
+            <li >
+                {{ap}}
+            </li>
+          </ul>
+  
+        </div>
+      </li>
+    </ul>
+  </div>

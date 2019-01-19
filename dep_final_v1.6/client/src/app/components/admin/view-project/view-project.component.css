@@ -1,0 +1,12 @@
+.card{
+    height: 250px; /* Your height here */
+    overflow: hidden;
+}
+.card-content{
+    height: 180px; /* Your height here */
+    overflow: auto;
+}
+.card-action{
+    height: 100px; /* Your height here */
+    overflow: hidden;
+}

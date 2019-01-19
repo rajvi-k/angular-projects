@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-image">
+    <div class="row">
+      <ngx-charts-bar-horizontal [view]="view" [scheme]="colorScheme" [results]="single" [gradient]="gradient" [xAxis]="showXAxis"
+        [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+        (select)="onSelect($event)">
+      </ngx-charts-bar-horizontal>
+    </div>
+
+
+
+    <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" href="#modal13"><i class="material-icons">zoom_out_map</i></a>
+  </div>
+  <div class="card-content os blue-text">
+    <h6 class="center-align">
+      Apps by OS
+    </h6>
+
+  </div>
+</div>
+
+<div id="modal13" class="modal modal-fixed-footer">
+
+
+  <div class="modal-content center-align">
+    <div class="center-align">
+      <div class="row">
+        <div class="text-blue">
+          <h4>Apps by OS</h4>
+        </div>
+        <ngx-charts-bar-horizontal [view]="[400,400]" [scheme]="colorScheme" [results]="single" [gradient]="gradient" [xAxis]="showXAxis"
+        [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+        (select)="onSelect($event)">
+      </ngx-charts-bar-horizontal>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="modal-action  modal-close waves-effect waves-green btn-flat ">Close</a>
+  </div>
+</div>

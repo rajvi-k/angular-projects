@@ -1,0 +1,415 @@
+<div class="container">
+    <h3 class="col-md-10" style="text-align:center">Attributes Master For {{this.pName}}</h3>
+  <div class="col-md-11"><span *ngIf="old_customCat.length==0"  style="position:relative; bottom:-10px; "><i class="fa fa-hourglass-start"></i>Choose Type of project</span>
+    <div class="col-md-11"><span *ngIf="old_customCat.length!=0" style="position:relative; bottom:-10px; "><i class="fa fa-hourglass-start"></i>Edit project</span><br><br>
+  <div class="switch col-md-6">
+    <label>
+        Choose your Attributes
+        <input type="checkbox" id="projType" data-md-icheck (change)="checkProjectType($event)">
+        <span class="lever"></span>
+       Select all standard Attributes
+      </label>
+  </div>
+   
+  </div>
+
+  <div class="col-md-12">
+      <form>
+        <ul>
+          <li class="col-md-3" style="font-family:Roboto, sans-serif"> <input type="checkbox" id="general" [checked]=genCheck data-md-icheck (change)="addProp($event,'general_attributes')" />
+            <label for="general">General Attributes</label></li>
+          <li class="col-md-3"> <input type="checkbox" id="integration" [checked]=intCheck data-md-icheck (change)="addProp($event,'integration_attributes')" />
+            <label for="integration">Integration Attributes</label></li>
+          <li class="col-md-3"> <input type="checkbox" id="classification" [checked]=classCheck data-md-icheck (change)="addProp($event,'classification_attributes')"
+            />
+            <label for="classification">Classification Attributes</label></li>
+          <li class="col-md-3"> <input type="checkbox" id="app_type" [checked]=appCheck data-md-icheck (change)="addProp($event,'application_type')" />
+            <label for="app_type">App Type Attributes</label></li>
+          <li class="col-md-3"> <input type="checkbox" id="ticket" [checked]=tickCheck data-md-icheck (change)="addProp($event,'ticket_attributes')" />
+            <label for="ticket">Ticket Attributes</label></li>
+          <li class="col-md-3" *ngFor="let x of checkCustomCat"> <input type="checkbox" id={{x.category_type}} data-md-icheck (change)="addProp($event,x.category_type)" />
+            <label for={{x.category_type}}>{{x.category_type}}</label></li>
+        </ul>
+      </form>
+    </div>
+  
+  <!-- Display selected attributes -->
+  <div class="col-md-11" *ngIf="old_customCat.length!=0">
+    <div class="col-md-4" ><span style="position:relative; bottom:-10px; left:-15px; "><i class="fa fa-hourglass-half"></i>Project Attributes</span></div> 
+     <div class="switch col-md-6">
+      <label>
+          Show 
+          <input type="checkbox" id="hideAtts" data-md-icheck (change)="hideAttributes($event)">
+          <span class="lever"></span>
+         Hide
+        </label>
+    </div>
+  </div>
+      <div class="col-md-11" *ngIf="!hideAttribs"><br>
+        <div *ngFor="let x of old_customCat" style="height:150px; padding-bottom:10px" class="col-md-4">
+          <div class="col-md-12" style="font-size: initial;">{{x.category_type|titlecase}}<a href="/dashboard/add-attribute/{{ProjectId}}/{{pName}}#selectCategory"><i class="fa fa-edit fa-lg right" aria-hidden="true" (click)="callCatSelect(x.category_type)"></i></a></div>
+          <div style="height:130px; overflow-y:scroll" class="col-md-12">
+            <ul class="fa-ul">
+              <li *ngFor="let y of x.attributes" class="text"><i class="fa-li fa fa-check-square"></i>{{y.label}}</li>
+  
+            </ul>
+  
+  
+          </div>
+        </div>
+  
+      </div>
+        <div class="col-md-11" *ngIf="attrObj.length!=0"><span  style="position:relative; bottom:-10px; "><i class="fa fa-hourglass-half"></i>Selected Attributes</span></div>
+      <div class="col-md-11">
+<!--   
+        <span *ngIf="attrObj.length==0" class=" text text-warning" style="position:relative; bottom:-10px; "><i class="fa fa-exclamation-triangle"></i> None selected!</span> -->
+        <div *ngIf="general_attributes.length>0||newGenAtts.length>0" class="col-md-4"><br>
+          <div class="col-md-12" style="font-size: initial;">General Attributes<a href="/dashboard/add-attribute/{{ProjectId}}/{{pName}}#selectCategory"><i class="fa fa-edit fa-lg right" aria-hidden="true" (click)="callCatEditSelect('general_attributes')"></i></a><i class="fa fa-trash-o fa-lg right" aria-hidden="true" (click)="deleteCat('gen')"></i></div>
+          <div *ngIf="general_attributes.length>0||newGenAtts.length>0" style="height:150px; overflow-y:scroll" class="col-md-12">
+  
+  
+            <ul class="fa-ul">
+              <li *ngFor="let x of general_attributes"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+              <li *ngFor="let x of newGenAtts" class="text text-danger"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+            </ul>
+  
+  
+          </div>
+        </div>
+        <div *ngIf="integration_attributes.length>0||newIntAtts.length>0" class="col-md-4"><br>
+          <div class="col-md-12" style="font-size: initial;">Integration Attributes<a href="/dashboard/add-attribute/{{ProjectId}}/{{pName}}#selectCategory"><i class="fa fa-edit fa-lg right" aria-hidden="true" (click)="callCatEditSelect('integration_attributes')"></i></a><i class="fa fa-trash-o fa-lg right" aria-hidden="true" (click)="deleteCat('int')"></i></div>
+          <div *ngIf="integration_attributes.length>0||newIntAtts.length>0" style="height:150px; overflow-y:scroll" class="col-md-12">
+  
+  
+            <ul class="fa-ul">
+              <li *ngFor="let x of integration_attributes"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+              <li *ngFor="let x of newIntAtts" class="text text-danger"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+            </ul>
+  
+  
+          </div>
+        </div>
+        <div *ngIf="ticket_attributes.length>0||newTicketAtts.length>0" class="col-md-4"><br>
+          <div class="col-md-12" style="font-size: initial;">Ticket Attributes<a href="/dashboard/add-attribute/{{ProjectId}}/{{pName}}#selectCategory"><i class="fa fa-edit fa-lg right" aria-hidden="true" (click)="callCatEditSelect('ticket_attributes')"></i></a><i class="fa fa-trash-o fa-lg right" aria-hidden="true" (click)="deleteCat('tick')"></i></div>
+          <div *ngIf="ticket_attributes.length>0||newTicketAtts.length>0" style="height:150px; overflow-y:scroll" class="col-md-12">
+  
+  
+            <ul class="fa-ul">
+              <li *ngFor="let x of ticket_attributes"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+              <li *ngFor="let x of newTicketAtts" class="text text-danger"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+            </ul>
+  
+  
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="col-md-11 bottom">
+        <br/>
+        <div *ngIf="application_type.length>0||newAppAtts.length>0" class="col-md-4">
+          <div class="col-md-12" style="font-size: initial;">App Type Attributes<a href="/dashboard/add-attribute/{{ProjectId}}/{{pName}}#selectCategory"><i class="fa fa-edit fa-lg right" aria-hidden="true" (click)="callCatEditSelect('application_type')"></i></a><i class="fa fa-trash-o fa-lg right" aria-hidden="true" (click)="deleteCat('app')"></i></div>
+          <div *ngIf="application_type.length>0||newAppAtts.length>0" style="height:150px; overflow-y:scroll" class="col-md-12">
+  
+  
+            <ul class="fa-ul">
+              <li *ngFor="let x of application_type"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+              <li *ngFor="let x of newAppAtts" class="text text-danger"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+            </ul>
+  
+  
+          </div>
+        </div>
+        <!-- <div *ngIf="custom_applications_attributes.length>0||newCustomAtts.length>0" class="col-md-4">
+        <div class="col-md-12" style="font-size: initial;">Custom App Attributes<i class="fa fa-trash-o fa-lg right" aria-hidden="true" (click)="deleteCat('cust')"></i></div>
+        <div *ngIf="custom_applications_attributes.length>0||newCustomAtts.length>0" style="height:150px; overflow-y:scroll" class="col-md-12">
+  
+  
+          <ul class="fa-ul">
+            <li *ngFor="let x of custom_applications_attributes"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+            <li *ngFor="let x of newCustomAtts" class="text text-danger"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+          </ul>
+  
+  
+        </div>
+      </div> -->
+        <div *ngIf="classification_attributes.length>0||newClassAtts.length>0" class="col-md-4">
+          <div class="col-md-12" style="font-size: initial;">Classification Attributes<a href="/dashboard/add-attribute/{{ProjectId}}/{{pName}}#selectCategory"><i class="fa fa-edit fa-lg right" aria-hidden="true" (click)="callCatEditSelect('classification_attributes')"></i></a><i class="fa fa-trash-o fa-lg right" aria-hidden="true" (click)="deleteCat('class')"></i></div>
+          <div *ngIf="classification_attributes.length>0||newClassAtts.length>0" style="height:150px; overflow-y:scroll" class="col-md-12">
+  
+  
+            <ul class="fa-ul">
+              <li *ngFor="let x of classification_attributes"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+              <li *ngFor="let x of newClassAtts" class="text text-danger"><i class="fa-li fa fa-check-square"></i>{{x.label}}</li>
+            </ul>
+  
+  
+          </div>
+        </div>
+      </div>
+      <!-- <div *ngIf="customCat.length>0" class="col-md-4"> -->
+      <div class="col-md-11">
+        <div *ngFor="let x of customCat" style="height:150px" class="col-md-4">
+          <div class="col-md-12" style="font-size: initial;">{{x.category_type}}<a href="/dashboard/add-attribute/{{ProjectId}}/{{pName}}#selectCategory"><i class="fa fa-edit fa-lg right" aria-hidden="true" (click)="callCatEditSelect(x.category_type)"></i></a><i class="fa fa-trash-o fa-lg right" aria-hidden="true" (click)="deletecustCat(x.category_type)"></i></div>
+          <div style="height:130px; overflow-y:scroll" class="col-md-12">
+            <ul class="fa-ul">
+              <li *ngFor="let y of x.attributes" class="text text-danger"><i class="fa-li fa fa-check-square"></i>{{y.label}}</li>
+  
+            </ul>
+  
+  
+          </div>
+        </div>
+  
+      </div>
+  <div class="col-md-11"><span ><i class="fa fa-filter"></i>Filter Attributes</span></div>
+    <div class="form-group " style="padding-top:20px">
+  
+      <!-- select box  -->
+      <form class="col-md-12 ">
+        <div class="col-md-3 ">
+          <div  style="text-align:center"> Category Name</div>
+         
+            <select class="form-control col-md-12" [(ngModel)]="selectedAttribute.id" (change)="onSelect($event.target)" (ngModelChange)="sourceEvent($event)" id="selectCategory"
+              name="Source">
+                      <option  value="0">--Select--</option>
+                      <option *ngFor="let attribute of oldAttributes"  value='{{attribute}}' >{{attribute| uppercase}}
+            <!-- <button type="submit" class="btn btn-warning col s3 " (click)="selectAll(attribute)">All</button> -->
+                      </option>
+                  </select>
+          
+        </div>
+        <div class="col-md-8  panel panel-default">
+          <div class="panel-body">
+            <!-- <div> -->
+            <div class="col-md-5 ">
+  
+              <label>Available Attributes</label>
+              <form>
+  
+                <select class="form-control" multiple size="9" [ngModel]="studentSource" (ngModelChange)="sourceEvent($event)" name="Source">
+                    
+                              <!-- <option class='selectedAttribute.id == 0' value="0" >--Select--</option> -->
+                              <option *ngFor="let field of fields " value='{{field.label}}' data-toggle="tooltip"   (click)="showTable(field.label)" data-placement="left" title="{{field.label}}" data-trigger="focus">{{field.label | titlecase}}</option>
+                    
+                                    </select>
+  
+              </form>
+  
+            </div>
+            <!-- -----------------------------------------left ends----------------------------------------- -->
+  
+  
+  
+  
+  
+            <div class=" btn-vert-block col-xs-2" style="padding-top:30px">
+  
+              <button type="button" class="btn btn-default btn-block" (click)="AllSourceToDestination()"><i class="glyphicon glyphicon-forward"></i></button>
+  
+              <button type="button" class="btn btn-default btn-block" (click)="SourceToDestination()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+  
+              <button type="button" class="btn btn-default btn-block" (click)="DestinationToSource()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+  
+              <button type="button" class="btn btn-default btn-block" (click)="AllDestinationToSource()"><i class="glyphicon glyphicon-backward"></i></button>
+  
+            </div>
+  
+  
+  
+  
+  
+            <div class="col-md-5 ">
+  
+              <label>Selected Project Attributes</label>
+              <form>
+                <select class="form-control" multiple size="9" [ngModel]="studentDestination" (ngModelChange)="destinationEvent($event)"
+                  name="Destination" #destination>
+                                <option *ngFor ="let student of studentDestination"  value="{{student.key}}" >
+                                        {{student.label|titlecase}}
+                                </option>
+                          </select>
+              </form>
+  
+            </div>
+  
+  
+          </div>
+        </div>
+          <div class="col-md-3 centre " style="position: relative ;top:-57px;">
+            <a href="#viewAtts"><button type="submit" class="btn btn-success  center-align " (click)="onSubmit(destination)">Save Attributes</button></a>
+          </div>
+  
+  
+      </form>
+  
+    </div>
+  
+  
+  
+    <!-- General -->
+    
+    <!-- <div class="col-md-11">
+      <ul class="collapsible" data-collapsible="expandable">
+        <li>
+          <div class="collapsible-header" style="font:#B4B2B2"><i class="material-icons">edit</i>STEP 2: Compare Attributes Category-Wise</div>
+          <div class="collapsible-body">
+            <ul class="fa-ul">
+              <li><i class="material-icons compare">fiber_manual_record</i> Attributes already present in your project shall be
+                displayed under 'Selected Attributes'.</li>
+              <li><i class="material-icons compare ">fiber_manual_record</i>The 'Available Attributes' are currently absent in
+                your project. Custom attributes created shall be displayed under 'Available Attributes'.</li>
+              <li><i class="material-icons compare ">fiber_manual_record</i> When you have selected every attribute for your project
+                according to the category selected previously , please click 'Add Category' button</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div> -->
+    <div class="row col-md-11">
+      <div style="padding-left:40px">
+        <!-- ......................................................................................................................... -->
+  
+  
+  
+        <!-- ............................................................................................................................. -->
+  
+        <!--------------------left box-------------------- -->
+  
+       
+      </div>
+    </div>
+  
+  
+    <div class="col-md-11">
+      <ul class="collapsible" data-collapsible="expandable">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i> Add Custom Categories and Attributes</div>
+  
+          <div class="collapsible-body cust">
+  
+            <div class="col-md-12 ">
+                      
+                <div class="form-group">
+                  <form>
+                    <div class="col-md-4  panel panel-info">
+                      <div class="panel-heading" style="text-align:center">Add New Category </div>
+                      <div class="panel-body">
+                        <div class="input-field  category col s9">
+                          <input type="text" class="validate form-control" #newCategoryName id="newCategoryName">
+                        </div>
+  
+                        <button type="submit" class="btn btn-warning col s3 " (click)="addCategory(newCategoryName)">Add</button>
+                      </div>
+                    </div>
+                    <div class="panel-body col-md-8">
+                      <div class="col-md-12">
+                        <label class="col-md-4" for="fname">Field Name</label>
+  
+                       
+  
+                        <label for="label1 " class="col-md-4 col-md-offset-1">Key</label>
+                        <label></label>
+                      
+                      </div>
+                      <div class="col-md-12">
+  
+  
+                        <form #customForm="ngForm">
+  
+                          <div class=" form-group input-field col s4 ">
+                            <!-- <i class="fa fa-lightbulb-o md-18 prefix" aria-hidden="true"></i> -->
+                            <input type="text" class="validate form-control" [(ngModel)]="model.fname" name="fname" #fname="ngModel" (input)="onSearchChange($event.target.value,customForm)"
+                              #newattr id="fname">
+  
+                            <!-- <label for="icon_prefix">First Name</label> -->
+                          </div>
+                          <!-- <div class="input-field col s3">
+                          <input type="text" class="validate form-control" #val id="val">
+                        </div> -->
+                          <!-- <select class="input-field col s3 form-control" #valueType id="sdata">
+                
+                  <option value="" disabled selected>Choose your option</option>
+                                      <option value="string"> String</option>
+                                      <option value="number"> Number</option>
+                              </select> -->
+                          <div class=" form-group input-field col s4">
+                            <input type="text" class="validate form-control" id="key" class="form-control" [(ngModel)]="labelNew" name="key" #key="ngModel">
+                          </div>
+                          <!-- <input  type="text" class="form-control input-field col s5"  #newattr id="fname" ><i class="material-icons tiny ">storage</i>
+            <input type="text" class="form-control input-field col s6" #val id="val" > -->
+  
+                          <button type="submit" class="btn btn-warning col s3 offset-s1 " (click)="addattribute(fname.value,key.value,'',customForm)">Add</button>
+                        </form>
+                           
+                        
+                      </div>
+  
+                      <!-- <div class="col-md-12" left>
+                <label for="sdata col s6">Type</label></div> -->
+  
+  
+  
+                    </div>
+  
+  
+                    <br/></form>
+  
+                </div>
+  
+              </div>
+       
+          </div>
+        </li>
+      </ul>
+    </div>
+  
+<!--   
+    <div class="col-md-11">
+      <ul class="collapsible" data-collapsible="expandable">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">thumb_up</i>Submit the Above Attributes</div>
+          <div class="collapsible-body" style="font:#B4B2B2"><span>On submit you shall be displayed the attributes you have chosen to remove. The new attributes will be pushed to the project if you agree.</span></div>
+        </li>
+      </ul>
+    </div>
+   -->
+    <div class="col-md-11">
+      <button type="submit" [disabled]="attrObj.length==0" class="btn btn-danger col s4 offset-s4" (click)="onAdd()">Submit</button>
+    </div>
+    <!-- </div> -->
+  
+    <!-- Modal Trigger -->
+    <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+  
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>The following attributes will be deleted</h4>
+        <ul class="fa-ul" style=" column-count: 2;">
+          <li *ngFor="let x of this.missingAtt"><i class="fa fa-exclamation-triangle"></i>{{x.label}}</li>
+        </ul>
+      </div>
+  
+      <div class="modal-footer" style="padding-bottom:8%">
+        <button style="margin-bottom:0px" class="modal-action modal-close waves-effect waves-green btn" (click)="onFinalAdd()">Agree</button>
+        <button class="modal-action modal-close waves-effect waves-green btn ">Disagree</button>
+      </div>
+    </div>
+    <!-- <div *ngIf="this.missingAtt=='[]'" class="modal-content">
+    <h4>Attributes to be added
+    </h4>  
+  </div> -->
+    <div id="modal2" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>The above selected attributes will be added</h4>
+        <ul class="fa-ul" style=" column-count: 2;">
+          <li *ngFor="let x of this.tableData"><i class="fa fa-exclamation-triangle"></i>{{x.label}}</li>
+        </ul>
+      </div>
+  
+      <div class="modal-footer" style="padding-bottom:8%">
+        <button style="margin-bottom:0px" class="modal-action modal-close waves-effect waves-green btn" (click)="onFinalAdd()">Agree</button>
+        <button class="modal-action modal-close waves-effect waves-green btn ">Disagree</button>
+      </div>
+    </div>

@@ -1,0 +1,331 @@
+ /* individual cells */
+ :host /deep/ ng2-smart-table tbody > tr> td  { 
+    font-size: 0.975em;
+   
+    overflow: hidden;white-space: nowrap;
+        border: 1.8px solid black;
+       
+        padding: 0.15em 0.5em;
+        line-height: 0.5em;
+        font-style: align-self;
+        
+}
+:host /deep/ 
+/* action and add new row cells */
+:host /deep/ ng2-smart-table thead > tr> th:first-child  { 
+    font-size: 1.0em;
+
+    overflow: hidden;
+    /* white-space: nowrap; */
+        border: 1.8px solid black;
+       
+}
+
+/* headers and search cells */
+:host /deep/ ng2-smart-table thead > tr> th  { 
+     word-wrap: break-word;
+    overflow: hidden;
+    /* font-size: 0.975em; */
+  
+        border: 1.8px solid black;
+    /* height: 1rem; */
+    
+        
+        
+}
+/* first column  */
+:host /deep/ ng2-smart-table tbody > tr> td:first-child  { 
+    font-size: 0.95em;
+      
+        padding: .5em 1em;
+        line-height: 0.7em;
+        /* display: none */
+        
+}
+
+ /* :host /deep/ ng2-smart-table-cell thead>tr>td:first-child { 
+display:none;
+        
+}  */
+
+/* :host /deep/ input-editor input{ 
+
+
+} */
+
+
+
+
+
+/* all cells */
+/* 
+ :host  /deep/ *  {
+    width: 75px;
+         line-height: 0.5em; 
+ } */
+    /* height: 75px; */
+
+/*changes hide*/
+:host  /deep/ * table thead tr>th:nth-child(2) {
+      font-size: 0.95em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    height: 3em;
+    display: none
+
+}
+
+/*changes hide*/
+:host  /deep/ * table tbody td:nth-child(2) {
+    font-size: 0.95em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  height: 3em;
+  display: none
+
+}
+
+/*changes*/
+:host  /deep/ * {
+background-color:white;
+}
+
+/*changes*/
+:host  /deep/ * ul>li.active {
+    
+        background: transparent;
+       
+}
+    /* height: 75px;
+   
+
+/* add new cell */
+:host  /deep/ * table>thead>tr>td {
+    width: 200px;
+  white-space: nowrap; 
+    border: 1.8px solid black;
+    text-overflow: ellipsis;
+    overflow: hidden;    height: 1.5em;
+    
+   
+}
+
+:host  /deep/ * table>thead>tr>td:nth-child(2) {
+    display: none   
+}
+
+
+/*changes*/
+
+:host  /deep/ *   .ng2-smart-filter    input, :host  /deep/ *  .ng2-smart-filter  select{
+    height: 1.5em
+}
+
+
+:host  /deep/  table>thead>tr:first-child>th{
+ /* height: 3rem; */
+ height: 3rem;
+/* border: 10px solid pink; */
+}
+/* links  */
+:host /deep/  a:first-child {
+    color: #4545F8;
+    line-height: 0.9em; 
+    text-decoration: none;
+}
+:host /deep/ a:hover {
+    color: #D40A0A;
+          line-height: 0.9em;
+  text-decoration: underline;
+  /* text-overflow: ellipsis; */
+  overflow: hidden;
+  /* white-space: nowrap */
+  /* white-space: nowrap; */
+}
+/* links  */
+:host /deep/  a:nth-child(2) {color: #A33C0C;
+    text-decoration: none;}
+    :host /deep/ a:hover {
+    color: #D40A0A;
+    line-height: 0.9em;
+    text-decoration: underline;
+    text-overflow: ellipsis;
+    overflow: hidden;
+      /* white-space: nowrap; */
+    }
+
+:host /deep/ ng2-smart-table thead >tr  { 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 0.975em;
+
+        border: 1.8px solid blue;
+    /* height: 1rem; */
+    
+        
+        
+}
+/* :host /deep/ ng2-smart-table tbody > tr > td:nth-child(2) { 
+	text-align: left; 
+    
+        font-size: 20rem   black; 
+       
+}
+:host /deep/ ng2-smart-table-cell{
+    font-size: 20rem   black; 
+}
+:host /deep th.ng2-smart-th.name{
+    border: 10rem ;
+} */
+
+/* -------------
+
+[_nghost-c3] * {
+    box-sizing: border-box;
+}
+<style>…</style>
+[_nghost-c2] * {
+    width: 85px;
+    height: 75px;
+}
+materialize.min.css:6
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+Inherited from th.ng2-smart-th.esp_estimate_of_munich_re
+<style>…</style>
+[_nghost-c2] ng2-smart-table thead > tr> th {
+    /* text-overflow: ellipsis;
+    overflow: hidden;
+    /* white-space: nowrap; */
+    /* font-size: 0.975em; */
+    /* line-height: 0.5em; */
+    /* border: 1.8px solid black;
+    word-wrap: break-word;
+}
+<style>…</style>
+[_nghost-c3] table tr td, [_nghost-c3] table tr th {
+    font-size: .875em;
+    margin: 0;
+    padding: .5em 1em;
+}
+<style>…</style>
+[_nghost-c3] table tr th {
+    font-weight: 700;
+}
+<style>…</style>
+td, th {
+    padding: 2px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+materialize.min.css:6
+td, th {
+    padding: 15px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+    word-wrap: break-word;
+}
+user agent stylesheet
+th {
+    font-weight: bold;
+    text-align: -internal-center;
+} */
+/* Inherited from tr.ng2-smart-titles
+<style>…</style>
+[_nghost-c2] ng2-smart-table thead >tr {
+    text-overflow: ellipsis;
+    overflow: hidden; */
+    /* white-space: nowrap; */
+    /* font-size: 0.975em; */
+    /* line-height: 0.5em; */
+    /* border: 1.8px solid blue;
+}
+Inherited from table
+<style>…</style>
+[_nghost-c3] table { */
+    /* line-height: 1.5em; */
+    /* border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all;
+} */
+/* materialize.min.css:6
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+} */
+/* user agent stylesheet
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+Inherited from ng2-smart-table
+<style>…</style>
+[_nghost-c3] {
+    font-size: 1rem;
+}
+Inherited from html
+@media only screen and (min-width: 1200px)
+materialize.min.css:6
+html {
+    font-size: 15px;
+}
+@media only screen and (min-width: 992px)
+materialize.min.css:6
+html {
+    font-size: 14.5px;
+}
+@media only screen and (min-width: 0)
+materialize.min.css:6
+html {
+    font-size: 14px;
+}
+materialize.min.css:6
+html {
+    line-height: 0.99;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0,0,0,0.87);
+}
+materialize.min.css:6
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+materialize.min.css:6
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+Pseudo ::after element
+materialize.min.css:6
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit; */
+/* }  */
+
+/* .ng2-smart-pagination
+{
+    display:inline-flex;font-size:.875em;padding:0
+}
+.ng2-smart-pagination .sr-only
+{
+    position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.ng2-smart-pagination .ng2-smart-page-item{display:inline}.ng2-smart-pagination .page-link-next,.ng2-smart-pagination .page-link-prev{font-size:10px}:host{display:flex;justify-content:space-between}:host select{margin:1rem 0 1rem 1rem}:host label{margin:1rem 0 1rem 1rem;line-height:2.5rem} */

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  
+   <!-- <div style="padding-left:50px"> -->
+      <ng2-smart-table *ngIf="role=='TPC'" [settings]="settings" [source]="exelData" (createConfirm)="onAddCall($event)"
+      (editConfirm)="onEditCall($event)" (deleteConfirm)="onDeleteCall($event)" (userRowSelect)="onUserRowSelect($event)"></ng2-smart-table>
+   <!-- </div> -->
+
+ <ng2-smart-table *ngIf="role=='Executive'" [settings]="settingsExec" [source]="exelData" (createConfirm)="onAddExecCall($event)" (editConfirm)="onEditExecCall($event)"
+   (deleteConfirm)="onDeleteCall($event)" (userRowSelect)="onUserRowSelect($event)"></ng2-smart-table>
+ 
+   <!-- <ng2-smart-table-pager *ngIf="isPagerDisplay"
+   [source]="source"
+   (changePage)="changePage($event)">
+ </ng2-smart-table-pager> -->
+ </div>
+ <div style="padding-left:30px">
+   <button *ngIf="(this.temp!=0 && this.temp)" class="btn btn-primary teal" style="padding-left:10px" (click)="export()">Export</button>
+ </div>
+
+ <div style="padding-left:30px">
+    <button class="btn btn-primary red" *ngIf="!this.temp || this.temp==0" style="padding-left:10px" (click)="exportAll()">Export</button>
+  </div>

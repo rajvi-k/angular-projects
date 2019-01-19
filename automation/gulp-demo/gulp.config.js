@@ -1,0 +1,21 @@
+module.exports={
+    allJS:[
+        './src/**/*.js',
+        './*.js'
+    ],
+    allLess:[
+        './src/css/*.less',
+        './*.less'
+    ],
+    outputDir:[
+        './dist'
+    ],
+    allCss:[
+        './src/css/*.css'
+    ],
+    images:[
+        './src/images/*.jpg'
+    ] ,
+    temp:'./src/temp',
+    indexHTML:'./src/index.html'
+}

@@ -1,0 +1,53 @@
+::ng-deep .mat-step-header .mat-step-icon {
+    background-color: #ADDDEE ;
+    color: white;
+}
+::ng-deep .mat-step-header .mat-step-icon-not-touched {
+    background-color: #d7cec7   ;
+    color: white ;
+}
+ /* ::ng-deep .mat-step-header .mat-step-icon {
+    background-color: #E0DBD7  !important;
+    color: #F01540 !important;
+} */
+::ng-deep .mat-horizontal-stepper {background:#CEF1D4
+}
+ ::ng-deep .mat-button, .mat-icon-button, .mat-raised-button {
+    color: black;
+    background: #4EBA87;
+}
+::ng-deep  .mat-step-icon-not-touched{
+ border-radius: 50% ;
+    height: 24px ;
+    width: 24px ;
+    align-items: center ;
+    justify-content: center ;
+    display: flex ;
+}
+
+::ng-deep .mat-step-icon {
+    border-radius: 50% ;
+    height: 24px ;
+    width: 24px ;
+    align-items: center ;
+    justify-content: center;
+    display: flex ;
+}
+::ng-deep .mat-step-header >
+    :nth-of-type(2)>
+        .mat-step-icon>
+            *{
+                display:none;
+            }
+            :after{
+                content:1
+            }
+        
+    
+
+
+
+::ng-deep .mat-horizontal-stepper-header .mat-step-icon, .mat-horizontal-stepper-header .mat-step-icon-not-touched {
+    margin-right: 8px !important;
+    flex: none !important;
+}

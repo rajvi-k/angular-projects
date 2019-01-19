@@ -1,0 +1,238 @@
+/* * { padding: 0; margin: 0; outline: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+
+body { font-family: monospace; font-size: 14px; line-height: 1.25; } */
+/* My Defiend No Materrialize */
+/* [type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: relative;
+    left: -9999px;
+    color: #ffca30;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #ffca30;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ffca30;
+    border-radius: 100%; 
+    background: #ffca30;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background:#ffca30;
+    position: relative;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+} */
+/* End of My define */
+/* Materialize Overide */
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  display: none;
+}
+/* Radio Buttons
+   ========================================================================== */
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1rem;
+  -webkit-transition: .28s ease;
+  transition: .28s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+[type="radio"] + label:before,
+[type="radio"] + label:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 16px;
+  height: 16px;
+  z-index: 0;
+  -webkit-transition: .28s ease;
+  transition: .28s ease;
+}
+
+/* Unchecked styles */
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:before,
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+  /* border-radius: 50%; */
+  display:none;
+}
+
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:not(:checked) + label:after {
+  border: 2px solid #ffca30;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+/* Checked styles */
+[type="radio"]:checked + label:before {
+  border: 2px solid transparent;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+  border: 2px solid #ffca30;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+  background-color: #ffca30;
+}
+
+[type="radio"]:checked + label:after {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+/* Radio With gap */
+[type="radio"].with-gap:checked + label:after {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+/* Focused styles */
+[type="radio"].tabbed:focus + label:before {
+  -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Disabled Radio With gap */
+[type="radio"].with-gap:disabled:checked + label:before {
+  border: 2px solid rgba(0, 0, 0, 0.42);
+}
+
+[type="radio"].with-gap:disabled:checked + label:after {
+  border: none;
+  background-color: #ffca30;
+  /* background-color: rgba(0, 0, 0, 0.42); */
+}
+
+/* Disabled style */
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+  background-color: transparent;
+  border-color: #ffca30;
+  /* border-color: rgba(0, 0, 0, 0.42); */
+}
+
+[type="radio"]:disabled + label {
+  /* color: rgba(0, 0, 0, 0.42); */
+  color:#ffca30
+}
+
+[type="radio"]:disabled:not(:checked) + label:before {
+  /* border-color: rgba(0, 0, 0, 0.42); */
+  border-color:#ffca30;
+}
+
+[type="radio"]:disabled:checked + label:after {
+  background-color: rgba(0, 0, 0, 0.42);
+  border-color: #ffca30;
+}
+
+/* End of Override */
+.score-outer { width: 331px; position: relative; top: auto; left: auto; margin: auto; }
+
+.score { font-size: 0; line-height: 0; color: #fff; font-weight: bold; overflow: hidden; background-color: #333; }
+
+.score-label,
+.score-result,
+.score-rating { display: inline-block; vertical-align: middle; }
+
+.score-label { font-size: 14px; line-height: 1.43; text-align: center; width: 100px; padding: 5px 10px; }
+.score-result { font-size: 14px; line-height: 1.43; text-align: center; width: 30px; height: 30px; position: absolute; top: 0; left: 100%; padding: 5px 0; }
+
+.score-rating { position: relative; border-right: 1px solid #fff; margin-right: 30px; }
+.score-rating label { width: 20px; height: 30px; float: left; border-left: 1px solid #fff; background: #ffca30; cursor: pointer; }
+.score-rating input { position: absolute; top: 0; left: -999px; }
+
+.score-rating input:checked + label { background: #ffca30; }
+.score-rating input:checked ~ label { background: #666; }
+
+.score-rating:hover > input + label { background: #ffca30; }
+.score-rating:hover > input + label:hover ~ label { background: #666; }
+
+.score-rating input:nth-of-type(1):checked ~ .score-result:before { content: '0'; }
+.score-rating input:nth-of-type(2):checked ~ .score-result:before,
+.score-rating label:nth-of-type(1):hover ~ .score-result:before { content: '1'; }
+.score-rating input:nth-of-type(3):checked ~ .score-result:before,
+.score-rating label:nth-of-type(2):hover ~ .score-result:before { content: '2'; }
+.score-rating input:nth-of-type(4):checked ~ .score-result:before,
+.score-rating label:nth-of-type(3):hover ~ .score-result:before { content: '3'; }
+.score-rating input:nth-of-type(5):checked ~ .score-result:before,
+.score-rating label:nth-of-type(4):hover ~ .score-result:before { content: '4'; }
+.score-rating input:nth-of-type(6):checked ~ .score-result:before,
+.score-rating label:nth-of-type(5):hover ~ .score-result:before { content: '5'; }
+.score-rating input:nth-of-type(7):checked ~ .score-result:before,
+.score-rating label:nth-of-type(6):hover ~ .score-result:before { content: '6'; }
+.score-rating input:nth-of-type(8):checked ~ .score-result:before,
+.score-rating label:nth-of-type(7):hover ~ .score-result:before { content: '7'; }
+.score-rating input:nth-of-type(9):checked ~ .score-result:before,
+.score-rating label:nth-of-type(8):hover ~ .score-result:before { content: '8'; }
+.score-rating input:nth-of-type(10):checked ~ .score-result:before,
+.score-rating label:nth-of-type(9):hover ~ .score-result:before { content: '9'; }
+.score-rating input:nth-of-type(11):checked ~ .score-result:before,
+.score-rating label:nth-of-type(10):hover ~ .score-result:before { content: '10'; }		
+

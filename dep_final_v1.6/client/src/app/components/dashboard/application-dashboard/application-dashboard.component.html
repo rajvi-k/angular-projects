@@ -1,0 +1,28 @@
+<ng-progress [positionUsing]="'marginLeft'" [minimum]="0.15" [maximum]="1" [speed]="300" [showSpinner]="true" [direction]="'rightToLeftIncreased'"
+  [color]="'red'" [trickleSpeed]="300" [thick]="false" [ease]="'linear'">
+</ng-progress>
+
+<div class="container-fluid  blue-grey darken-3">
+  <div class="row">
+    <div class="fixed-action-btn" title="Go back to All Applications">
+      <a class="btn-floating btn-large blue hoverable" [routerLink]="['/dashboard','project',proj_id]">
+            <i class="large material-icons">arrow_back</i>
+          </a>
+    </div>
+    <app-application-details [appData]="sendData"></app-application-details>
+    <div class="col s8 m7 l7 right">
+      <app-category-completion [appData]="sendData"></app-category-completion>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m12 ">
+      <app-overall-scores [appData]="sendData"></app-overall-scores>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <app-specific-category [appData]="sendData"></app-specific-category>
+  </div>
+</div>

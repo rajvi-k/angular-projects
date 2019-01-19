@@ -1,0 +1,53 @@
+<div *ngIf="details">
+  <div class="col s4 m2">
+    <div class="card-height valign-wrapper card-panel blue light hoverable z-depth-4">
+      <span class="white-text ">
+                  
+                  <b>Project Name</b>
+                  <p><i class="material-icons left show-on-medium-and-up">filter_center_focus</i>{{details.project_name|titlecase}}</p>
+                  
+                </span>
+    </div>
+  </div>
+  <div class="col s4 m4">
+    <div class="card-panel card-height indigo light hoverable z-depth-4" title="{{details.description|titlecase}}">
+      <span class="white-text">
+        
+                  <b>Project Description</b>
+                <p class="truncate" title="{{details.description|titlecase}}"><i class="material-icons left show-on-medium-and-up">more_vert</i> {{details.description|titlecase}}</p> 
+              
+                </span>
+    </div>
+  </div>
+  <div class="col s4 m2">
+    <div class="card-panel valign-wrapper card-height cyan  hoverable z-depth-4">
+      <span class="white-text ">
+                    <b class="center-align">Project Type</b>
+                    <p><i class="material-icons left show-on-medium-and-up">games</i> {{details.project_type|titlecase}}</p>
+                  </span>
+    </div>
+  </div>
+  <div class="col s4 m2">
+
+    <div *ngIf="details.project_status=='Completed'" class="card-panel valign-wrapper card-height green hoverable z-depth-4">
+      <span class="white-text">
+                    <b>Project Status</b>
+                    <p><i class="material-icons left show-on-medium-and-up">access_alarms</i>  {{details.project_status|titlecase}}</p>
+                </span>
+    </div>
+    <div *ngIf="details.project_status=='Incomplete'" class="card-panel valign-wrapper card-height red darken-1 hoverable z-depth-4">
+      <span class="white-text">
+                      <b>Project Status</b>
+                      <p><i class="material-icons left show-on-medium-and-up">alarm_off</i>  {{details.project_status|titlecase}}</p>
+                  </span>
+    </div>
+  </div>
+  <div class="col s4 m2">
+    <div class="card-panel valign-wrapper card-height teal hoverable z-depth-4">
+      <span class="white-text">
+                <b>Number of Apps</b>
+                <p><i class="material-icons left show-on-medium-and-up">apps</i>  {{details.number_apps}}</p>
+            </span>
+    </div>
+  </div>
+</div>

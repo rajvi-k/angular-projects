@@ -1,0 +1,109 @@
+<h3 class="first" align="center">Funnel chart</h3>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col s3">
+      <h6>
+        <span class="label label-default">Projects</span>
+      </h6>
+      <p-dropdown [style]="{'width':'12em'}" [options]="projectsdata" [(ngModel)]="selectedproject" [panelStyle]="{minWidth:'12em'}"></p-dropdown>
+    </div>
+    <div class="col s3">
+      <h6>
+        <span class="label label-default">Scores</span>
+      </h6>
+      <p-dropdown [style]="{'width':'12em'}" [options]="scores" [(ngModel)]="selectedscores" [panelStyle]="{minWidth:'12em'}" (onChange)="data(selectedscores)"></p-dropdown>
+    </div>
+    <div class="col s3" *ngIf="subscores.length>0">
+      <h6>
+        <span class="label label-default">Subscores</span>
+      </h6>
+      <p-dropdown [style]="{'width':'12em'}" [options]="subscores" [(ngModel)]="selectedsubscores" [panelStyle]="{minWidth:'12em'}"></p-dropdown>
+    </div>
+    <div class="col s3" *ngIf="option1count>0">
+      <h6>
+        <span class="label label-default">Score</span>
+      </h6>
+      <p-dropdown [style]="{'width':'12em'}" [options]="score_data" [(ngModel)]="selectedscoredata" [panelStyle]="{minWidth:'12em'}"></p-dropdown>
+    </div>
+    <!-- <div class="col s3" *ngIf="option2count>0">
+      <h6>
+        <span class="label label-default">Score_From</span>
+      </h6>
+      <p-dropdown [style]="{'width':'12em'}" [options]="score_from" [(ngModel)]="selectedfrom" [panelStyle]="{minWidth:'12em'}"></p-dropdown>
+    </div>
+    <div class="col s3" *ngIf="option2count>0">
+      <h6>
+        <span class="label label-default">Score_To</span>
+      </h6>
+      <p-dropdown [style]="{'width':'12em'}" [options]="score_to" [(ngModel)]="selectedto" [panelStyle]="{minWidth:'12em'}"></p-dropdown>
+    </div> -->
+  </div>
+  <div class="row">
+    <div class="col s3" *ngIf="subscores.length>0">
+      <div>
+        <label class="label_color">By Score<p-radioButton name="group1" value="1"  [(ngModel)]="val1" inputId="opt1" (click)="combidata(val1)"></p-radioButton></label>&nbsp;
+        <label class="label_color">By Range<p-radioButton name="group1" value="2" [(ngModel)]="val1" inputId="opt2" (click)="combidata(val1)"></p-radioButton></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s3" *ngIf="option2count>0">
+      <h6>
+        <span class="label label-default">Score_From</span>
+      </h6>
+      <p-dropdown [style]="{'width':'12em'}" [options]="score_from" [(ngModel)]="selectedfrom" [panelStyle]="{minWidth:'12em'}"></p-dropdown>
+    </div>
+    <div class="col s3" *ngIf="option2count>0">
+      <h6>
+        <span class="label label-default">Score_To</span>
+      </h6>
+      <p-dropdown [style]="{'width':'12em'}" [options]="score_to" [(ngModel)]="selectedto" [panelStyle]="{minWidth:'12em'}"></p-dropdown>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s3">
+      <button class="waves-effect waves-light btn" (click)="getdata()">click</button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" *ngIf="appcount>0">
+  <div class="row">
+    <div class="col s4 ">
+      <div class="card center-align" style="height:50px">
+        <h6>Project Name:{{projectname}}</h6>
+      </div>
+    </div>
+    <div class="col s3 ">
+      <div class="card center-align" style="height:50px">
+        <h6>Number of Apps:{{appcount}}</h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" *ngIf="flag==true">
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div *ngIf="funneldata.length>0">
+          <div echarts [options]="option1" class="demo-chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" *ngIf="flag1==true">
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div *ngIf="combined_funneldata.length>0">
+          <div echarts [options]="option2" class="demo-chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
